@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @include('partials.head')
-<body x-data="{ 'showTaskUploadModal': false, 'showTaskEditModal': false }" x-cloak>
+<body class="bg-brand" x-data="{ 'showTaskUploadModal': false, 'showTaskEditModal': false }" x-cloak>
 	@include('shared.flash')
 
 	<!-- Site header -->

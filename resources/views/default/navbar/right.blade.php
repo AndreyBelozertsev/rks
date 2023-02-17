@@ -14,9 +14,9 @@
                 <p>{{ Auth::user()->name }}</p>
             </li> 
             <li class="user-footer">
-                <a href="{{ route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <a href="{{ route('logOut')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="fa fa-btn fa-sign-out"></i>Выйти</a> 
-                <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display: none;">@csrf</form>
+            <form id="logout-form" action="{{ route('logOut')}}" method="POST" style="display: none;">@csrf @method('DELETE')</form>
             </li>
         </ul>
     </li>

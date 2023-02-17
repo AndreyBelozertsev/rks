@@ -27,13 +27,6 @@ class AuthRegistrar implements RouteRegistrar
             
             });
 
-            Route::controller(SignUpController::class)->group(function(){
-
-                Route::get('/sign-up', 'page')->name('register');
-
-                Route::post('/sign-up', 'handle')->middleware('throttle:auth ')->name('register.handle');
-            });
-
             Route::controller(ForgotPasswordController::class)->group(function(){
 
                 Route::get('/forgot-password', 'page')->middleware('guest')->name('password.forgot');
@@ -47,15 +40,6 @@ class AuthRegistrar implements RouteRegistrar
             
                 Route::post('/reset-password', 'handle')->name('password.reset.handle');
 
-            });
-            
-
-            Route::controller(SocialAuthController::class)->group(function(){
-
-                Route::get('/auth/socialite/{driver}', 'redirect')->name('socailite.redirect');
-            
-                Route::get('/auth/socialite/{driver}/callback', 'callback')->name('socailite.callback');
-                
             });
             
 
