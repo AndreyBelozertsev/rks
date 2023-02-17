@@ -87,8 +87,7 @@ class Users extends Section implements Initializable
             AdminColumnFilter::select( User::class, 'name')
                 ->setDisplay('name')
                 ->setPlaceholder('Все пользователи')
-                ->setColumnName('id')
-            ,
+                ->setColumnName('id'),
             null
         ]);
         $display->getColumnFilters()->setPlacement('card.heading');
@@ -107,6 +106,7 @@ class Users extends Section implements Initializable
         $form = AdminForm::card()->addBody([
             AdminFormElement::columns()->addColumn([
                 AdminFormElement::text('name', 'Имя')
+                    ->setValidationRules('string','max:255')
                     ->required(),
                 AdminFormElement::text('email', 'email')
                     ->setValidationRules([Rule::unique('users')->ignore($id)]),

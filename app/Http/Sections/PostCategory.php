@@ -85,7 +85,13 @@ class PostCategory extends Section implements Initializable
         $form = AdminForm::card()->addBody([
             
             AdminFormElement::text('title', 'Заголовок')
-                ->required(),
+                ->required()
+                ->setValidationRules('string','max:255'),
+            AdminFormElement::number('sort', 'Порядок сортировки')
+                ->setDefaultValue(500)
+                ->required(), 
+            AdminFormElement::checkbox('status', 'Опубликовать?')
+                ->setDefaultValue(true),
             AdminFormElement::html('<hr>'),
             
         ]);

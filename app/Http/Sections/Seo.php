@@ -58,19 +58,19 @@ class Seo extends Section implements Initializable
     {
         $columns = [
             AdminColumn::text('id', '№')->setWidth('50px')->setHtmlAttribute('class', 'text-center'),
-            AdminColumn::link('url', 'УРЛ', 'created_at')
+            AdminColumn::link('title', 'Title')
                 ->setSearchCallback(function($column, $query, $search){
                     return $query
-                        ->orWhere('url', 'like', '%'.$search.'%')
+                        ->orWhere('title', 'like', '%'.$search.'%')
                     ;
                 })
                 ->setOrderable(function($query, $direction) {
                     $query->orderBy('created_at', $direction);
                 }),
-            AdminColumn::text('title', 'Title')
+            AdminColumn::text('url', 'УРЛ', 'created_at')
                 ->setSearchCallback(function($column, $query, $search){
                     return $query
-                        ->orWhere('title', 'like', '%'.$search.'%')
+                        ->orWhere('url', 'like', '%'.$search.'%')
                     ;
                 })
                 ->setOrderable(function($query, $direction) {
@@ -84,12 +84,15 @@ class Seo extends Section implements Initializable
 
         $display = AdminDisplay::datatables()
             ->setName('firstdatatables')
-            ->setOrder([[0, 'asc']])
+            ->setOrder([[0, 'desc']])
             ->setDisplaySearch(true)
             ->paginate(25)
             ->setColumns($columns)
             ->setHtmlAttribute('class', 'table-primary table-hover')
         ;
+        $display->setApply(function ($query) {
+            $query->orderBy('id', 'desc');
+        });
 
 
         $display->getColumnFilters()->setPlacement('card.heading');
@@ -110,6 +113,7 @@ class Seo extends Section implements Initializable
                 AdminFormElement::text('url', 'УРЛ')
                     ->required()
                     ->unique()
+                    ->setValidationRules('string','max:255')
                 ,
                 AdminFormElement::text('title', 'Title')
                     ->required()

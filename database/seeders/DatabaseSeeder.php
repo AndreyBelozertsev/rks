@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             CustomerSeeder::class,
             DevelopmentStageSeeder::class,
             NavigationSeeder::class,
+            PortfolioCategorySeeder::class,
+            PortfolioSeeder::class,
             PostCategorySeeder::class,
             PostSeeder::class,
             ServiceCategorySeeder::class,

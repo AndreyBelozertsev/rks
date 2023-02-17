@@ -97,6 +97,10 @@ class Customer extends Section implements Initializable
             ->setHtmlAttribute('class', 'table-primary table-hover')
         ;
 
+        $display->setApply(function ($query) {
+            $query->orderBy('id', 'desc');
+        });
+
         $display->getColumnFilters()->setPlacement('card.heading');
 
         return $display;

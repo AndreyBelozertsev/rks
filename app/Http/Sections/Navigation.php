@@ -79,8 +79,10 @@ class Navigation extends Section implements Initializable
         $form = AdminForm::card()->addBody([
             AdminFormElement::columns()->addColumn([
                 AdminFormElement::text('title', 'Заголовок')
-                    ->required(),
-                AdminFormElement::text('url', 'Относительный путь'),
+                    ->required()
+                    ->setValidationRules('string','max:255'),
+                AdminFormElement::text('url', 'Относительный путь')
+                    ->setValidationRules('string','max:255'),
                 AdminFormElement::select('navigation_id', 'Родительский пункт', NavigationModel::class)
                     ->setLoadOptionsQueryPreparer(function($element, $query) use($id) {
                         return $query

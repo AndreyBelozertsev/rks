@@ -7,6 +7,7 @@ use Support\Traits\HasSlug;
 use Domain\Post\Models\Post;
 use Support\Traits\CreateSeo;
 use Support\Traits\HasThumbnail;
+use Domain\Case\Models\Portfolio;
 use Support\Traits\DateForHumman;
 use Illuminate\Database\Eloquent\Model;
 use Support\Traits\ResolveRouteBindingSlug;
@@ -21,6 +22,10 @@ class Service extends Model
         return $this->belongsTo(ServiceCategory::class, 'service_category_id', 'id');
     }
 
+    public function portfolios()
+    {
+        return $this->belongsToMany(Portfolio::class);
+    }
 
     public function posts()
     {

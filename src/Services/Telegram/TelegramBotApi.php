@@ -4,7 +4,7 @@ namespace Services\Telegram;
 
 use Throwable;
 use Illuminate\Support\Facades\Http;
-use App\Services\Telegram\Exceptions\TelegramBotApiException;
+use Services\Telegram\Exceptions\TelegramBotApiException;
 
 
 

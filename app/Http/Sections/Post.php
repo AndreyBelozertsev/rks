@@ -9,7 +9,8 @@ use AdminFormElement;
 use AdminColumnFilter;
 
 use SleepingOwl\Admin\Section;
-use App\Services\PathSaveClass;
+use Domain\Case\Models\Portfolio;
+use Services\Files\PathSaveClass;
 use Domain\Product\Models\Service;
 use Domain\Post\Models\PostCategory;
 use Illuminate\Database\Eloquent\Model;
@@ -50,7 +51,7 @@ class Post extends Section implements Initializable
      */
     public function initialize()
     {
-        $this->setIcon('fa fa-newspaper');
+        $this->setIcon('fa fa-list');
     }
 
     /**
@@ -74,6 +75,7 @@ class Post extends Section implements Initializable
             AdminColumn::text('category.title', 'Категория')
                 ->setHtmlAttribute('class', 'badge table-badge')
                 ->setSearchable(false),
+            AdminColumn::boolean('status', 'Статус'),
             AdminColumn::text('created_at', 'Дата создания/обновления', 'updated_at')
                 ->setWidth('160px')
                 ->setOrderable(function($query, $direction) {
@@ -90,6 +92,10 @@ class Post extends Section implements Initializable
             ->setColumns($columns)
             ->setHtmlAttribute('class', 'table-primary table-hover')
         ;
+
+        $display->setApply(function ($query) {
+            $query->orderBy('id', 'desc');
+        });
         $display->getColumnFilters()->setPlacement('card.heading');
 
         return $display;
@@ -107,7 +113,7 @@ class Post extends Section implements Initializable
             
             AdminFormElement::text('title', 'Заголовок')
                 ->required()
-            ,
+                ->setValidationRules('string','max:255'),
             AdminFormElement::select('post_category_id', 'Категория')
                 ->setModelForOptions(PostCategory::class, 'title'),
             AdminFormElement::wysiwyg('description', 'Краткое описание'),
@@ -120,14 +126,16 @@ class Post extends Section implements Initializable
                 ->setUploadPath(function($file) {
                     return PathSaveClass::getUploadPath('post','images'); 
                 }),
-
+            AdminFormElement::multiselect('portfolios', 'Кейсы')
+                ->setHtmlAttribute('data-portfolios', Portfolio::all()->toJson())
+                ->setModelForOptions(Portfolio::class, 'title'),
             AdminFormElement::multiselect('services', 'Услуги')
                 ->setHtmlAttribute('data-services', Service::all()->toJson())
-                ->setModelForOptions(Service::class, 'title'),
+                ->setModelForOptions(Service::class, 'title'),  
             AdminFormElement::checkbox('status', 'Опубликовать?')
                 ->setDefaultValue(true),
             AdminFormElement::html('<hr>'),
-    ]);
+        ]);
 
         $form->getButtons()->setButtons([
             'save'  => new Save(),

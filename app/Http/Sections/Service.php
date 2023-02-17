@@ -9,6 +9,8 @@ use AdminFormElement;
 use AdminColumnFilter;
 use Domain\Post\Models\Post;
 use SleepingOwl\Admin\Section;
+use Domain\Case\Models\Portfolio;
+use Services\Files\PathSaveClass;
 use Illuminate\Database\Eloquent\Model;
 use SleepingOwl\Admin\Form\Buttons\Save;
 use Domain\Product\Models\ServiceCategory;
@@ -59,7 +61,6 @@ class Service extends Section implements Initializable
     public function onDisplay($payload = [])
     {
         $columns = [
-            AdminColumn::text('id', '№')->setWidth('50px')->setHtmlAttribute('class', 'text-center'),
             AdminColumn::link('title', 'Заголовок')
                 ->setSearchCallback(function($column, $query, $search){
                     return $query
@@ -93,6 +94,10 @@ class Service extends Section implements Initializable
             ->setHtmlAttribute('class', 'table-primary table-hover')
         ;
 
+        $display->setApply(function ($query) {
+            $query->orderBy('title', 'asc');
+        });
+
         $display->getColumnFilters()->setPlacement('card.heading');
 
         return $display;
@@ -108,7 +113,8 @@ class Service extends Section implements Initializable
     {
         $form = AdminForm::card()->addBody([
                 AdminFormElement::text('title', 'Заголовок')
-                    ->required(),
+                    ->required()
+                    ->setValidationRules('string','max:255'),
                 AdminFormElement::select('service_category_id', 'Категория')
                     ->setModelForOptions(ServiceCategory::class, 'title')
                     ->required(),
@@ -116,15 +122,18 @@ class Service extends Section implements Initializable
                 AdminFormElement::wysiwyg('content', 'Основное содержание'),
                 AdminFormElement::image('thumbnail', 'Обложка')
                     ->setUploadPath(function($file) {
-                        //return PathSaveClass::getUploadPath('post','images'); 
+                        return PathSaveClass::getUploadPath('service','images'); 
                     }),
                 AdminFormElement::files('images', 'Фото')
                     ->setUploadPath(function($file) {
-                        return PathSaveClass::getUploadPath('post','images'); 
+                        return PathSaveClass::getUploadPath('service','images'); 
                     }),
                 AdminFormElement::number('sort', 'Порядок сортировки')
                     ->setDefaultValue(500)
                     ->required(), 
+                AdminFormElement::multiselect('portfolios', 'Кейсы')
+                    ->setHtmlAttribute('data-portfolios', Portfolio::all()->toJson())
+                    ->setModelForOptions(Portfolio::class, 'title'),
                 AdminFormElement::multiselect('posts', 'Статьи')
                     ->setHtmlAttribute('data-posts', Post::all()->toJson())
                     ->setModelForOptions(Post::class, 'title'),

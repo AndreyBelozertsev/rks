@@ -2,20 +2,24 @@
 
 namespace App\Http\Sections;
 
-use AdminColumn;
-use AdminColumnFilter;
-use AdminDisplay;
 use AdminForm;
+use AdminColumn;
+use AdminDisplay;
 use AdminFormElement;
+use AdminColumnFilter;
+use Domain\Post\Models\Post;
+use SleepingOwl\Admin\Section;
+use Domain\Product\Models\Service;
 use Illuminate\Database\Eloquent\Model;
-use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
-use SleepingOwl\Admin\Contracts\Form\FormInterface;
-use SleepingOwl\Admin\Contracts\Initializable;
-use SleepingOwl\Admin\Form\Buttons\Cancel;
 use SleepingOwl\Admin\Form\Buttons\Save;
+use Domain\Case\Models\PortfolioCategory;
+use Domain\Product\Models\ServiceCategory;
+use SleepingOwl\Admin\Form\Buttons\Cancel;
+use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Form\Buttons\SaveAndClose;
 use SleepingOwl\Admin\Form\Buttons\SaveAndCreate;
-use SleepingOwl\Admin\Section;
+use SleepingOwl\Admin\Contracts\Form\FormInterface;
+use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 
 /**
  * Class Portfolio
@@ -46,7 +50,7 @@ class Portfolio extends Section implements Initializable
      */
     public function initialize()
     {
-        $this->addToNavigation()->setPriority(100)->setIcon('fa fa-briefcase');
+        $this->setIcon('fa fa-list');
     }
 
     /**
@@ -57,26 +61,24 @@ class Portfolio extends Section implements Initializable
     public function onDisplay($payload = [])
     {
         $columns = [
-            AdminColumn::text('id', '#')->setWidth('50px')->setHtmlAttribute('class', 'text-center'),
-            AdminColumn::link('name', 'Name', 'created_at')
+            AdminColumn::link('title', 'Заголовок')
                 ->setSearchCallback(function($column, $query, $search){
                     return $query
-                        ->orWhere('name', 'like', '%'.$search.'%')
-                        ->orWhere('created_at', 'like', '%'.$search.'%')
+                        ->orWhere('title', 'like', '%'.$search.'%')
                     ;
                 })
                 ->setOrderable(function($query, $direction) {
                     $query->orderBy('created_at', $direction);
-                })
-            ,
-            AdminColumn::boolean('name', 'On'),
-            AdminColumn::text('created_at', 'Created / updated', 'updated_at')
+                }),
+            
+            AdminColumn::lists('service_categories.title','Категории услуг'),
+            AdminColumn::text('sort', 'Порядок сортировки'),
+            AdminColumn::text('created_at', 'Дата создания/обновления', 'updated_at')
                 ->setWidth('160px')
                 ->setOrderable(function($query, $direction) {
                     $query->orderBy('updated_at', $direction);
                 })
                 ->setSearchable(false)
-            ,
         ];
 
         $display = AdminDisplay::datatables()
@@ -85,20 +87,13 @@ class Portfolio extends Section implements Initializable
             ->setDisplaySearch(true)
             ->paginate(25)
             ->setColumns($columns)
-            ->setHtmlAttribute('class', 'table-primary table-hover th-center')
+            ->setHtmlAttribute('class', 'table-primary table-hover')
         ;
 
-        $display->setColumnFilters([
-            AdminColumnFilter::select()
-                ->setModelForOptions(\Domain\Case\Models\Portfolio::class, 'name')
-                ->setLoadOptionsQueryPreparer(function($element, $query) {
-                    return $query;
-                })
-                ->setDisplay('name')
-                ->setColumnName('name')
-                ->setPlaceholder('All names')
-            ,
-        ]);
+        $display->setApply(function ($query) {
+            $query->orderBy('sort', 'asc');
+        });
+
         $display->getColumnFilters()->setPlacement('card.heading');
 
         return $display;
@@ -113,20 +108,42 @@ class Portfolio extends Section implements Initializable
     public function onEdit($id = null, $payload = [])
     {
         $form = AdminForm::card()->addBody([
-            AdminFormElement::columns()->addColumn([
-                AdminFormElement::text('name', 'Name')
-                    ->required()
-                ,
-                AdminFormElement::html('<hr>'),
-                AdminFormElement::datetime('created_at')
-                    ->setVisible(true)
-                    ->setReadonly(false)
-                ,
-                AdminFormElement::html('last AdminFormElement without comma')
-            ], 'col-xs-12 col-sm-6 col-md-4 col-lg-4')->addColumn([
-                AdminFormElement::text('id', 'ID')->setReadonly(true),
-                AdminFormElement::html('last AdminFormElement without comma')
-            ], 'col-xs-12 col-sm-6 col-md-8 col-lg-8'),
+            
+            AdminFormElement::text('title', 'Заголовок')
+                ->required()
+                ->setValidationRules('string','max:255'),
+            AdminFormElement::wysiwyg('description', 'Краткое описание'),
+            AdminFormElement::wysiwyg('content', 'Основное содержание'),
+            AdminFormElement::wysiwyg('service_description', 'Услуги прописью'),
+            AdminFormElement::wysiwyg('result', 'Результат'),
+            AdminFormElement::wysiwyg('techology', 'Примененные технологии'),
+            AdminFormElement::text('branch', 'Конкретизированное описание отрасли')
+                ->setValidationRules('string','max:255'),
+            AdminFormElement::image('thumbnail', 'Обложка')
+                ->setUploadPath(function($file) {
+                    return PathSaveClass::getUploadPath('case','images'); 
+                }),
+            AdminFormElement::files('images', 'Фото')
+                ->setUploadPath(function($file) {
+                    return PathSaveClass::getUploadPath('case','images'); 
+                }),
+            AdminFormElement::select('portfolio_category_id', 'Категория')
+                ->setModelForOptions(PortfolioCategory::class, 'title'),
+
+            AdminFormElement::multiselect('posts', 'Статьи')
+                ->setHtmlAttribute('data-posts', Post::all()->toJson())
+                ->setModelForOptions(Post::class, 'title'),
+            AdminFormElement::multiselect('services', 'Услуги')
+                ->setHtmlAttribute('data-services', Service::all()->toJson())
+                ->setModelForOptions(Service::class, 'title'),
+
+            AdminFormElement::multiselect('service_categories', 'Категории услуг')
+                ->setHtmlAttribute('data-service_categories', ServiceCategory::all()->toJson())
+                ->setModelForOptions(ServiceCategory::class, 'title'),
+
+            AdminFormElement::checkbox('status', 'Опубликовать?')
+                ->setDefaultValue(true),
+            AdminFormElement::html('<hr>'),
         ]);
 
         $form->getButtons()->setButtons([

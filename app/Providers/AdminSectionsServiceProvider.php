@@ -22,6 +22,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
         \Domain\Product\Models\ServiceCategory::class => 'App\Http\Sections\ServiceCategory',
         \Domain\Product\Models\DevelopmentStage::class => 'App\Http\Sections\DevelopmentStage',
         \Domain\Case\Models\Portfolio::class => 'App\Http\Sections\Portfolio',
+        \Domain\Case\Models\PortfolioCategory::class => 'App\Http\Sections\PortfolioCategory',
     ];
 
     protected $widgets = [

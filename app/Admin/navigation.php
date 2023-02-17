@@ -18,7 +18,7 @@ return [
     [
         'title' => 'Продукт',
         'icon' => 'fa fa-folder',
-        'priority'    => 100,
+        'priority'    => 200,
         'pages' => [
             (new Page(\Domain\Product\Models\Service::class))
                 ->setPriority(0),
@@ -26,6 +26,17 @@ return [
                 ->setPriority(100),
             (new Page(\Domain\Product\Models\DevelopmentStage::class))
                 ->setPriority(200),
+        ]
+    ],
+    [
+        'title' => 'Кейсы',
+        'icon' => 'fa fa-briefcase',
+        'priority'    => 300,
+        'pages' => [
+            (new Page(\Domain\Case\Models\Portfolio::class))
+                ->setPriority(0),
+            (new Page(\Domain\Case\Models\PortfolioCategory::class))
+                ->setPriority(100),
         ]
     ],
     [

@@ -2,20 +2,21 @@
 
 namespace App\Http\Sections;
 
-use AdminColumn;
-use AdminColumnFilter;
-use AdminDisplay;
 use AdminForm;
+use AdminColumn;
+use AdminDisplay;
 use AdminFormElement;
+use AdminColumnFilter;
+use SleepingOwl\Admin\Section;
+use Services\Files\PathSaveClass;
 use Illuminate\Database\Eloquent\Model;
-use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
-use SleepingOwl\Admin\Contracts\Form\FormInterface;
-use SleepingOwl\Admin\Contracts\Initializable;
-use SleepingOwl\Admin\Form\Buttons\Cancel;
 use SleepingOwl\Admin\Form\Buttons\Save;
+use SleepingOwl\Admin\Form\Buttons\Cancel;
+use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Form\Buttons\SaveAndClose;
 use SleepingOwl\Admin\Form\Buttons\SaveAndCreate;
-use SleepingOwl\Admin\Section;
+use SleepingOwl\Admin\Contracts\Form\FormInterface;
+use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 
 /**
  * Class DevelopmentStage
@@ -73,6 +74,10 @@ class DevelopmentStage extends Section implements Initializable
             ->setHtmlAttribute('class', 'table-primary table-hover')
         ;
 
+        $display->setApply(function ($query) {
+            $query->orderBy('sort', 'asc');
+        });
+
         $display->getColumnFilters()->setPlacement('card.heading');
 
         return $display;
@@ -88,16 +93,17 @@ class DevelopmentStage extends Section implements Initializable
     {
         $form = AdminForm::card()->addBody([
                 AdminFormElement::text('title', 'Заголовок')
-                    ->required(),
+                    ->required()
+                    ->setValidationRules('string','max:255'),
                 AdminFormElement::wysiwyg('description', 'Краткое описание'),
                 AdminFormElement::wysiwyg('content', 'Основное содержание'),
                 AdminFormElement::image('thumbnail', 'Обложка')
                     ->setUploadPath(function($file) {
-                        //return PathSaveClass::getUploadPath('post','images'); 
+                        return PathSaveClass::getUploadPath('development-stage','images'); 
                     }),
                 AdminFormElement::files('images', 'Фото')
                     ->setUploadPath(function($file) {
-                        return PathSaveClass::getUploadPath('post','images'); 
+                        return PathSaveClass::getUploadPath('development-stage','images'); 
                     }),
                 AdminFormElement::number('sort', 'Порядок сортировки')
                     ->setDefaultValue(500)

@@ -7,6 +7,7 @@ use Support\Traits\HasSlug;
 use Support\Traits\CreateSeo;
 use Support\Traits\ScopeActive;
 use Support\Traits\HasThumbnail;
+use Domain\Case\Models\Portfolio;
 use Support\Traits\DateForHumman;
 use Domain\Product\Models\Service;
 use Domain\Post\Models\PostCategory;
@@ -25,6 +26,16 @@ class Post extends Model
         return $this->belongsTo(PostCategory::class, 'post_category_id', 'id');
     }
 
+    public function services()
+    {
+        return $this->belongsToMany(Service::class);
+    }
+
+    public function portfolios()
+    {
+        return $this->belongsToMany(Portfolio::class);
+    }
+
     protected function thumbnailDir():string
     {
         return 'post';
@@ -34,10 +45,4 @@ class Post extends Model
     {
        return route('article.show', ['slug' => $this->slug] );
     }
-
-    public function services()
-    {
-        return $this->belongsToMany(Service::class);
-    }
-
 }

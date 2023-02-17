@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Domain\Case\Models\PortfolioCategory;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,7 +14,25 @@ return new class extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->string('thumbnail')->nullable();
+            $table->text('images')->nullable();
+            $table->text('description')->nullable();
+            $table->text('service_description')->nullable();
+            $table->text('result')->nullable();
+            $table->text('techology')->nullable();
+            $table->string('branch')->nullable();
+            $table->text('content')->nullable();
+            $table->integer('sort')->default(500)->nullable();
+            $table->foreignIdFor(PortfolioCategory::class)
+                    ->nullable()
+                    ->constrained()
+                    ->onUpdate('cascade')
+                    ->nullOnDelete('cascade');
+            $table->boolean('status')->default(true);
             $table->timestamps();
+
         });
     }
 
