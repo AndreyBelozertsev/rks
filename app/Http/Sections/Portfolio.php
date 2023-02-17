@@ -18,13 +18,13 @@ use SleepingOwl\Admin\Form\Buttons\SaveAndCreate;
 use SleepingOwl\Admin\Section;
 
 /**
- * Class Seo
+ * Class Portfolio
  *
- * @property \Domain\Seo\Models\Seo $model
+ * @property \Domain\Case\Models\Portfolio $model
  *
  * @see https://sleepingowladmin.ru/#/ru/model_configuration_section
  */
-class Seo extends Section implements Initializable
+class Portfolio extends Section implements Initializable
 {
     /**
      * @var bool
@@ -34,7 +34,7 @@ class Seo extends Section implements Initializable
     /**
      * @var string
      */
-    protected $title = 'СЕО';
+    protected $title = 'Кейсы';
 
     /**
      * @var string
@@ -46,7 +46,7 @@ class Seo extends Section implements Initializable
      */
     public function initialize()
     {
-        $this->addToNavigation()->setPriority(100)->setIcon('fa fa-rocket');
+        $this->addToNavigation()->setPriority(100)->setIcon('fa fa-briefcase');
     }
 
     /**
@@ -57,27 +57,24 @@ class Seo extends Section implements Initializable
     public function onDisplay($payload = [])
     {
         $columns = [
-            AdminColumn::text('id', '№')->setWidth('50px')->setHtmlAttribute('class', 'text-center'),
-            AdminColumn::link('url', 'УРЛ', 'created_at')
+            AdminColumn::text('id', '#')->setWidth('50px')->setHtmlAttribute('class', 'text-center'),
+            AdminColumn::link('name', 'Name', 'created_at')
                 ->setSearchCallback(function($column, $query, $search){
                     return $query
-                        ->orWhere('url', 'like', '%'.$search.'%')
+                        ->orWhere('name', 'like', '%'.$search.'%')
+                        ->orWhere('created_at', 'like', '%'.$search.'%')
                     ;
                 })
                 ->setOrderable(function($query, $direction) {
                     $query->orderBy('created_at', $direction);
-                }),
-            AdminColumn::text('title', 'Title')
-                ->setSearchCallback(function($column, $query, $search){
-                    return $query
-                        ->orWhere('title', 'like', '%'.$search.'%')
-                    ;
                 })
-                ->setOrderable(function($query, $direction) {
-                    $query->orderBy('created_at', $direction);
-                }),
-            AdminColumn::text('created_at', 'Создано/обновленно', 'updated_at')
+            ,
+            AdminColumn::boolean('name', 'On'),
+            AdminColumn::text('created_at', 'Created / updated', 'updated_at')
                 ->setWidth('160px')
+                ->setOrderable(function($query, $direction) {
+                    $query->orderBy('updated_at', $direction);
+                })
                 ->setSearchable(false)
             ,
         ];
@@ -88,10 +85,20 @@ class Seo extends Section implements Initializable
             ->setDisplaySearch(true)
             ->paginate(25)
             ->setColumns($columns)
-            ->setHtmlAttribute('class', 'table-primary table-hover')
+            ->setHtmlAttribute('class', 'table-primary table-hover th-center')
         ;
 
-
+        $display->setColumnFilters([
+            AdminColumnFilter::select()
+                ->setModelForOptions(\Domain\Case\Models\Portfolio::class, 'name')
+                ->setLoadOptionsQueryPreparer(function($element, $query) {
+                    return $query;
+                })
+                ->setDisplay('name')
+                ->setColumnName('name')
+                ->setPlaceholder('All names')
+            ,
+        ]);
         $display->getColumnFilters()->setPlacement('card.heading');
 
         return $display;
@@ -107,21 +114,19 @@ class Seo extends Section implements Initializable
     {
         $form = AdminForm::card()->addBody([
             AdminFormElement::columns()->addColumn([
-                AdminFormElement::text('url', 'УРЛ')
+                AdminFormElement::text('name', 'Name')
                     ->required()
-                    ->unique()
                 ,
-                AdminFormElement::text('title', 'Title')
-                    ->required()
-                    ->setValidationRules('string','max:50'),
-                AdminFormElement::textarea('description', 'Description')
-                    ->required()
-                    ->setValidationRules('string','max:130'),
-
-            ], 'col-xs-12 col-sm-6 col-md-6 col-lg-6')->addColumn([
-                AdminFormElement::image('open_graph', 'Open graph')
-                    ->addValidationRule('image'),
-            ],'col-xs-12 col-sm-6 col-md-6 col-lg-6')
+                AdminFormElement::html('<hr>'),
+                AdminFormElement::datetime('created_at')
+                    ->setVisible(true)
+                    ->setReadonly(false)
+                ,
+                AdminFormElement::html('last AdminFormElement without comma')
+            ], 'col-xs-12 col-sm-6 col-md-4 col-lg-4')->addColumn([
+                AdminFormElement::text('id', 'ID')->setReadonly(true),
+                AdminFormElement::html('last AdminFormElement without comma')
+            ], 'col-xs-12 col-sm-6 col-md-8 col-lg-8'),
         ]);
 
         $form->getButtons()->setButtons([

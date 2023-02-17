@@ -1,9 +1,13 @@
 <head>
 	<meta charset="utf-8">
 	
-	<title>@yield('title', $seo_title, env('APP_NAME '))</title>
-	<meta name="description" content="Видеокурс по изучению принципов программирования">
+	<title>{{ isset($seo_information->title) ? $seo_information->title : env('APP_NAME') }}</title>
+	<meta name="description" content="{{ isset($seo_information->description) ? $seo_information->description : '' }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<meta property="og:title" content="{{ isset($seo_information->title) ? $seo_information->title : env('APP_NAME') }}"/>
+	<meta property="og:image" content="{{ isset($seo_information->open_graph) ? $seo_information->open_graph : '' }}"/>
+	<meta property="og:description" content="{{ isset($seo_information->description) ? $seo_information->description : '' }}"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">

@@ -18,6 +18,10 @@ class AdminSectionsServiceProvider extends ServiceProvider
         \Domain\Auth\Models\User::class => 'App\Http\Sections\Users',
         \Domain\Seo\Models\Seo::class => 'App\Http\Sections\Seo',
         \Domain\Customer\Models\Customer::class => 'App\Http\Sections\Customer',
+        \Domain\Product\Models\Service::class => 'App\Http\Sections\Service',
+        \Domain\Product\Models\ServiceCategory::class => 'App\Http\Sections\ServiceCategory',
+        \Domain\Product\Models\DevelopmentStage::class => 'App\Http\Sections\DevelopmentStage',
+        \Domain\Case\Models\Portfolio::class => 'App\Http\Sections\Portfolio',
     ];
 
     protected $widgets = [

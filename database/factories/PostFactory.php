@@ -22,7 +22,7 @@ class PostFactory extends Factory
             'title' => fake()->word(),
             //'thumbnail' => $this->faker->fixturesImage('post','post/' . date('Y/m/d') ),
             //'images' => $this->imagesGeneration('about','about/'),
-            //'description' => fake()->paragraph(),
+            'description' => fake()->paragraph(),
             'content' => fake()->paragraph(),
             'created_at' => fake()->dateTimeBetween('-1 week', '+1 week')
         ];

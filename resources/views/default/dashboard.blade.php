@@ -8,13 +8,12 @@
                     <i class="fas fa-address-book text-white"></i>
                 </span>  
                 <div class="info-box-content">
-                    <span class="info-box-text">Тест</span> 
+                    <span class="info-box-text">Заявок</span> 
                     <span class="info-box-number">{{ $test }}</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 @endpush

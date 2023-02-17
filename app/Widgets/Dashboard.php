@@ -10,6 +10,7 @@ use App\Models\Place;
 use App\Models\Video;
 use App\Models\Museum;
 use App\Models\PrintedProduction;
+use Domain\Customer\Models\Customer;
 use SleepingOwl\Admin\Widgets\Widget;
 
 class Dashboard extends Widget
@@ -45,7 +46,7 @@ class Dashboard extends Widget
     public function toHtml()
     {   
 
-        $test= 'test';
+        $test= Customer::count();
        
         return view('default.dashboard',compact('test'))->render();
         

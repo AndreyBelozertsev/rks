@@ -9,15 +9,15 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ServiceCategoryFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
+    protected $model = ServiceCategory::class;
+
+    public function definition()
     {
         return [
-            //
+            'title' => fake()->word(),
+            'description' =>  fake()->text(120),
+            'content' =>  fake()->text(400),
+
         ];
     }
 }

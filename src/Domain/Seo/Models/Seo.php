@@ -13,7 +13,8 @@ class Seo extends Model
 
     protected $fillable = [
         'title',
-        'url'
+        'url',
+        'description'
     ];
 
     protected $casts = [

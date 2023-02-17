@@ -12,11 +12,11 @@ class SeoMiddleware
 {
     public function handle(Request $request, Closure $next)
     {
-        $seo = Cache::rememberForever('seo_' . str($request->getPathInfo())->slug('_'), function () use($request) {
-            return Seo::query()->where('url', $request->getPathInfo())->first() ?? false;
+        $seo_information = Cache::rememberForever('seo_' . str($request->getPathInfo())->slug('_'), function () use($request) {
+            return Seo::query()->where('url', $request->getPathInfo())->select(['id','url','title','description','open_graph'])->first() ?? false;
         });
         
-        view()->share('seo_title', isset($seo->title) ? $seo->title : null);
+        view()->share('seo_information', $seo_information);
         
         return $next($request);
     }

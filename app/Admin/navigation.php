@@ -16,6 +16,19 @@ return [
         ]
     ],
     [
+        'title' => 'Продукт',
+        'icon' => 'fa fa-folder',
+        'priority'    => 100,
+        'pages' => [
+            (new Page(\Domain\Product\Models\Service::class))
+                ->setPriority(0),
+            (new Page(\Domain\Product\Models\ServiceCategory::class))
+                ->setPriority(100),
+            (new Page(\Domain\Product\Models\DevelopmentStage::class))
+                ->setPriority(200),
+        ]
+    ],
+    [
         'title' => 'Настройки',
         'icon' => 'fa fa-cogs',
         'priority'    => 700,
@@ -25,8 +38,7 @@ return [
             (new Page(\Domain\Setting\Models\Navigation::class))
                 ->setPriority(100),
             (new Page(Domain\Auth\Models\User::class))
-                ->setPriority(100)
-            
+                ->setPriority(100)   
         ]
     ],
 ];

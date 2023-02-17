@@ -16,6 +16,10 @@ return new class extends Migration
 
             $table->string('title');
 
+            $table->string('description')->nullable();
+
+            $table->string('open_graph')->nullable();
+
             $table->timestamps();
         });
     }
