@@ -20,12 +20,13 @@ class NavigationSeeder extends Seeder
         $items = [
             [
                 'title' => 'Главная',
+                'url' => '/',
                 'type' => 'top',
                 'status' => 1
             ],
             [
                 'title' => 'Услуги',
-                'url' => '/services',
+                'url' => '/service-category',
                 'type' => 'top',
                 'status' => 1
             ],

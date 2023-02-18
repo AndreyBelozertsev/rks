@@ -133,6 +133,7 @@ class Portfolio extends Section implements Initializable
             AdminFormElement::multiselect('posts', 'Статьи')
                 ->setHtmlAttribute('data-posts', Post::all()->toJson())
                 ->setModelForOptions(Post::class, 'title'),
+                
             AdminFormElement::multiselect('services', 'Услуги')
                 ->setHtmlAttribute('data-services', Service::all()->toJson())
                 ->setModelForOptions(Service::class, 'title'),

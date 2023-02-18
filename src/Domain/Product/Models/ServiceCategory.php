@@ -7,6 +7,8 @@ use Support\Traits\ScopeActive;
 use Domain\Case\Models\Portfolio;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Domain\Product\QueryBuilders\ServiceCategoryQueryBuilder;
+
 
 class ServiceCategory extends Model
 {
@@ -21,4 +23,10 @@ class ServiceCategory extends Model
     {
         return $this->belongsToMany(Portfolio::class);
     }
+
+    public function newEloquentBuilder($query): ServiceCategoryQueryBuilder 
+    {
+         return new ServiceCategoryQueryBuilder($query);
+    }
+
 }

@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class DevelopmentStageController extends Controller
 {
-    //
+    public function show()
+    {
+        
+    }
 }

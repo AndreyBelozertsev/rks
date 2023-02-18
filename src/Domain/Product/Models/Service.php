@@ -2,20 +2,23 @@
 
 namespace Domain\Product\Models;
 
+
 use Support\Traits\Gallery;
 use Support\Traits\HasSlug;
 use Domain\Post\Models\Post;
 use Support\Traits\CreateSeo;
+use Support\Traits\ScopeActive;
 use Support\Traits\HasThumbnail;
 use Domain\Case\Models\Portfolio;
 use Support\Traits\DateForHumman;
 use Illuminate\Database\Eloquent\Model;
 use Support\Traits\ResolveRouteBindingSlug;
+use Domain\Product\QueryBuilders\ServiceQueryBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Service extends Model
 {
-    use HasFactory, HasSlug, ResolveRouteBindingSlug, HasThumbnail, DateForHumman, Gallery, CreateSeo;
+    use HasFactory, HasSlug, ScopeActive, ResolveRouteBindingSlug, HasThumbnail, DateForHumman, Gallery, CreateSeo;
 
     public function category()
     {
@@ -41,6 +44,11 @@ class Service extends Model
     protected function makeUrl():string
     {
        return route('service.show', ['category'=> $this->category->slug ,'slug' => $this->slug] );
+    }
+
+    public function newEloquentBuilder($query): ServiceQueryBuilder 
+    {
+         return new ServiceQueryBuilder($query);
     }
 }
 
