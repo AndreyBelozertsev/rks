@@ -32,7 +32,7 @@ class NavigationSeeder extends Seeder
             ],
             [
                 'title' => 'Контакты',
-                'url' => route('contact.index'),
+                'url' => '/contact',
                 'type' => 'top',
                 'status' => 1
             ]

@@ -37,6 +37,8 @@ return [
                 ->setPriority(0),
             (new Page(\Domain\Case\Models\PortfolioCategory::class))
                 ->setPriority(100),
+            (new Page(\Domain\Case\Models\Client::class))
+                ->setPriority(200),
         ]
     ],
     [

@@ -17,10 +17,15 @@ class SaveSettingsRequest extends FormRequest
     {
         return [
             'organization' => ['required'],
-            'address' => ['required'],
             'phone' => ['required'],
             'email' => ['required','email'],
-            'policy'=> ['required']
+            'address' => ['required'],
+            'work_time' => [],
+            'vk' => [],
+            'telegram' => [],
+            'policy'=> ['required'],
+            'cookie'=> ['required'],
         ];
     }
 }
+

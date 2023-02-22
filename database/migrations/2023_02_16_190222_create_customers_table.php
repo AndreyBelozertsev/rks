@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email')->nullable();
             $table->text('services')->nullable();
+            $table->text('test')->nullable();
             $table->string('url');
             $table->boolean('status')->default(false);
             $table->text('comment')->nullable();

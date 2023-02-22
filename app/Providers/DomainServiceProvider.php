@@ -3,9 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Domain\Seo\Providers\SeoServiceProvider;
 use Domain\Auth\Providers\AuthServiceProvider;
 use Domain\Case\Providers\CaseServiceProvider;
 use Domain\Post\Providers\PostServiceProvider;
+use Domain\Product\Providers\ProductServiceProvider;
 use Domain\Setting\Providers\SettingServiceProvider;
 use Domain\Customer\Providers\CustomerServiceProvider;
 
@@ -18,17 +20,33 @@ class DomainServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
         $this->app->register(
-            AuthServiceProvider::class,
-            CaseServiceProvider::class,
-            CustomerServiceProvider::class,
-            PostServiceProvider::class,
-            ProductServiceProvider::class,
-            SeoServiceProvider::class,
-            SettingServiceProvider::class,
+            AuthServiceProvider::class
         );
 
+        $this->app->register(
+            CaseServiceProvider::class
+        );
+
+        $this->app->register(
+            CustomerServiceProvider::class
+        );
+
+        $this->app->register(
+            PostServiceProvider::class
+        );
+
+        $this->app->register(
+            ProductServiceProvider::class
+        );
+
+        $this->app->register(
+            SeoServiceProvider::class
+        );
+
+        $this->app->register(
+            SettingServiceProvider::class
+        );
     }
 
     /**

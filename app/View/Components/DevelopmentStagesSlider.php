@@ -5,13 +5,16 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Cache;
 use Domain\Product\Models\DevelopmentStage;
 
 class DevelopmentStagesSlider extends Component
 {
 
     protected function getData(){
-        return DevelopmentStage::activeStages()->get();
+        return Cache::rememberForever('development_stages', function () {
+            return DevelopmentStage::activeStages()->get();
+        });    
     }
 
     /**

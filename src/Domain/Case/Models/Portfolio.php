@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Portfolio extends Model
 {
-    use HasFactory, HasSlug, ScopeActive,ResolveRouteBindingSlug, HasThumbnail, DateForHumman, Gallery, CreateSeo;
+    use HasFactory, HasSlug, ScopeActive, ResolveRouteBindingSlug, HasThumbnail, DateForHumman, Gallery, CreateSeo;
 
     public function category()
     {

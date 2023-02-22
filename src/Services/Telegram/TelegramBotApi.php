@@ -24,6 +24,7 @@ class TelegramBotApi
 
             return $response['ok'] ?? false;
         }catch(Throwable $e){
+            
             report(new TelegramBotApiException($e->getMessage()));
             return false;
         }

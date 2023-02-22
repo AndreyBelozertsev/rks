@@ -1,15 +1,13 @@
 <?php
 
 namespace App\Widgets;
-use App\Models\Post;
-use App\Models\About;
 
 
-use App\Models\Audio;
-use App\Models\Place;
-use App\Models\Video;
-use App\Models\Museum;
-use App\Models\PrintedProduction;
+
+
+use Domain\Post\Models\Post;
+use Domain\Case\Models\Portfolio;
+use Domain\Product\Models\Service;
 use Domain\Customer\Models\Customer;
 use SleepingOwl\Admin\Widgets\Widget;
 
@@ -46,9 +44,12 @@ class Dashboard extends Widget
     public function toHtml()
     {   
 
-        $test= Customer::count();
+        $customers = Customer::count();
+        $services = Service::count();
+        $portfolios = Portfolio::count();
+        $posts = Post::count();
        
-        return view('default.dashboard',compact('test'))->render();
+        return view('default.dashboard',compact('customers','services', 'portfolios', 'posts'))->render();
         
     }
 

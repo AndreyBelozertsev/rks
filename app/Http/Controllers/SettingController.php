@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Setting;
+
 use Illuminate\Http\Request;
+use Domain\Setting\Models\Setting;
 use Illuminate\Support\Facades\Cache;
 use App\Http\Requests\SaveSettingsRequest;
 
@@ -19,7 +20,6 @@ class SettingController extends Controller
         Setting::truncate();
         $data=[];
         foreach($request->input() as $k => $v){
-            Cache::forget("setting.contact.$k");
             if(empty($v)){
                 continue;
             }
@@ -28,6 +28,10 @@ class SettingController extends Controller
                 'value'=>$v
             ];
         }
+
+        Cache::forget('setting.contacts');
+        Cache::forget('setting.policy');
+        Cache::forget('setting.cookie-text');
         
         Setting::insert($data);
 
@@ -36,9 +40,11 @@ class SettingController extends Controller
 
     public function policyIndex()
     {
-        $policy = Setting::where('key','policy')
-                    ->select('value')
-                    ->firstOrFail();
+        $policy = Cache::rememberForever('setting.policy', function (){
+            return Setting::where('key','policy')
+                ->select('value')
+                ->first();
+        });
         return view('page.policy', compact('policy') );
     }
 }

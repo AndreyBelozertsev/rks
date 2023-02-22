@@ -2,20 +2,21 @@
 
 namespace App\Http\Sections;
 
-use AdminColumn;
-use AdminColumnFilter;
-use AdminDisplay;
 use AdminForm;
+use AdminColumn;
+use AdminDisplay;
 use AdminFormElement;
+use AdminColumnFilter;
+use SleepingOwl\Admin\Section;
 use Illuminate\Database\Eloquent\Model;
-use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
-use SleepingOwl\Admin\Contracts\Form\FormInterface;
-use SleepingOwl\Admin\Contracts\Initializable;
-use SleepingOwl\Admin\Form\Buttons\Cancel;
 use SleepingOwl\Admin\Form\Buttons\Save;
+use Domain\Product\Models\ServiceCategory;
+use SleepingOwl\Admin\Form\Buttons\Cancel;
+use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Form\Buttons\SaveAndClose;
 use SleepingOwl\Admin\Form\Buttons\SaveAndCreate;
-use SleepingOwl\Admin\Section;
+use SleepingOwl\Admin\Contracts\Form\FormInterface;
+use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 
 /**
  * Class Customer
@@ -114,6 +115,9 @@ class Customer extends Section implements Initializable
      */
     public function onEdit($id = null, $payload = [])
     {
+
+        $serviceCategories = ServiceCategory::allCategoryWithAdditional();
+      
         $form = AdminForm::card()->addBody([
             AdminFormElement::columns()->addColumn([
                 AdminFormElement::text('name', 'Имя')
@@ -134,13 +138,12 @@ class Customer extends Section implements Initializable
                         false=>'Нет'
                     ]
                 ),
-                AdminFormElement::datetime('Дата создания')
+                AdminFormElement::datetime('created_at','Дата заявки')
                     ->setReadonly(true)
                 ,
             ], 'col-xs-12 col-sm-6 col-md-4 col-lg-4')->addColumn([
-                AdminFormElement::textarea('services', 'Услуги')
-                    ->setReadonly(true)
-                ,
+                AdminFormElement::multiselect('services', 'Услуги', $serviceCategories)
+                    ->setReadonly(true),
                 AdminFormElement::textarea('comment', 'Комментарий')
                     ->setReadonly(true)
                 ,
@@ -150,7 +153,6 @@ class Customer extends Section implements Initializable
         $form->getButtons()->setButtons([
             'save'  => new Save(),
             'save_and_close'  => new SaveAndClose(),
-            'save_and_create'  => new SaveAndCreate(),
             'cancel'  => (new Cancel()),
         ]);
 

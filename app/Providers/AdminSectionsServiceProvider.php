@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use SleepingOwl\Admin\Providers\AdminSectionsServiceProvider as ServiceProvider;
+use Domain\Customer\Models\Client;
 
 class AdminSectionsServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
         \Domain\Product\Models\DevelopmentStage::class => 'App\Http\Sections\DevelopmentStage',
         \Domain\Case\Models\Portfolio::class => 'App\Http\Sections\Portfolio',
         \Domain\Case\Models\PortfolioCategory::class => 'App\Http\Sections\PortfolioCategory',
+        \Domain\Case\Models\Client::class => 'App\Http\Sections\Client',
     ];
 
     protected $widgets = [

@@ -21,8 +21,5 @@ class AppRegistrar implements RouteRegistrar
             ->where('file','.+\.(png|jpg|gif|bmp|svg|jpeg)$')
             ->name('thumbnail');
         
-        
-        Route::get('/contact', [SettingController::class, 'contactIndex'])->name('contact.index');
-        
     }
 }

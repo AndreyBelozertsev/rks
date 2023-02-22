@@ -7,5 +7,6 @@
 		
 
 	</div>
+	<x-our-clients />
  </main>
 @endsection

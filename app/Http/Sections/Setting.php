@@ -36,7 +36,7 @@ class Setting extends Section implements Initializable
     /**
      * @var string
      */
-    protected $title = "Контакты";
+    protected $title = "Настройки";
 
     protected $controllerClass = 'App\Http\Controllers\SettingController';
 
@@ -89,13 +89,20 @@ class Setting extends Section implements Initializable
                 ->required(),
         ];
 
+        $fields3 = [
+            AdminFormElement::textarea('cookie', 'Текст cookie', 'ckeditor')
+                ->setDefaultValue(SetModel::where('key','cookie')->value('value'))
+                ->required(),
+        ];
+
         $tabs = AdminDisplay::tabbed();
 
-        $tabs->setTabs(function ($id) use ($fields1, $fields2) {
+        $tabs->setTabs(function ($id) use ($fields1, $fields2, $fields3) {
             $tabs = [];
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements($fields1))->setLabel('Контактные данные');
             $tabs[] = AdminDisplay::tab(AdminForm::elements($fields2))->setLabel('Политика обработки персональных данных');
+            $tabs[] = AdminDisplay::tab(AdminForm::elements($fields3))->setLabel('Текст cookie');
 
             return $tabs;
         });

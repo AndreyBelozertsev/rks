@@ -7,4 +7,6 @@
     @empty
         
     @endforelse
+
+    <a href="{{ route('form.show',['category'=>$serviceCategory->slug, 'url'=>request()->url()]) }}">Обсудить проект</a>
 @endsection

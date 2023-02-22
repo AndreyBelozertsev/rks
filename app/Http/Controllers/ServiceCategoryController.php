@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Domain\Product\Models\ServiceCategory;
 
 class ServiceCategoryController extends Controller
 {
     public function index()
     {
-        $serviceCategories = ServiceCategory::serviceCategories()->get();
+
+        $serviceCategories = Cache::rememberForever('service_categories', function () {
+            return ServiceCategory::serviceCategories()->get();
+        });  
 
         return view( 'page.service-category.index', compact('serviceCategories') );
     }
