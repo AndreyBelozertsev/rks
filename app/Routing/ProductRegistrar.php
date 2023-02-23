@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Contracts\Routing\Registrar;
 use App\Http\Controllers\ServiceCategoryController;
+use App\Http\Controllers\DevelopmentStageController;
 
 class ProductRegistrar implements RouteRegistrar
 {

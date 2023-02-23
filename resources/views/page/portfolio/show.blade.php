@@ -16,7 +16,7 @@
         Статьи
 
         @forelse ($portfolio->posts as $post)
-            <a href="{{ route('article.show',['slug'=> $post->slug ]) }}">{{ $post->title  }}</a>
+            <a href="{{ route('article.show',['slug'=> $post->slug ]) }}">{{ $post->title }}</a>
             <br>
         @empty
             

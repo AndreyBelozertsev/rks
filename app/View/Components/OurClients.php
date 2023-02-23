@@ -12,7 +12,7 @@ class OurClients extends Component
 {
     protected function getData(){
         return Cache::rememberForever('our_clients', function () {
-            return Client::activeClents()->get();
+            return Client::activeItems()->get();
         });   
     }
 

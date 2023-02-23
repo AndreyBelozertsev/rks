@@ -17,7 +17,7 @@ class PostSeeder extends Seeder
     public function run()
     {
         PostFactory::new()
-            ->count(50)
+            ->count(30)
             ->create(['post_category_id'=>PostCategory::inRandomOrder()->first()]);
     }
 }

@@ -17,7 +17,7 @@ class PortfolioSeeder extends Seeder
     public function run()
     {
         PortfolioFactory::new()
-            ->count(50)
+            ->count(20)
             ->create(['portfolio_category_id'=>PortfolioCategory::inRandomOrder()->first()]);
     }
 }

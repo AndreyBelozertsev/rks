@@ -12,7 +12,7 @@ class ServiceCategoryController extends Controller
     {
 
         $serviceCategories = Cache::rememberForever('service_categories', function () {
-            return ServiceCategory::serviceCategories()->get();
+            return ServiceCategory::activeItems()->get();
         });  
 
         return view( 'page.service-category.index', compact('serviceCategories') );
@@ -21,7 +21,7 @@ class ServiceCategoryController extends Controller
     public function show($slug)
     {
 
-        $serviceCategory = ServiceCategory::serviceCategory($slug)->firstOrFail();
+        $serviceCategory = ServiceCategory::activeItem($slug)->firstOrFail();
 
         if(view()->exists("page.service-category.categories.$slug")){
             return view("page.service-category.categories.$slug", compact('serviceCategory') );

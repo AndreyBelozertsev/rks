@@ -16,5 +16,5 @@
 	<meta name="msapplication-TileColor" content="#1E1F43">
 	<meta name="theme-color" content="#1E1F43">
 
-    @vite(['resources/css/app.css', 'resources/css/scss/main.sass'])
+    @vite(['resources/css/app.css', 'resources/css/scss/main.scss'])
 </head>

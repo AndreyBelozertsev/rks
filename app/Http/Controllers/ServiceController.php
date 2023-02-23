@@ -14,8 +14,8 @@ class ServiceController extends Controller
 
     public function show($category, $slug)
     {
-        $service = Service::service($slug)->firstOrFail();
+        $service = Service::activeItem($slug)->firstOrFail();
 
-        return view('page.service.show',compact('service'));
+        return view('page.service.show',compact('service','category'));
     }
 }

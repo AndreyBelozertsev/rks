@@ -8,37 +8,56 @@ module.exports = {
   darkMode: 'media',
   theme: {
       screens: {
-      'xs': '375px',
-      'sm': '540px',
-      'md': '720px',
-      'lg': '960px',
-      'xl': '1140px',
-      '2xl': '1550px',
+        'xs': '375px',
+        'sm': '540px',
+        'md': '720px',
+        'lg': '960px',
+        'xl': '1140px',
+        '2xl': '1550px',
       },
       container: {
-      center: true,
-      padding: '20px',
+        center: true,
+        padding: {
+          DEFAULT: '20px',
+          xs: '0',
+          sm: '0',
+          md: '0'
+        },
       },
       fontFamily: {
       'sans': ['Dela Gothic One', 'sans-serif'],
       },
       fontSize: {
-      'xxs': ['14px', '1.6em'],
-      'xs': ['16px', '1.6em'],
-      'sm': ['18px', '1.6em'],
-      'md': ['20px', '1.45em'],
-      'lg': ['26px', '1.3em'],
-      'xl': ['36px', '1.3em'],
-      '2xl': ['64px', '1.1em'],
-      '3xl': ['96px', '1.1em'],
+        's': ['12px', '18px'],
+        'm': ['14px', '22px'],
+        'l': ['16px', '26px'],
+        'xl': ['18px', '28px'],
+        '2xl': ['20px', '30px'],
+        '3xl': ['24px', '34px'],
+        '4xl': ['30px', '40px']
       },
       extend: {
+        spacing: {
+          '128': '128px',
+        },
         colors: {
-            white: "#FFF",
             brand: "#282C35",
-            purple: "#9C73F8",
-            pink: "#EC4176",
-            greenAccent: "#CBE857",       
+            accent: "#CBE857",
+            onAccent: "#AEED42",
+            sunnyLime: "#d8ee7f",
+            wildSand: "#F0F0F0",
+            brandWhite: "#FBFBFB",
+            success: "#18762e",
+            error: "#c30f00",
+            warning: "#ec8e00",
+            brandGrey:{
+              10: '#E9E9EC',
+              20: '#D5D5D6',
+              40: '#AAABAD',
+              60: '#808185',
+              80: '#55575C',
+              100: '#404247'
+            }          
         },
       },
   },

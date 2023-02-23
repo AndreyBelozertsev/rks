@@ -116,7 +116,7 @@ class Customer extends Section implements Initializable
     public function onEdit($id = null, $payload = [])
     {
 
-        $serviceCategories = ServiceCategory::allCategoryWithAdditional();
+        $serviceCategories = ServiceCategory::itemsWithAdditionalServices();
       
         $form = AdminForm::card()->addBody([
             AdminFormElement::columns()->addColumn([

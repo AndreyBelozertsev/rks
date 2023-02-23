@@ -9,7 +9,7 @@ class PortfolioController extends Controller
 {
     public function show($slug)
     {
-        $portfolio = Portfolio::portfolio($slug)->firstOrFail();
+        $portfolio = Portfolio::activeItem($slug)->firstOrFail();
 
         return view('page.portfolio.show',compact('portfolio'));
     }

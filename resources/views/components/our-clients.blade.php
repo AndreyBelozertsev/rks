@@ -1,3 +1,14 @@
-<div>
-    @dump($clients)<!-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius -->
+<div class="pb-8">
+	<marquee class="py-4 ff-dela-gothic-one text-3xl text-brand" scrollamount="3">
+            @forelse ($clients as $client)
+                <span class="px-4"><img src="{{ $client->thumbnail }}"></span>•
+            @empty
+                
+            @endforelse
+            @forelse ($clients as $client)
+                <span class="px-4"><img src="{{ $client->thumbnail }}"></span>•
+            @empty
+                
+            @endforelse
+	</marquee>
 </div>

@@ -45,7 +45,7 @@ class SendContactFormListener
     protected function createServicesList($services): string
     {
         $serviceCategories = Cache::rememberForever('service_categories_with_additional', function () {
-            return ServiceCategory::allCategoryWithAdditional();
+            return ServiceCategory::itemsWithAdditionalServices();
         }); 
 
         $servicesArray = explode(',' , $services);

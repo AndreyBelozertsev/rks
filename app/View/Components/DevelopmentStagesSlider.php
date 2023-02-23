@@ -13,7 +13,7 @@ class DevelopmentStagesSlider extends Component
 
     protected function getData(){
         return Cache::rememberForever('development_stages', function () {
-            return DevelopmentStage::activeStages()->get();
+            return DevelopmentStage::activeItems()->get();
         });    
     }
 

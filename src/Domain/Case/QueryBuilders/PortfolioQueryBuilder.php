@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class PortfolioQueryBuilder extends Builder
 {
-    public function portfolio($slug): PortfolioQueryBuilder
+    public function activeItem($slug): PortfolioQueryBuilder
     {
         return $this->active()
             ->where('slug',$slug)

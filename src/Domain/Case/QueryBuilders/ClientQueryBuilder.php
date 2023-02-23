@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class ClientQueryBuilder extends Builder
 {
-    public function activeClents(): ClientQueryBuilder
+    public function activeItems(): ClientQueryBuilder
     {
         return $this->active()
             ->orderBy('sort', 'asc')

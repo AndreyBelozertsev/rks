@@ -20,9 +20,9 @@ class CustomerFactory extends Factory
             'name' => fake()->firstName(),
             'phone'=> Str::phoneNumber(fake()->e164PhoneNumber()),
             'email'=> fake()->email(),
-            'services'=> fake()->words(3, true),
+            'services'=> 'marketing',
             'url' => fake()->slug(),
-            'comment'=> fake()->paragraph(2),
+            'comment'=> fake()->paragraph(1),
         ];
     }
 }

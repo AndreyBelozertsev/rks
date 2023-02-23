@@ -5,10 +5,11 @@ use Illuminate\Database\Eloquent\Builder;
 
 class ServiceQueryBuilder extends Builder
 {
-    public function service($slug): ServiceQueryBuilder
+    public function activeItem($slug): ServiceQueryBuilder
     {
         return $this->active()
             ->where('slug',$slug)
+            ->whereHas('category',fn ($query) => $query->active())
             ->with([
                 'portfolios' => fn ($query) => $query
                     ->active()

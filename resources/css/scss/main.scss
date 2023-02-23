@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Dela Gothic One';
+    src: url('./../../fonts/DelaGothicOne/DelaGothicOne-Regular.eot');
+    src: local('Dela Gothic One Regular'), local('DelaGothicOne-Regular'),
+        url('./../../fonts/DelaGothicOne/DelaGothicOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./../../fonts/DelaGothicOne/DelaGothicOne-Regular.woff2') format('woff2'),
+        url('./../../fonts/DelaGothicOne/DelaGothicOne-Regular.woff') format('woff'),
+        url('./../../fonts/DelaGothicOne/DelaGothicOne-Regular.ttf') format('truetype');
+    ;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./../../fonts/Jura/Jura-SemiBold.eot');
+    src: local('Jura SemiBold'), local('Jura-SemiBold'),
+        url('./../../fonts/Jura/Jura-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('./../../fonts/Jura/Jura-SemiBold.woff2') format('woff2'),
+        url('./../../fonts/Jura/Jura-SemiBold.woff') format('woff'),
+        url('./../../fonts/Jura/Jura-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./../../fonts/Jura/Jura-Regular.eot');
+    src: local('Jura Regular'), local('Jura-Regular'),
+        url('./../../fonts/Jura/Jura-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./../../fonts/Jura/Jura-Regular.woff2') format('woff2'),
+        url('./../../fonts/Jura/Jura-Regular.woff') format('woff'),
+        url('./../../fonts/Jura/Jura-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./../../fonts/Jura/Jura-Light.eot');
+    src: local('Jura Light'), local('Jura-Light'),
+        url('./../../fonts/Jura/Jura-Light.eot?#iefix') format('embedded-opentype'),
+        url('./../../fonts/Jura/Jura-Light.woff2') format('woff2'),
+        url('./../../fonts/Jura/Jura-Light.woff') format('woff'),
+        url('./../../fonts/Jura/Jura-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./../../fonts/Jura/Jura-Bold.eot');
+    src: local('Jura Bold'), local('Jura-Bold'),
+        url('./../../fonts/Jura/Jura-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./../../fonts/Jura/Jura-Bold.woff2') format('woff2'),
+        url('./../../fonts/Jura/Jura-Bold.woff') format('woff'),
+        url('./../../fonts/Jura/Jura-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./../../fonts/Jura/Jura-Medium.eot');
+    src: local('Jura Medium'), local('Jura-Medium'),
+        url('./../../fonts/Jura/Jura-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./../../fonts/Jura/Jura-Medium.woff2') format('woff2'),
+        url('./../../fonts/Jura/Jura-Medium.woff') format('woff'),
+        url('./../../fonts/Jura/Jura-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+$brand: #282C35;
+$accent: #CBE857;
+$onAccent: #AEED42;
+$sunnyLime: #d8ee7f;
+$wildSand: #F0F0F0;
+$brandWhite: #FBFBFB;
+$success: #18762e;
+$error: #c30f00;
+$warning: #ec8e00;
+$brandHeading: #2B2D33;
+
+// Imports
+@import '_hero';
+@import '_navmenu';
+@import '_pulse_button';
+@import '_root';
+@import '_runner-string';
