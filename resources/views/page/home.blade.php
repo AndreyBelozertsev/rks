@@ -3,14 +3,14 @@
 @section('content')
 
 <main class="py-20 lg:py-20">
-	<section>
+	<section class="lg:h-screen">
 		<div class="container">
-			<div class="hidden lg:flex justify-center">
-				<svg width="50" height="300">
+			<div class="hidden lg:flex justify-center pt-20 pb-40">
+				<svg width="80" height="300">
 					<text x="28" y="150" fill="#F0F0F0" transform="rotate(-90, 28, 150)" style="text-anchor:middle;font-size:16px;">Другой взгляд на маркетинг</text>
 				</svg>
 				<div class="ff-dela-gothic-one">
-					<div>
+					<div class="pb-12">
 						<h1 class="uppercase text-onAccent text-9xl">Ракурс</h1>
 					</div>
 					<div class="text-4xl">
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="about py-12">
+	<section class="about py-12 lg:h-screen">
 		<div class="container lg:grid grid-cols-2 pb-20 gap-32">
 			<div class="relative">
 				<h2 class="pb-8 lg:pl-4 lg:pt-[96px] lg:text-4xl relative z-[1]">О нас</h2>
@@ -60,26 +60,28 @@
 				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы называем точную цену услуг,поэтому никогда не выходим за рамки согласованного бюджета. А ещё наша команда ценит время партнёров, поэтому всегда соблюдает сроки</p>
 			</div>
 		</div>
+	</section>
+	<section class="services pb-20 lg:mb-40 lg:h-screen">
 		<div class="container hidden lg:grid grid-cols-2 gap-32">
 			<div>
 				<p class="text-4xl">Ракурс в цифрах</p>
 			</div>	
 			<div class="lg:grid grid-cols-2">
 				<div>
-					<p class="text-7xl stroke-panel">+5</p>
-					<span class="text-xl text-onAccent">лет опыта</span>
+					<p class="text-6xl stroke-panel">+5</p>
+					<span class="text-l text-onAccent">лет опыта</span>
 				</div>
 				<div>
-					<p class="text-7xl stroke-panel">+2000</p>
-					<span class="text-xl text-onAccent ">опубликованных панорам</span>
+					<p class="text-6xl stroke-panel">+2000</p>
+					<span class="text-l text-onAccent ">опубликованных панорам</span>
 				</div>
 				<div>
-					<p class="text-7xl stroke-panel">+200</p>
-					<span class="text-xl text-onAccent ">компаний</span>
+					<p class="text-6xl stroke-panel">+200</p>
+					<span class="text-l text-onAccent ">компаний</span>
 				</div>
 				<div>
-					<p class="text-7xl stroke-panel">+22%</p>
-					<span class="text-xl text-onAccent ">прирост выручки клиента</span>
+					<p class="text-6xl stroke-panel">+22%</p>
+					<span class="text-l text-onAccent ">прирост выручки клиента</span>
 				</div>
 			</div>
 
@@ -88,8 +90,6 @@
 			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span></marquee>
 			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span></marquee>
 		</div>
-	</section>
-	<section class="about pb-20">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<div>
@@ -104,24 +104,22 @@
 				</div>
 				<div>
 					<div class="hidden lg:flex flex-col pt-10 pb-20">
-						<div class="flex">
-							<a href="#" class="uppercase text-5xl ff-dela-gothic-one border-solid divide-wildSand border-t-2 leading-loose">маркетинг</a>
-						</div>
-						<div class="flex">
-							<a href="#" class="uppercase text-5xl ff-dela-gothic-one border-solid divide-wildSand border-t-2 leading-loose">разработка</a>
-						</div>
-						<div class="flex">
-							<a href="#" class="uppercase text-5xl ff-dela-gothic-one border-solid divide-wildSand border-t-2 border-b-2 leading-loose">фотосьемка</a>
-						</div>
+						@forelse ($serviceCategories as $category)
+							<div class="flex">
+								<a href="{{ route('service-category.show', $category->slug) }}" 
+								class="uppercase text-5xl ff-dela-gothic-one border-solid divide-wildSand border-t-2 leading-loose @if($loop->last) border-b-2 @endif">{{ $category->title }}</a>
+							</div>
+						@empty
+						@endforelse
 					</div>
 					<div>
-						<a class="text-base underline underline-offset-4 decoration-2 decoration-accent py-2" href="#">Узнать больше</a>
+						<a class="text-base underline underline-offset-4 decoration-2 decoration-accent py-2" href="{{ route('service-category.index') }}">Узнать больше</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="work pb-10">
+	<section class="work pb-10 lg:h-screen">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<div class="relative pb-7">
@@ -135,7 +133,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="client pb-10 ">
+	<section class="client pb-10">
 		<div class="container ">
 			<div class="relative pb-7">
 				<h2 class="pb-8 lg:pl-4 lg:pt-[96px] lg:text-4xl relative z-[1]">Нам<br>доверяют</h2>
