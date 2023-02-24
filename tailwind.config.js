@@ -27,15 +27,18 @@ module.exports = {
       fontFamily: {
       'sans': ['Dela Gothic One', 'sans-serif'],
       },
-      fontSize: {
-        's': ['12px', '18px'],
-        'm': ['14px', '22px'],
-        'l': ['16px', '26px'],
-        'xl': ['18px', '28px'],
-        '2xl': ['20px', '30px'],
-        '3xl': ['24px', '34px'],
-        '4xl': ['30px', '40px']
-      },
+      // fontSize: {
+      //   's': ['12px', '18px'],
+      //   'm': ['14px', '22px'],
+      //   'l': ['16px', '26px'],
+      //   'xl': ['18px', '28px'],
+      //   '2xl': ['20px', '30px'],
+      //   '3xl': ['24px', '34px'],
+      //   '4xl': ['30px', '40px'],
+      //   '5xl': ['36px', '46px'],
+      //   '6xl': ['42px', '52px'],
+      //   '7xl': ['48px', '58px'],
+      // },
       extend: {
         spacing: {
           '128': '128px',

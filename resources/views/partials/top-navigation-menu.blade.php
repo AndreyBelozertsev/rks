@@ -11,19 +11,19 @@
                     <span class="bar"></span>
                 </div>
             </div>
-            <ul class="menu" id="menu">
+            <ul class="menu container" id="menu">
                 @forelse ($menu->all() as $item)
-                    <li><a class="text-4xl" href="{{ $item->link() }}" class="@if($item->isActive()) font-bold @endif"> {{ $item->label()  }}</a></li>
+                    <li><a href="{{ $item->link() }}" class="@if($item->isActive()) menu_active @endif"> {{ $item->label()  }}</a></li>
                 @empty
                 @endforelse
                 @if (auth()->check())
                     <li>
                         <span>{{ auth()->user()->name }}</span>
-                        <a class="text-4xl" href="{{ route('admin.dashboard') }}">В админ панель</a>
+                        <a href="{{ route('admin.dashboard') }}">В админ панель</a>
                         <form action="{{ route('logOut') }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="text-4xl" type="submit">Выйти</button>
+                            <button type="submit">Выйти</button>
                         </form>
                     </li>
                 @endif

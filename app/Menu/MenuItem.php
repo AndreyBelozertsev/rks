@@ -2,6 +2,7 @@
 
 namespace App\Menu;
 
+use Illuminate\Support\Str;
 use Support\Traits\Makeable;
 
 class MenuItem
@@ -32,7 +33,13 @@ class MenuItem
         if($path === '/') {
             return request()->path() === $path;
         }
-
-        return request()->fullUrlIs($this->link() . '*');
+    
+        $link = $this->link();
+        
+        if(! Str::is(url('/') . '*', $link) ){
+            $link = url('/') . $link; 
+        }
+      
+        return request()->fullUrlIs($link . '*');
     }
 }
