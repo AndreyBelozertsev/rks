@@ -4,6 +4,7 @@
 	<title>{{ isset($seo_information->title) ? $seo_information->title : env('APP_NAME') }}</title>
 	<meta name="description" content="{{ isset($seo_information->description) ? $seo_information->description : '' }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 	<meta property="og:title" content="{{ isset($seo_information->title) ? $seo_information->title : env('APP_NAME') }}"/>
 	<meta property="og:image" content="{{ isset($seo_information->open_graph) ? $seo_information->open_graph : '' }}"/>

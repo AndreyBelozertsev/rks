@@ -12,11 +12,11 @@ class CustomerRegistrar implements RouteRegistrar
     public function map(Registrar $registrar): void
     {
         Route::middleware('web')->group(function () {
-            Route::get('/contact/form', [CustomerController::class, 'showForm'])->name('form.show');
+            Route::get('/form', [CustomerController::class, 'showForm'])->name('form.show');
 
-            Route::post('/contact/form', [CustomerController::class, 'contactFormProcess']);
+            Route::post('/form', [CustomerController::class, 'contactFormProcess']);
 
-            Route::post('/contact/modal-form', [CustomerController::class, 'contactModalFormProcess'])->name('form.send-modal');
+            Route::post('/modal-form', [CustomerController::class, 'contactModalFormProcess'])->name('form.send-modal');
 
         });
     }

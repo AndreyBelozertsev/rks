@@ -32,7 +32,7 @@ class SendModalContactFormRequest extends FormRequest
 
         $this->merge([
             'services' => 'analytic',
-            'url' => request()->url(),
+            'url' => isset($this->url) ? $this->url : request()->url(),
             'phone' => Str::phoneNumber($this->phone),
         ]);
     }

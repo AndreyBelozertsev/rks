@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Forms;
 
 use Closure;
 use Illuminate\View\Component;
@@ -19,6 +19,6 @@ class ServiceCategoriesInputs extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.service-categories-inputs', ['categories' => $this->getData()]);
+        return view('components.forms.service-categories-inputs', ['categories' => $this->getData()]);
     }
 }

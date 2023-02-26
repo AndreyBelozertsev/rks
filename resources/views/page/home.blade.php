@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-<main class="py-20 lg:py-20">
 	<section class="lg:h-screen">
 		<div class="container">
 			<div class="hidden lg:flex justify-center pt-20 pb-40">
@@ -19,7 +17,7 @@
 					</div>
 				</div>
 				<div class="flex items-end">
-					<a href="{{ route('form.show') }}"><button class="rounded-full w-128 h-128 ff-dela-gothic-one bg-onAccent text-brand text-lg">Оставить<br>заявку</button></a>
+					<a href="{{ route('form.show') }}"><button class="animation-pulse rounded-full w-128 h-128 ff-dela-gothic-one bg-onAccent text-brand text-lg">Оставить<br>заявку</button></a>
 				</div>
 			</div>
 			<div class="relative block lg:hidden">
@@ -39,7 +37,7 @@
 				<a href="{{ route('form.show') }}"><button class="rounded-full w-128 h-128 ff-dela-gothic-one bg-accent text-brand text-lg">Оставить<br>заявку</button></a>
 			</div>
 			<div class="flex justify-center pb-8">
-				<button class="pulse-button">
+				<button class="pulse-button" id="pulse-button">
 					<span class="pulse-button__icon"></span>
 					<span class="pulse-button__rings"></span>
 					<span class="pulse-button__rings"></span>
@@ -48,12 +46,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="about py-12 lg:h-screen">
+	<section class="about py-12" id="anchor">
 		<div class="container lg:grid grid-cols-2 pb-20 gap-32">
-			<div class="relative">
-				<h2 class="pb-8 lg:pl-4 lg:pt-[96px] lg:text-4xl relative z-[1]">О нас</h2>
-				<span class="hidden lg:inline absolute top-0 text-brandGrey-100 text-[180px] leading-none ff-dela-gothic-one z-0">01</span>
-			</div>
+			<x-subtitle-home title="О нас" number="01" />
 			<div>
 				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Руководствуясь концепцией, согласно которой нет единого шаблона для всех,Ракурс нашёл своё место в качестве динамично развивающейся и гибкой студии, которая охватывает несколько областей маркетинга, брендинг и разработки</p>
 				<p class="lg:text-2xl lg:leading-10 lg:pb-10">За 5 лет мы выросли благодаря вовлеченности в проблемы клиентов и упорному труду</p>
@@ -61,7 +56,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="services pb-20 lg:mb-40 lg:h-screen">
+	<section class="services pb-20 lg:mb-40">
 		<div class="container hidden lg:grid grid-cols-2 gap-32">
 			<div>
 				<p class="text-4xl">Ракурс в цифрах</p>
@@ -93,10 +88,7 @@
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<div>
-					<div class="relative pb-7">
-						<h2 class="pb-8 lg:pl-4 lg:pt-[96px] lg:text-4xl relative z-[1]">Услуги</h2>
-						<span class="hidden lg:inline absolute top-0 text-brandGrey-100 text-[180px] leading-none ff-dela-gothic-one z-0">02</span>
-					</div>
+					<x-subtitle-home class="pb-7" title="Услуги" number="02" />
 					<div class="pb-8">
 						<p>Независимо от того, управляете ли вы предприятием или небольшим стартапом, вы получите лучший в своём классе сервис, соответствующий вашим ожиданиям</p>
 						<p>Решаем задачи по продвижению любой сложности: от контекстной рекламы до создания приложений</p>
@@ -119,13 +111,10 @@
 			</div>
 		</div>
 	</section>
-	<section class="work pb-10 lg:h-screen">
+	<section class="work pb-10">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
-				<div class="relative pb-7">
-					<h2 class="pb-8 lg:pl-4 lg:pl-4 lg:pt-[96px] lg:text-4xl relative z-[1]">Как мы<br>работаем?</h2>
-					<span class="hidden lg:inline absolute top-0 text-brandGrey-100 text-[180px] leading-none ff-dela-gothic-one z-0">03</span>
-				</div>
+				<x-subtitle-home class="pb-7" title="Как мы<br>работаем?" number="03" />
 				<div class="pb-8">
 					<p class="lg:text-2xl lg:leading-10 lg:pb-10">Нам важно быть полезными клиенту, поэтому изначально мы согласовываем целевые показатели, проводим анализ компании, изучаем её представленность в интернете, сайт, целевую аудиторию</p>
 					<p class="lg:text-2xl lg:leading-10 lg:pb-10">После аудита мы озвучиваем зоны потенциального роста и интересуемся бюджетом на рекламу. Понимание объёма вашего бюджета даёт нам возможность предложить оптимальные варианты для начала взаимовыгодного сотрудничества</p>
@@ -135,10 +124,7 @@
 	</section>
 	<section class="client pb-10">
 		<div class="container ">
-			<div class="relative pb-7">
-				<h2 class="pb-8 lg:pl-4 lg:pt-[96px] lg:text-4xl relative z-[1]">Нам<br>доверяют</h2>
-				<span class="hidden lg:inline absolute top-0 text-brandGrey-100 text-[180px] leading-none ff-dela-gothic-one z-0">04</span>
-			</div>
+			<x-subtitle-home class="pb-7" title="Нам<br>доверяют" number="04" />
 		</div>
 		<x-our-clients />
 		<div class="container">
@@ -152,5 +138,4 @@
 			</div>
 		</div>
 	</section>
- </main>
 @endsection

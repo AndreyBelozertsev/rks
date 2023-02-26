@@ -17,7 +17,7 @@ class NewCustomerDTO
     {
         $this->name = $customer['name'];
         $this->phone = $customer['phone'];
-        $this->email = $customer['email'];
+        $this->email = isset($customer['email']) ? $customer['email'] : null;
         $this->services = $customer['services'];
         $this->url = $customer['url'];
         $this->comment = isset($customer['comment']) ? $customer['comment'] : null;

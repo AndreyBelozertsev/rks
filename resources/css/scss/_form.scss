@@ -1,0 +1,13 @@
+
+
+input:invalid + span:before {
+    content: attr(placeholder);
+    position: relative;
+    color: $brandGrey-40;
+}
+  
+input:invalid + span:after {
+    content: ' *';
+    position: relative;
+    color: $error;
+}

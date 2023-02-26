@@ -4,6 +4,7 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    "./node_modules/flowbite/**/*.js"
   ],
   darkMode: 'media',
   theme: {
@@ -67,5 +68,5 @@ module.exports = {
   variants: {
       extend: {},
   },
-  plugins: [],
+  plugins: []
 }

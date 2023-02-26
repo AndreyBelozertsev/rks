@@ -1,14 +1,37 @@
 @props([
     'type'=>'text',
     'isError' => false,
-    'value' => ''
+    'value' => '',
+    'required' => '',
+    'name' => '',
+    'placeholder' => '',
+
 ])
 
-<input type="{{ $type }}" value="{{ $value }}" {{ $attributes
-    ->class(
-        [
-            '_is-error'=> $isError,
-            'w-full h-14 px-4 rounded-lg border border-[#A07BF0] bg-white/20 focus:border-pink focus:shadow-[0_0_0_2px_#EC4176] outline-none transition text-white placeholder:text-white text-xxs md:text-xs font-semibold']
-    )
- }}
->
+<label class="relative">
+        <input 
+            {{ $required }}
+            name="{{ $name }}"
+            {{ $attributes
+                ->class(
+                    [
+                        'input-error'=> $isError,
+                        'placeholder-brandGrey-40 bg-brand border-solid border-brandGrey-40 border-b w-full py-3 px-2 outline-none'
+                    ]
+                )
+            }}
+            type="{{ $type }}"
+            @if(! $required) 
+                placeholder="{{ $placeholder }}"
+            @endif
+        >
+       
+        @if($required)
+            <span class="absolute -top-1 left-2 cursor-text" placeholder="{{ $placeholder }}"></span>
+        @endif
+        <p class="text-error text-sm feedback-error hidden" id="{{ $name }}-error">
+            <img class="inline align-bottom" src="{{ asset('template/icon/warning-filled.svg') }}">
+            <span>Ошибка</span>
+        </p>
+</label>
+

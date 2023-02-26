@@ -36,6 +36,8 @@
 			</div>
 		</div>
 	</footer>
+	@include('modals.response')
+	@include('modals.analitic')
 	<script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
 	@vite(['resources/js/app.js'])
 </body>

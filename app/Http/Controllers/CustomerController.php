@@ -22,7 +22,7 @@ class CustomerController extends Controller
         
         $action(new NewCustomerDTO($request->validated()));
 
-        return view('page.form.index');
+        return response()->json(['success'=>'Спасибо!</br>В ближайшее время<br>мы свяжемся с вами'],200);
     }
 
     public function contactModalFormProcess(SendModalContactFormRequest $request, NewCustomerContract $action)
@@ -30,7 +30,7 @@ class CustomerController extends Controller
 
         $action(new NewCustomerDTO($request->validated()));
 
-        return view('page.form.index');
+        return response()->json(['success'=>'Спасибо!</br>В ближайшее время<br>мы свяжемся с вами'],200);
     }
     
 }
