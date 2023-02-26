@@ -5,7 +5,8 @@
             class="custom-checkbox-bg hidden" 
             id="service-{{$category->slug}}" 
             type="checkbox" 
-            name="services[{{ $category->slug }}]" 
+            name="services" 
+            value="{{ $category->slug }}"
             @if (request()->get('category') == $category->slug) checked @endif
         >
         <label class="rounded-2xl label-custom-checkbox-bg py-2 px-4 border-solid border-onAccent border" for="service-{{$category->slug}}">

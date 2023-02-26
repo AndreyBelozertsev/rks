@@ -1,4 +1,5 @@
 import './bootstrap';
+import './components/cookie-modal';
 import './components/form';
 import './components/map';
 import './components/modal';

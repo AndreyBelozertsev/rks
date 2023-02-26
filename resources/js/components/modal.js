@@ -6,8 +6,6 @@ for (let i = 0; i < openmodal.length; i++) {
   })
 }
 
-document.addEventListener('click', function(e){console.log(e.target)});
-
 let closemodal = document.querySelectorAll('.modal-close');
 for (let i = 0; i < closemodal.length; i++) {
     closemodal[i].addEventListener('click', function(e){
@@ -44,14 +42,15 @@ export function hideModal(id) {
         modal.classList.remove('modal-open');
         modal.classList.add('opacity-0','pointer-events-none');
         body.classList.remove('modal-active');
+        modal.dispatchEvent(new CustomEvent("hideModal", {
+            detail: { id: id }
+        }));
     }
 }
 
 export function hideAllModals() {
     const modals = document.querySelectorAll('.modal-open');
-    console.log( 1234 );
     for (let i = 0; i < modals.length; i++) {
-        console.log( modals[i].id );
         hideModal( modals[i].id );
     }
 }

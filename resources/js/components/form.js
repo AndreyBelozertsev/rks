@@ -1,7 +1,4 @@
 import {openModal,hideAllModals } from './modal.js';
-//import  hideAllModals from './modal.js';
-
-openModal('modal-analitic');
 
 if( document.getElementsByClassName('contact-form') ){
     let forms = document.getElementsByClassName('contact-form');
@@ -13,7 +10,7 @@ if( document.getElementsByClassName('contact-form') ){
             const button = e.target.querySelector('input[type="submit"]');
             //const preloader = document.getElementById('preloader');
             const responseBlock = document.querySelector('#modal-response .modal-content');
-            console.log(responseBlock);
+   
             //button.setAttribute('disabled', 'disabled');
             //preloader.classList.remove("hidden");
             responseBlock.innerHTML = '';
@@ -29,13 +26,8 @@ if( document.getElementsByClassName('contact-form') ){
                 inputsError[i].querySelector('span').innerHTML ='';
             }
 
-            let object = {};
-            new FormData(e.target).forEach(function(value, key){
-                if(value){
-                    object[key] = value;
-                }
-            });
-            let formJson = JSON.stringify(object);
+            let formJson = formToJSON(e.target);
+
             const res = await fetch(e.target.action, {
                 method: "POST",
                 headers: {
@@ -75,4 +67,25 @@ if( document.getElementsByClassName('contact-form') ){
             }
         });
     }
+}
+
+
+function formToJSON( elem ) {
+    let output = {};
+    new FormData( elem ).forEach(
+        ( value, key ) => {
+            if(value ){
+                if ( Object.prototype.hasOwnProperty.call( output, key ) ) {
+                    let current = output[ key ];
+                    if ( !Array.isArray( current ) ) {
+                        current = output[ key ] = [ current ];
+                    }
+                    current.push( value );
+                } else {
+                    output[ key ] = value;
+                }
+            }
+        }
+    );
+    return JSON.stringify( output );
 }

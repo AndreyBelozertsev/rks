@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             PostSeeder::class,
             ServiceCategorySeeder::class,
             ServiceSeeder::class,
+            SettingSeeder::class,
         ]);
     }
 }

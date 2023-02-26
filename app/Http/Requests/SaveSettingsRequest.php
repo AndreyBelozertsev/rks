@@ -16,15 +16,20 @@ class SaveSettingsRequest extends FormRequest
     public function rules()
     {
         return [
-            'organization' => ['required'],
-            'phone' => ['required'],
-            'email' => ['required','email'],
-            'address' => ['required'],
+            'organization' => [],
+            'phone1' => [],
+            'phone2' => [],
+            'email' => [],
+            'city' => [],
+            'street' => [],
+            'office' => [],
+            'coordinates'=> [],
+            'work_days' => [],
             'work_time' => [],
             'vk' => [],
             'telegram' => [],
-            'policy'=> ['required'],
-            'cookie'=> ['required'],
+            'policy'=> [],
+            'cookie'=> [],
         ];
     }
 }

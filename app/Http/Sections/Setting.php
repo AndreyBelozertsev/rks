@@ -58,41 +58,57 @@ class Setting extends Section implements Initializable
      *
      * @return DisplayInterface
      */
-    public function onDisplay($payload = [])
-    {
-  
+    public function onDisplay($payload = []){
 
         $fields1 = [
             AdminFormElement::text('organization', 'Название организации')
-                ->setDefaultValue(SetModel::where('key','organization')->value('value'))
-                ->required(),
-            AdminFormElement::text('phone', 'Номер телефона')
-                ->setDefaultValue(SetModel::where('key','phone')->value('value'))
-                ->required(),
+                ->setDefaultValue(SetModel::where('key','organization')->value('value')),
+            AdminFormElement::text('phone1', 'Номер телефона 1')
+                ->setDefaultValue(SetModel::where('key','phone1')->value('value')),
+
+            AdminFormElement::text('phone2', 'Номер телефона 2')
+                ->setDefaultValue(SetModel::where('key','phone2')->value('value')),
+
             AdminFormElement::text('email', 'Адрес электронной почты')
-                ->setDefaultValue(SetModel::where('key','email')->value('value'))
-                ->required(),
-            AdminFormElement::text('address', 'Адрес')
-                ->setDefaultValue(SetModel::where('key','address')->value('value'))
-                ->required(),
-            AdminFormElement::text('work_time', 'Режим работы')
+                ->setDefaultValue(SetModel::where('key','email')->value('value')),
+
+            AdminFormElement::text('city', 'Город')
+                ->setDefaultValue(SetModel::where('key','city')->value('value')),
+
+            AdminFormElement::text('street', 'Улица')
+                ->setDefaultValue(SetModel::where('key','street')->value('value')),
+
+            AdminFormElement::text('building', 'Номер строения')
+                ->setDefaultValue(SetModel::where('key','building')->value('value')),
+
+            AdminFormElement::text('office', 'Офис')
+                ->setDefaultValue(SetModel::where('key','office')->value('value')),
+            
+            AdminFormElement::text('coordinates', 'Координаты')
+                ->setDefaultValue(SetModel::where('key','coordinates')->value('value')),
+            
+            AdminFormElement::text('work_days', 'Рабочие дни')
+                ->setDefaultValue(SetModel::where('key','work_days')->value('value')),
+
+            AdminFormElement::text('work_time', 'Часы работы')
                 ->setDefaultValue(SetModel::where('key','work_time')->value('value')),
+
+                
             AdminFormElement::text('vk', 'Вконтакте')
                 ->setDefaultValue(SetModel::where('key','vk')->value('value')),
+
             AdminFormElement::text('telegram', 'Telegram')
                 ->setDefaultValue(SetModel::where('key','telegram')->value('value')),
         ];
         $fields2 = [
             AdminFormElement::wysiwyg('policy', 'Политика обработки перснальных данных', 'ckeditor')
                 ->setHeight('450')
-                ->setDefaultValue(SetModel::where('key','policy')->value('value'))
-                ->required(),
+                ->setDefaultValue(SetModel::where('key','policy')->value('value')),
         ];
 
         $fields3 = [
             AdminFormElement::textarea('cookie', 'Текст cookie', 'ckeditor')
-                ->setDefaultValue(SetModel::where('key','cookie')->value('value'))
-                ->required(),
+                ->setDefaultValue(SetModel::where('key','cookie')->value('value')),
         ];
 
         $tabs = AdminDisplay::tabbed();

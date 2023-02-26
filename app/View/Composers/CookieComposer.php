@@ -14,13 +14,13 @@ class CookieComposer
     protected function getData()
     {
         return Cache::rememberForever('setting.cookie-text', function (){
-            return Setting::where('key','cookie')->select('value')->first() ?? false;
+            return Setting::where('key','cookie')->pluck('value')->first() ?? false;
         });
     }
 
     public function compose(View $view): void
     {
-        $view->with('cookie-text',$this->getData());
+        $view->with('cookie_text',$this->getData());
     }
 
 }

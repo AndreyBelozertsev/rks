@@ -1,6 +1,6 @@
 <div id="modal-analitic" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
     <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-30"></div>
-    <div class="modal-container bg-brand w-11/12 md:max-w-md max-h-screen mx-auto rounded shadow-lg z-50 overflow-y-auto">
+    <div class="modal-container bg-brand w-full md:w-11/12 md:max-w-md max-h-screen mx-auto rounded shadow-lg z-50 overflow-y-auto">
         <div class="py-2 text-left px-6">
             <div class="flex justify-end items-center">
                 <div data-modal="modal-analitic" class="modal-close cursor-pointer z-50">
@@ -31,11 +31,11 @@
                     </div>
   
                     <div class="py-3">
-                        <div class="custom-checkbox-mark inline text-left">
-                            
-                            <input type="checkbox" id="custom-checkbox-agree" name="agree" checked="checked">
+                        <div class="custom-checkbox-mark inline text-left"> 
+                            <input type="checkbox" id="custom-checkbox-agree" name="agree">
                             <label for="custom-checkbox-agree">
-                            <span>Согласен с политикой обработки персональных данных</span></label>
+                                <span>Согласен с политикой обработки персональных данных</span>
+                            </label>
                             <p class="text-error text-sm feedback-error hidden" id="agree-error">
                                 <img class="inline align-bottom" src="{{ asset('template/icon/warning-filled.svg') }}">
                                 <span></span>

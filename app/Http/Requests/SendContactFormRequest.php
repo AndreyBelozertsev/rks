@@ -33,7 +33,7 @@ class SendContactFormRequest extends FormRequest
         
         $this->merge([
             'services' => $this->services 
-                ? implode( ',' ,  collect($this->services)->keys()->toArray() ) 
+                ? implode( ',' ,  collect($this->services)->all() ) 
                 : '',
             'url' => $this->url ? $this->url : request()->url(),
             'phone' => Str::phoneNumber($this->phone),

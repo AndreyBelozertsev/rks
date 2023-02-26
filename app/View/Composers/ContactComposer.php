@@ -12,10 +12,16 @@ class ContactComposer
 
     protected $fields = [
         'organization', 
-        'address', 
+        'city', 
+        'street',
+        'building',
+        'office',
+        'coordinates',
         'email', 
-        'phone', 
+        'phone1',
+        'phone2', 
         'telegram', 
+        'work_days',
         'work_time',
         'vk'
     ];
@@ -25,7 +31,7 @@ class ContactComposer
     {
         $fields = $this->fields;
         return Cache::rememberForever('setting.contacts', function () use($fields) {
-            return Setting::whereIn('key',$fields)->select('value')->get();
+            return Setting::whereIn('key',$fields)->pluck('value', 'key');
         });
     }
 

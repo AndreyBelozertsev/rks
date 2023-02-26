@@ -15,19 +15,22 @@ class ServiceCategorySeeder extends Seeder
     {
         $categories = [
             [
-                'title' => 'Разработка',
-                'description' =>  fake()->text(120),
-                'content' =>  fake()->text(400),
+                'title' => 'Маркетинг',
+                'description' =>  fake()->paragraph(4),
+                'thumbnail' => 'template/images/marketing.png',
+                'content' =>  fake()->paragraph(8),
             ],
             [
-                'title' => 'Маркетинг',
-                'description' =>  fake()->text(120),
-                'content' =>  fake()->text(400),
+                'title' => 'Разработка',
+                'description' =>  fake()->paragraph(4),
+                'thumbnail' => 'template/images/development.png',
+                'content' =>  fake()->paragraph(8),
             ],
             [
                 'title' => 'Фотосъемка',
-                'description' =>  fake()->text(120),
-                'content' =>  fake()->text(400),
+                'description' =>  fake()->paragraph(4),
+                'thumbnail' => 'template/images/photography.png',
+                'content' =>  fake()->paragraph(8),
             ]
         ];
        
