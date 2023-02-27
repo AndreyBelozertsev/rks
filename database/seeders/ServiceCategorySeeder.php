@@ -16,21 +16,21 @@ class ServiceCategorySeeder extends Seeder
         $categories = [
             [
                 'title' => 'Маркетинг',
-                'description' =>  fake()->paragraph(4),
-                'thumbnail' => 'template/images/marketing.png',
-                'content' =>  fake()->paragraph(8),
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service-category/marketing.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
             ],
             [
                 'title' => 'Разработка',
-                'description' =>  fake()->paragraph(4),
-                'thumbnail' => 'template/images/development.png',
-                'content' =>  fake()->paragraph(8),
+                'description' => '<p>Мы часто сталкивались с тем, что заказчики, которые хотят заказать свой первый сайт, точно не знают, как правильно выбрать исполнителя, из чего складывается стоимость сайта и какие есть особенности. С чего же складывается цена?</p>',
+                'thumbnail' => '/template/images/service-category/development.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
             ],
             [
                 'title' => 'Фотосъемка',
-                'description' =>  fake()->paragraph(4),
-                'thumbnail' => 'template/images/photography.png',
-                'content' =>  fake()->paragraph(8),
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service-category/photography.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
             ]
         ];
        

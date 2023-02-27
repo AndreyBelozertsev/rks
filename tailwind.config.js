@@ -20,8 +20,8 @@ module.exports = {
         center: true,
         padding: {
           DEFAULT: '20px',
-          xs: '0',
-          sm: '0',
+          xs: '16px',
+          sm: '16px',
         },
       },
       fontFamily: {

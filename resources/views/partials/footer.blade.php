@@ -1,5 +1,5 @@
 	<!-- Site footer -->
-	<footer class="bg-brand pt-20 pb-8">
+	<footer class="bg-brand py-8">
 		<div class="container">
 			<div class="hidden lg:flex gap-24 pb-8">
 				<div>

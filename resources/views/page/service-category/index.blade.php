@@ -2,28 +2,21 @@
 
 @section('content')
 <main class="py-12">
-    <section>
+    <section class="pb-12">
         <div class="container">
             <div class="pb-12">
                 <h1>Услуги</h1>
             </div>
-            <div class="pb-40">
-                <p class="lg:text-2xl lg:leading-10"><span class="text-onAccent font-bold">Ракурс</span> — это студия digital маркетинга с широким спектром услуг</p>
+            <div class="pb-28">
+                <p class="lg:text-2xl lg:leading-10"><span class="text-accent lg:text-onAccent font-bold">Ракурс</span> — это студия digital маркетинга с широким спектром услуг</p>
                 <p class="lg:text-2xl lg:leading-10">Мы разрабатываем, дорабатываем и внедряем цифровой продукт, который помогает бизнесу преодолеть вызовы и решить проблемы, связанные с максимальным охватом в интернете, несмотря на конкуренцию на рынке</p>
             </div>
-            <div class="flex justify-center pb-24">
-                    <button class="pulse-button" id="pulse-button">
-                        <span class="pulse-button__icon"></span>
-                        <span class="pulse-button__rings"></span>
-                        <span class="pulse-button__rings"></span>
-                        <span class="pulse-button__rings"></span>
-                    </button>
-            </div>
+            <x-pulse-button class="pb-28" />
     </section>
     <section class="py-12" id="anchor">
         <div class="container">
             @forelse ($serviceCategories as $category)
-                <div class="lg:grid grid-cols-2 gap-16 pb-20">
+                <div class="lg:grid grid-cols-2 gap-16 pb-12">
                     <div class="hidden lg:block">
                         <x-subtitle-home class="pb-7" title="{{ $category->title }}" number="{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}" />
                     </div>
@@ -49,11 +42,9 @@
             </div>
         </div>
     </section>
-    <section class="py-12">
+    <section class="pb-12">
         <div class="container">
-            <div class="flex py-6">
-                <a href="{{ route('form.show') }}" class="bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center">Обсудить проект</a>
-            </div>
+            <x-pre-footer-action />
         </div>
     </section>
 </main>
