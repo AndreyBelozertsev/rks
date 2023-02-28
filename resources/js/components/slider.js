@@ -1,28 +1,26 @@
-//import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
-import Swiper from 'swiper/bundle'
-const swiper = new Swiper('.swiper', {
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 30,
-      slideShadows: false,
+const swiperStages = new Swiper('.swiper', {
+    modules: [Navigation],
+    speed: 600,
+
+    loop: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-   
+    slidesPerView: 1,
+    spaceBetween: 30,
 
-    // configure Swiper to use modules
-    //modules: [Navigation],
-
-    //loop: true,
-  
-    // // Navigation arrows
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-  
-    // // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-   
+    breakpoints: {
+        720: {
+          slidesPerView: 2,
+        },
+        960: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+    }
 });

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="py-12">
+<main class="py-28">
     <section class="pb-12">
         <div class="container">
             <div class="pb-12">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<main class="py-20">
 	<section class="lg:h-screen">
 		<div class="container">
 			<div class="hidden lg:flex justify-center pt-20 pb-40">
@@ -134,4 +135,5 @@
 			<x-pre-footer-action />
 		</div>
 	</section>
+</main>
 @endsection
