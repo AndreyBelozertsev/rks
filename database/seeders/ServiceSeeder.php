@@ -50,8 +50,55 @@ class ServiceSeeder extends Seeder
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 2,
                 'sort' => 400,
-            ]
-            
+            ],
+            [
+                'title' => 'Яндекс.Карты',
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service/yandex-map.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
+                'service_category_id' => 1,
+                'sort' => 100,
+            ],
+            [
+                'title' => 'QR-код',
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service/qr.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
+                'service_category_id' => 1,
+                'sort' => 200,
+            ],
+            [
+                'title' => 'Базовое SEO',
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service/bazovoe-seo.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
+                'service_category_id' => 1,
+                'sort' => 300,
+            ],
+            [
+                'title' => 'Рекламная подписка',
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service/reklamnaya-podpiska.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
+                'service_category_id' => 1,
+                'sort' => 400,
+            ],
+            [
+                'title' => 'Директ',
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service/direct.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
+                'service_category_id' => 1,
+                'sort' => 500,
+            ],
+            [
+                'title' => 'Геореклама',
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service/georeklama.png',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
+                'service_category_id' => 1,
+                'sort' => 500,
+            ]  
         ];
        
         foreach($services as $service){

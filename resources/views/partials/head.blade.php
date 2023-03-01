@@ -18,4 +18,5 @@
 	<meta name="theme-color" content="#1E1F43">
 
     @vite(['resources/css/app.css', 'resources/css/scss/main.scss'])
+	
 </head>

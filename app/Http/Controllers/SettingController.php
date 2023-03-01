@@ -32,7 +32,7 @@ class SettingController extends Controller
         Cache::forget('setting.contacts');
         Cache::forget('setting.policy');
         Cache::forget('setting.cookie-text');
-        
+
         Setting::insert($data);
 
         return redirect()->back()->with('success_message', "Настройки успешно обновлены");

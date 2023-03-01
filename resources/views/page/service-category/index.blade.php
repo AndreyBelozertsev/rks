@@ -15,28 +15,14 @@
     </section>
     <section class="py-12" id="anchor">
         <div class="container">
-            @forelse ($serviceCategories as $category)
-                <div class="lg:grid grid-cols-2 gap-16 pb-12">
-                    <div class="hidden lg:block">
-                        <x-subtitle-home class="pb-7" title="{{ $category->title }}" number="{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}" />
-                    </div>
-                    <div class="pb-12">
-                        <div>
-                            <div class="pb-8">
-                                <img src="{{ $category->thumbnail }}" alt="{{ $category->title }}">
-                            </div>
-                            <div class="pb-8 block lg:hidden">
-                                <h3>{{  $category->title  }}</h3>
-                            </div>
-                        </div>
-                        <div class="pb-10 lg:text-2xl lg:leading-10 lg:pb-10">
-                            {!! $category->description !!}
-                        </div>
-                        <div class="pb-8">
-                            <a class="text-base underline underline-offset-4 decoration-2 decoration-accent py-2" href="{{ route('service-category.show', $category->slug) }}">Узнать больше</a>
-                        </div>
-                    </div>
-                </div>
+            @forelse($serviceCategories as $category)
+                <x-product-item 
+                    :url="route('service-category.show', $category->slug)"
+                    :title="$category->title"
+                    :description="$category->description"
+                    :number="$loop->iteration"
+                    :thumbnail="$category->thumbnail"
+                />
             @empty
             @endforelse
             </div>

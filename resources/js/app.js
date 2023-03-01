@@ -2,6 +2,7 @@ import './bootstrap';
 import './components/cookie-modal';
 import './components/flipper';
 import './components/form';
+import './components/lightgallery';
 import './components/map';
 import './components/modal';
 import './components/navmenu';

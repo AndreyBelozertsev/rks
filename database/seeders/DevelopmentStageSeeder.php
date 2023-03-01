@@ -21,6 +21,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/analitika.jpg',
                 'sort' => 100,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Стратегия',
@@ -28,6 +29,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/strategy.jpg',
                 'sort' => 200,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Техзадание',
@@ -35,6 +37,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/texzadanie.jpg',
                 'sort' => 300,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Прототипирование',
@@ -42,6 +45,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/prototipirovanie.jpg',
                 'sort' => 400,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Дизайн-макет',
@@ -49,6 +53,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/dizain-maket.jpg',
                 'sort' => 500,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Верстка',
@@ -56,6 +61,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/verstka.jpg',
                 'sort' => 600,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Программирование',
@@ -63,6 +69,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/programmirovanie.jpg',
                 'sort' => 700,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Базовое наполнение',
@@ -70,6 +77,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/bazovoe-napolnenie.jpg',
                 'sort' => 800,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Тестирование',
@@ -77,6 +85,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/testirovanie.jpg',
                 'sort' => 900,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Техподдержка',
@@ -84,6 +93,7 @@ class DevelopmentStageSeeder extends Seeder
                 'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
                 'thumbnail' => '/template/images/stages/texpodderjka.jpg',
                 'sort' => 1000,
+                'images' => '[{"url":"template\/images\/stages\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
            
         ];

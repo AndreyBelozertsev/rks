@@ -11,6 +11,6 @@ class DevelopmentStageController extends Controller
     {
         $developmentStage = DevelopmentStage::activeItem($slug)->firstOrFail();
 
-        return view('page.development-step.show', compact('developmentStage'));
+        return view('page.development-stage.show', compact('developmentStage'));
     }
 }
