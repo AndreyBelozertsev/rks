@@ -22,6 +22,7 @@
                     :description="$category->description"
                     :number="$loop->iteration"
                     :thumbnail="$category->thumbnail"
+                    :icon="$category->icon"
                 />
             @empty
             @endforelse

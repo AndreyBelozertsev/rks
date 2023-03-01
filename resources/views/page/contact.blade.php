@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <main class="py-28">
 	<section>

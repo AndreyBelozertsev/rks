@@ -1,26 +1,27 @@
 @unless ($breadcrumbs->isEmpty())
 <section class="section-bredcrumbs">
-    <div class="my-5">
+    <div class="mb-5 mt-[.95rem]">
         <nav class="container mx-auto">
             <ol class="py-4 flex flex-wrap text-brandGrey-40">
                 @foreach ($breadcrumbs as $breadcrumb)
-                    @if ($breadcrumb->url && !$loop->last)
+                    @if ($loop->first)
                         <li>
                             <a href="{{ $breadcrumb->url }}">
-                                <span class="pr-[6px]"><</span> {{ $breadcrumb->title }}
+                                <span class="pr-[4px]"><</span> {{ $breadcrumb->title }}
+                            </a>
+                        </li>
+                    @elseif( $breadcrumb->url && !$loop->last )
+                        <li>
+                            <a href="{{ $breadcrumb->url }}">
+                                <span class="pr-[4px] pl-4"><</span> {{ $breadcrumb->title }}
                             </a>
                         </li>
                     @else
                         <li>
-                            <span class="pr-[6px]"><</span> {{ $breadcrumb->title }}
+                            <span class="pr-[6px] pl-4"><</span> {{ $breadcrumb->title }}
                         </li>
                     @endif
 
-                    @unless($loop->last)
-                        <li>
-                            <span class="pr-[6px]"><</span>
-                        </li>
-                    @endif
                 @endforeach
             </ol>
         </nav>

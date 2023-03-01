@@ -3,7 +3,8 @@
     'title', 
     'description',
     'number',
-    'thumbnail'
+    'thumbnail',
+    'icon'
 ])
 
 
@@ -14,7 +15,11 @@
     <div class="pb-12">
         <div>
             <div class="pb-8">
-                <img src="{{ $thumbnail }}" alt="{{ $title }}">
+                @if($icon)
+                    {!! $icon !!}
+                @elseif($thumbnail)
+                    <img src="{{ $thumbnail }}" alt="{{ $title }}">
+                @endif
             </div>
             <div class="pb-8 block lg:hidden">
                 <h3>{{  $title  }}</h3>

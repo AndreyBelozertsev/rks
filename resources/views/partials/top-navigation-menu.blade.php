@@ -30,6 +30,8 @@
             </ul>
         </div>
     </div>
+    <div class="bg-brand">
+        @yield('breadcrumbs')
+    </div>
     <div class="popup" id="popup"></div>
-
 </nav>

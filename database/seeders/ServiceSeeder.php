@@ -54,7 +54,7 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'Яндекс.Карты',
                 'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
-                'thumbnail' => '/template/images/service/yandex-map.png',
+                'icon' => '<lord-icon src="/template/lord-icon/map-pin.json" trigger="loop" delay="1500" colors="primary:#F0F0F0,secondary:#cbe857" stroke="35" state="hover-jump" style="width:100px;height:100px"></lord-icon>',
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
                 'sort' => 100,
@@ -62,7 +62,7 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'QR-код',
                 'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
-                'thumbnail' => '/template/images/service/qr.png',
+                'icon' => '<lord-icon src="/template/lord-icon/qr.json" trigger="loop" delay="1500" colors="primary:#F0F0F0,secondary:#cbe857" style="width:100px;height:100px"></lord-icon>',
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
                 'sort' => 200,
@@ -70,7 +70,7 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'Базовое SEO',
                 'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
-                'thumbnail' => '/template/images/service/bazovoe-seo.png',
+                'icon' => '<lord-icon src="/template/lord-icon/seo.json" trigger="loop" delay="1500" colors="primary:#F0F0F0,secondary:#cbe857" stroke="35"style="width:100px;height:100px"></lord-icon>',
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
                 'sort' => 300,
@@ -78,7 +78,7 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'Рекламная подписка',
                 'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
-                'thumbnail' => '/template/images/service/reklamnaya-podpiska.png',
+                'icon' => '<lord-icon src="/template/lord-icon/reklamnaya-podpiska.json" trigger="loop" delay="1500" colors="primary:#F0F0F0,secondary:#cbe857" stroke="35" style="width:100px;height:100px"></lord-icon>',
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
                 'sort' => 400,
@@ -86,7 +86,7 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'Директ',
                 'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
-                'thumbnail' => '/template/images/service/direct.png',
+                'icon' => '<lord-icon src="/template/lord-icon/direct.json" trigger="loop" delay="1500" colors="primary:#F0F0F0,secondary:#cbe857" stroke="35" style="width:100px;height:100px"></lord-icon>',
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
                 'sort' => 500,
@@ -94,11 +94,18 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'Геореклама',
                 'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
-                'thumbnail' => '/template/images/service/georeklama.png',
+                'icon' => '<lord-icon src="/template/lord-icon/geo.json" trigger="loop" delay="1500" colors="primary:#F0F0F0,secondary:#cbe857" stroke="35" state="hover-1" style="width:100px;height:100px"></lord-icon>',
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
                 'sort' => 500,
-            ]  
+            ],
+            [
+                'title' => 'Интерьерная фотосьемка',
+                'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
+                'service_category_id' => 3,
+                'sort' => 100,
+            ]   
         ];
        
         foreach($services as $service){

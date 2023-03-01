@@ -22,6 +22,6 @@ class ServiceQueryBuilder extends Builder
                     ->active()
                     ->select(['title','slug','description','thumbnail'])
             ])
-            ->select(['id','title','thumbnail','images','content','slug']);
+            ->select(['id','title','thumbnail','icon','images','content','slug']);
     }
 }

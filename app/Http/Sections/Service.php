@@ -124,6 +124,8 @@ class Service extends Section implements Initializable
                     ->setUploadPath(function($file) {
                         return PathSaveClass::getUploadPath('service','images'); 
                     }),
+                AdminFormElement::textarea('icon', 'lord-icon')
+                    ->setRows(3),
                 AdminFormElement::files('images', 'Фото')
                     ->setUploadPath(function($file) {
                         return PathSaveClass::getUploadPath('service','images'); 

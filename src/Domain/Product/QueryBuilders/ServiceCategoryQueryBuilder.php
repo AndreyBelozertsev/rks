@@ -10,7 +10,7 @@ class ServiceCategoryQueryBuilder extends Builder
         return $this->active()
             ->orderBy('sort', 'asc')
             ->whereHas('services', fn ($query) => $query->active())
-            ->select(['title','slug','description','sort','thumbnail']);
+            ->select(['title','slug','description','sort','icon','thumbnail']);
     }
 
     public function activeItem($slug): ServiceCategoryQueryBuilder
@@ -22,7 +22,7 @@ class ServiceCategoryQueryBuilder extends Builder
             ->with([
                 'services' => fn ($query) => $query
                     ->active()
-                    ->select(['title','slug','description','sort','thumbnail','service_category_id'])
+                    ->select(['title','slug','description','sort','thumbnail','icon','service_category_id'])
                     ->orderBy('sort', 'asc')
             ])
             ->with([
@@ -32,7 +32,7 @@ class ServiceCategoryQueryBuilder extends Builder
                     ->orderBy('sort', 'asc')
                     ->limit(6)
             ])
-            ->select(['id','title','thumbnail','content','slug']);
+            ->select(['id','title','thumbnail','icon','content','slug']);
     }
 
     public function itemsWithAdditionalServices(): array
