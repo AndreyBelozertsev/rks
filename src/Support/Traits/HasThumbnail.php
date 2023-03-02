@@ -3,6 +3,7 @@ namespace Support\Traits;
 
 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 
 trait HasThumbnail
@@ -15,7 +16,6 @@ trait HasThumbnail
         if(! $this->{$this->thumbnailColumn()} || Storage::exists($this->{$this->thumbnailColumn()} )){
             return;
         }
-        
         return route('thumbnail',[
             'size'=>$size,
             'dir'=> $this->thumbnailDir(),

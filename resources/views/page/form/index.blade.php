@@ -12,8 +12,8 @@
                 <h2 class="pb-12">Готовы создать эффективный маркетинг вместе с нами?</h2>
             </div>
             <div class="container">
-                <div class="pb-8">
-                    <p class="text-xl pb-6">Мы свяжемся с вами, чтобы:</p>
+                <div class="pb-8 lg:text-xl lg:leading-10">
+                    <p class="text-xl lg:text-2xl pb-6">Мы свяжемся с вами, чтобы:</p>
                     <p>Определить задачу</p>
                     <p>Ответить на ваши вопросы</p>
                     <p>Предоставить информацию о ценах</p>

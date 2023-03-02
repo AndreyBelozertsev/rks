@@ -11,6 +11,11 @@ class ServiceQueryBuilder extends Builder
             ->where('slug',$slug)
             ->whereHas('category',fn ($query) => $query->active())
             ->with([
+                'category' =>  fn ($query) => $query
+                    ->active()
+                    ->select(['id','title','slug'])
+            ])
+            ->with([
                 'portfolios' => fn ($query) => $query
                     ->active()
                     ->whereHas('category',fn ($query) => $query->active())
@@ -22,6 +27,11 @@ class ServiceQueryBuilder extends Builder
                     ->active()
                     ->select(['title','slug','description','thumbnail'])
             ])
-            ->select(['id','title','thumbnail','icon','images','content','slug']);
+            ->with([
+                'additionalServices' => fn ($query) => $query
+                    ->active()
+                    ->select(['title','description','thumbnail'])
+            ])
+            ->select(['id','title','thumbnail','icon','images','content','slug','view', 'service_category_id']);
     }
 }

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('images')->nullable();
             $table->integer('sort')->default(500)->nullable();
             $table->boolean('status')->default(true);
+            $table->string('view')->default('default');
             $table->foreignIdFor(ServiceCategory::class)
                     ->nullable()
                     ->constrained()

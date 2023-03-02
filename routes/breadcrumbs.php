@@ -23,3 +23,8 @@ Breadcrumbs::for('development-stage.show', function ($trail, $stage) {
     $trail->parent('service-category.development');
     $trail->push($stage->title, route('development-stage.show',['slug'=> $stage->slug]));
 });
+
+Breadcrumbs::for('service.show', function ($trail, $service) {
+    $trail->parent('service-category.show',$service->category);
+    $trail->push($service->title, route('service.show',['category'=>$service->category->slug ,'slug'=> $service->slug]));
+});

@@ -35,6 +35,11 @@ class Service extends Model
         return $this->belongsToMany(Post::class);
     }
 
+    public function additionalServices()
+    {
+        return $this->belongsToMany(AdditionalService::class);
+    }
+
 
     protected function thumbnailDir():string
     {

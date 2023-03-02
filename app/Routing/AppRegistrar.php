@@ -15,11 +15,13 @@ class AppRegistrar implements RouteRegistrar
             Route::get('/', [HomeController::class, 'index'])->name('home'); 
         });
 
-        Route::get('/storage/images/{dir}/{method}/{size}/{file}',ThumbnailController::class)
-            ->where('method','resize|crop|fit')
-            ->where('size','\d+x\d+')
-            ->where('file','.+\.(png|jpg|gif|bmp|svg|jpeg)$')
-            ->name('thumbnail');
-        
+        Route::get('/storage/images/{dir}/{method}/{year}/{month}/{day}/{size}/{file}',ThumbnailController::class)
+        ->where('method','resize|crop|fit')
+        ->where('year','\d{4}$')
+        ->where('month','\d{2}$')
+        ->where('day','\d{2}$')
+        ->where('size','(\d+|null)x(\d+|null)')
+        ->where('file','.+\.(png|jpg|gif|bmp|svg|jpeg)$')
+        ->name('thumbnail');
     }
 }

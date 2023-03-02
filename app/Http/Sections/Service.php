@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
 use SleepingOwl\Admin\Form\Buttons\Save;
 use Domain\Product\Models\ServiceCategory;
 use SleepingOwl\Admin\Form\Buttons\Cancel;
+use Domain\Product\Models\AdditionalService;
 use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Form\Buttons\SaveAndClose;
 use SleepingOwl\Admin\Form\Buttons\SaveAndCreate;
@@ -139,6 +140,12 @@ class Service extends Section implements Initializable
                 AdminFormElement::multiselect('posts', 'Статьи')
                     ->setHtmlAttribute('data-posts', Post::all()->toJson())
                     ->setModelForOptions(Post::class, 'title'),
+                AdminFormElement::multiselect('additionalServices', 'Связанные услуги')
+                    ->setHtmlAttribute('data-additional-services', AdditionalService::all()->toJson())
+                    ->setModelForOptions(AdditionalService::class, 'title'),
+                AdminFormElement::select('view', 'Шаблон',config('constant.service_view'))
+                    ->setDefaultValue('default')
+                    ->required(),
                 AdminFormElement::checkbox('status', 'Опубликовать?')
                     ->setDefaultValue(true),
                 AdminFormElement::html('<hr>'),

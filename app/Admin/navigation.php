@@ -26,6 +26,8 @@ return [
                 ->setPriority(100),
             (new Page(\Domain\Product\Models\DevelopmentStage::class))
                 ->setPriority(200),
+            (new Page(\Domain\Product\Models\AdditionalService::class))
+                ->setPriority(300),
         ]
     ],
     [

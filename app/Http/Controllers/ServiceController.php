@@ -16,6 +16,10 @@ class ServiceController extends Controller
     {
         $service = Service::activeItem($slug)->firstOrFail();
 
-        return view('page.service.show',compact('service','category'));
+        if(view()->exists("page.service.show.$service->view")){
+            return view("page.service.show.$service->view", compact('service') );
+        }
+
+        return view("page.service.show.default", compact('service') );
     }
 }

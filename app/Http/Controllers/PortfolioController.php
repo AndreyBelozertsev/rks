@@ -11,6 +11,6 @@ class PortfolioController extends Controller
     {
         $portfolio = Portfolio::activeItem($slug)->firstOrFail();
 
-        return view('page.portfolio.show',compact('portfolio'));
+        return view('page.portfolio.show.default',compact('portfolio'));
     }
 }

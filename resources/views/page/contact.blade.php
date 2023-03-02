@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<main class="py-28">
-	<section>
+<main class="pt-28">
+	<section class="pb-12">
 		<div class="container">
 			<div class="pb-12">
 				<h1>Контакты</h1>
@@ -13,12 +13,12 @@
 				<div class="w-full md:w-1/2 lg:w-1/3">
 					<div class="pb-8">
 						<div class="hidden md:block pb-8">
-							<h5>Связаться с нами</h5>
+							<h3>Связаться с нами</h3>
 						</div>
-						<div class="pb-8">
+						<div class="pb-8 lg:pb-4 lg:text-xl lg:leading-10">
 							<x-contacts.contact />
 						</div>
-						<div class="pb-16 md:pb-8">
+						<div class="pb-16 md:pb-4 lg:text-xl lg:leading-10">
 							<x-contacts.address />
 						</div>
 
@@ -31,14 +31,14 @@
 							<div class="block md:hidden pb-8">
 								<h5>Режим работы</h5>
 							</div>
-							<div class="pb-16 md:pb-8">
+							<div class="pb-16 lg:pb-4 md:pb-8 lg:text-xl lg:leading-10">
 								<x-contacts.schedule />
 							</div>
 						@endif
 						<div class="block md:hidden pb-8">
 							<h5>Социальные сети</h5>
 						</div>
-						<div class="flex justify-between pb-8">
+						<div class="flex justify-between pb-8 lg:text-xl lg:leading-10">
 							<x-contacts.social />
 						</div>
 					</div>

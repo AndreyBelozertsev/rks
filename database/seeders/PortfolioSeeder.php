@@ -18,6 +18,9 @@ class PortfolioSeeder extends Seeder
     {
         PortfolioFactory::new()
             ->count(20)
-            ->create(['portfolio_category_id'=>PortfolioCategory::inRandomOrder()->first()]);
+            ->create([
+                'portfolio_category_id'=>PortfolioCategory::inRandomOrder()->first(),
+                'thumbnail' => '/template/images/case/2023/03/01/1.jpg'
+            ]);
     }
 }

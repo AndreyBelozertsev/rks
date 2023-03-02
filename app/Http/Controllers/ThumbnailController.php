@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -10,12 +11,14 @@ class ThumbnailController extends Controller
 {
     public function __invoke(
             string $dir, 
-            string $method, 
+            string $method,
+            string $year, 
+            string $month, 
+            string $day, 
             string $size, 
             string $file
         ) :BinaryFileResponse
     {
-        
         abort_if(!in_array($size, config('thumbnail.allowed_sizes',[])),
             403, 
             'Size not allowed'
@@ -23,9 +26,9 @@ class ThumbnailController extends Controller
         
         $storage = Storage::disk('images');
         
-
-        $realPath = "$dir/$file";
-        $newDirPath = "$dir/$method/$size";
+        
+        $realPath = "$dir/$year/$month/$day/$file";
+        $newDirPath = "$dir/$method/$year/$month/$day/$size";
         $resultPath = "$newDirPath/$file"; 
 
         if(!$storage->exists($newDirPath )){
@@ -33,11 +36,21 @@ class ThumbnailController extends Controller
         }
 
         if(!$storage->exists($resultPath)){
-            $image = Image::make($storage->path($realPath));
+            if(File::exists("template/images/$realPath")){
+                $image = Image::make("template/images/$realPath");
+            }else{
+                $image = Image::make($storage->path($realPath));
+            }
             
             [$w,$h] = explode('x',$size);
-            $image->{$method}($w, $h);
-           
+
+            if($w == 'null' || $h == 'null'){
+                $image->{$method}($w, $h, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+            }else{
+                $image->{$method}($w, $h);
+            }
             $image->save($storage->path($resultPath));
             
         }
