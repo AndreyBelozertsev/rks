@@ -2,13 +2,7 @@
 
 
 return [
-    // 'services' => 
-    // [
-    //     'development' => 'Разработка (сайт, мобильное приложение)',
-    //     'marketing' => 'Маркетинг',
-    //     'photography' => 'Фотосъемка',
-    //     'analytic' => 'Аналитика сайта'
-    // ],
+
     'additional_services' =>
     [
         'analytic' => 'Аналитика сайта'
@@ -17,6 +11,12 @@ return [
     [
         'default' => 'Стандартный',
         'geo' => 'ГеоРеклама'
-    ]
-
+    ],
+    'portfolio_view' =>
+    [
+        'default' => 'Стандартный',
+        'development' => 'Разработка',
+        'marketing' => 'Маркетинг',
+        'photography' => 'Фотосъемка',
+    ],
 ];

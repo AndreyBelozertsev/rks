@@ -25,11 +25,11 @@
                 <h5>Виды сайтов</h5>
             </div>
             <div class="pb-8">
-                <x-horizontal-scroll>
+                <x-horizontal-scroll.horizontal-scroll>
                     @foreach ($serviceCategory->services as $item)
                         <x-flipper-card :item="$item" :url="route('service.show', ['category'=> $item->category->slug,'slug'=> $item->slug])" />
                     @endforeach
-                </x-horizontal-scroll>
+                </x-horizontal-scroll.horizontal-scroll>
             </div>
         </div>
     </section>

@@ -31,6 +31,7 @@ return new class extends Migration
                     ->onUpdate('cascade')
                     ->nullOnDelete('cascade');
             $table->boolean('status')->default(true);
+            $table->string('view')->default('default');
             $table->timestamps();
 
         });

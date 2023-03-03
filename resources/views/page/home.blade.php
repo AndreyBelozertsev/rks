@@ -132,7 +132,9 @@
 		</div>
 		<x-our-clients />
 		<div class="container">
-			<x-pre-footer-action />
+			<x-pre-footer-action 
+				text="Готовы запустить проект по продвижению? Мы поможем вам в этом. Давайте сделаем ваш бизнес успешным"
+			/>
 		</div>
 	</section>
 </main>

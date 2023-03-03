@@ -36,7 +36,10 @@
     <br><br>
     <section class="pb-12">
         <div class="container">
-            <x-pre-footer-action url="{{ route('form.show',['category'=>$serviceCategory->slug, 'url'=>request()->url()]) }}" />
+            <x-pre-footer-action 
+                url="{{ route('form.show',['category'=>$serviceCategory->slug, 'url'=>request()->url()]) }}" 
+                text="Готовы запустить проект по продвижению? Мы поможем вам в этом. Давайте сделаем ваш бизнес успешным"
+            />
         </div>
     </section>
 </main>

@@ -11,6 +11,10 @@ class PortfolioController extends Controller
     {
         $portfolio = Portfolio::activeItem($slug)->firstOrFail();
 
+        if(view()->exists("page.portfolio.show.$portfolio->view")){
+            return view("page.portfolio.show.$portfolio->view", compact('portfolio') );
+        }
+
         return view('page.portfolio.show.default',compact('portfolio'));
     }
 }

@@ -17,11 +17,11 @@
             <div class="pb-16">
                 <h3>Кейсы</h3>
             </div>
-            <x-horizontal-scroll>
+            <x-horizontal-scroll.horizontal-scroll>
                 @foreach ($service->portfolios as $item)
                     <x-flipper-card :item="$item" :url="route('case.show',['slug'=>$item->slug])" />
                 @endforeach
-            </x-horizontal-scroll>
+            </x-horizontal-scroll.horizontal-scroll>
             <div>
         </div> 
     </section>

@@ -36,8 +36,8 @@ class ThumbnailController extends Controller
         }
 
         if(!$storage->exists($resultPath)){
-            if(File::exists("template/images/$realPath")){
-                $image = Image::make("template/images/$realPath");
+            if(File::exists(config('thumbnail.default_template') . $realPath)){
+                $image = Image::make(config('thumbnail.default_template') . $realPath);
             }else{
                 $image = Image::make($storage->path($realPath));
             }

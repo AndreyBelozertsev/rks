@@ -26,6 +26,6 @@ class PortfolioQueryBuilder extends Builder
                     ->active()
                     ->select(['title','slug','description','thumbnail'])
             ])
-            ->select(['id','title','thumbnail','images','content','slug','service_description','result','techology','branch']);
+            ->select(['id','title','thumbnail','images','content','slug','service_description','result','techology','branch','view']);
     }
 }

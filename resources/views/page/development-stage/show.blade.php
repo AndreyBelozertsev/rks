@@ -14,11 +14,11 @@
     </section>
     <section class="pb-12">
 		<div class="container">
-            <x-gallery>
+            <x-gallery.gallery>
                 @foreach (getImages($developmentStage->images) as $image)
-                    <x-gallery-item :url_full="$image['url']" :title="$image['title']" :desc="$image['desc']" />
+                    <x-gallery.gallery-item :url_full="$image['url']" :title="$image['title']" :desc="$image['desc']" />
                 @endforeach
-            </x-gallery>
+            </x-gallery.gallery>
         </div>
     </section>
     <section class="pb-12">

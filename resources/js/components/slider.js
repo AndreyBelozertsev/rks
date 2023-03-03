@@ -1,9 +1,8 @@
 import Swiper, { Navigation } from 'swiper';
 
-const swiperStages = new Swiper('.swiper', {
+const swiperStages = new Swiper('.swiper-default', {
     modules: [Navigation],
     speed: 600,
-
     loop: true,
   
     // Navigation arrows

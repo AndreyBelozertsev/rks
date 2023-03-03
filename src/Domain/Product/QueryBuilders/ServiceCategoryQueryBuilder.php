@@ -32,7 +32,7 @@ class ServiceCategoryQueryBuilder extends Builder
                     ->orderBy('sort', 'asc')
                     ->limit(6)
             ])
-            ->select(['id','title','thumbnail','icon','content','slug']);
+            ->select(['id','title','thumbnail','icon','content','images','slug']);
     }
 
     public function itemsWithAdditionalServices(): array

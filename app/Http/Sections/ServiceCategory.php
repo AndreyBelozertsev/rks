@@ -98,6 +98,10 @@ class ServiceCategory extends Section implements Initializable
                 }),
             AdminFormElement::textarea('icon', 'lord-icon')
                 ->setRows(3),
+            AdminFormElement::files('images', 'Фото')
+                ->setUploadPath(function($file) {
+                    return PathSaveClass::getUploadPath('service-category','images'); 
+                }),
             AdminFormElement::multiselect('portfolios', 'Кейсы')
                 ->setHtmlAttribute('data-portfolios', Portfolio::all()->toJson())
                 ->setModelForOptions(Portfolio::class, 'title'),

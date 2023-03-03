@@ -16,11 +16,11 @@
     @if($service->images)
     <section class="pb-12">
 		<div class="container">
-            <x-gallery class="justify-center">
+            <x-gallery.gallery class="justify-center">
                 @foreach (getImages($service->images) as $image)
-                    <x-gallery-item :url_full="$image['url']" :title="$image['title']" :desc="$image['desc']" />
+                    <x-gallery.gallery-item :url_full="$image['url']" :title="$image['title']" :desc="$image['desc']" />
                 @endforeach
-            </x-gallery>
+            </x-gallery.gallery>
         </div>
     </section>
     @endif
@@ -30,11 +30,11 @@
             <div class="pb-12">
                 <h3>Форматы</h3>
             </div>
-            <x-slider>
+            <x-slider.slider class="swiper-default">
                 @foreach ($service->additionalServices as $item)
-                    <x-slider-item :item="$item" :thumbnail="$item->makeThumbnail('345x220','resize')" :iteration="$loop->iteration" />
+                    <x-slider.slider-product-item :item="$item" :thumbnail="$item->makeThumbnail('345x220','resize')" :iteration="$loop->iteration" />
                 @endforeach
-            </x-slider>
+            </x-slider.slider>
             <div class="pb-8 lg:text-2xl lg:leading-10">
                 {!! $service->content !!}
             </div>
@@ -47,11 +47,11 @@
             <div class="pb-16">
                 <h3>Кейсы</h3>
             </div>
-            <x-horizontal-scroll>
+            <x-horizontal-scroll.horizontal-scroll>
                 @foreach ($service->portfolios as $item)
                     <x-flipper-card :item="$item" :url="route('case.show',['slug'=>$item->slug])" />
                 @endforeach
-            </x-horizontal-scroll>
+            </x-horizontal-scroll.horizontal-scroll>
             <div>
         </div> 
     </section>
