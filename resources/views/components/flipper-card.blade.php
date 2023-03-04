@@ -4,7 +4,6 @@
     'url' => null
 ])
 
-
 <div class="min-w-full md:min-w-[70%] lg:min-w-0" >
     <div class="rounded-lg overflow-hidden">
         <div class="flip-container" id="{{ $entity }}-{{ $item->slug }}">
@@ -14,7 +13,7 @@
                         <div class="pb-8">
                             <a 
                                 class="block bg-center bg-no-repeat bg-cover h-[250px] md:h-[300px] lg:h-[250px]"
-                                style="background-image: url('{{ $item->thumbnail }}')" 
+                                style="background-image: url('{{ $item->thumbnail ? $item->thumbnail : asset('template/images/logo.svg') }}')" 
                                 href="{{ $url }}"
                             >
                             </a>

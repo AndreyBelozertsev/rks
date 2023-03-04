@@ -14,11 +14,11 @@
     </section>
     <section class="pb-12">
 		<div class="container">
-            <x-gallery.gallery>
+            <x-slider.slider class="swiper-default gallery-slider">
                 @foreach (getImages($developmentStage->images) as $image)
-                    <x-gallery.gallery-item :url_full="$image['url']" :title="$image['title']" :desc="$image['desc']" />
+                    <x-slider.slider-photography-item :item="$image" />
                 @endforeach
-            </x-gallery.gallery>
+            </x-slider.slider>
         </div>
     </section>
     <section class="pb-12">

@@ -1,6 +1,6 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-const swiperStages = new Swiper('.swiper-default', {
+const swiperDefault = new Swiper('.swiper-default', {
     modules: [Navigation],
     speed: 600,
     loop: true,
@@ -22,4 +22,30 @@ const swiperStages = new Swiper('.swiper-default', {
             spaceBetween: 40,
         },
     }
+});
+
+const swiperPhotography = new Swiper('.swiper-photography', {
+  modules: [Navigation, Pagination],
+  speed: 600,
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  slidesPerView: 2,
+  spaceBetween: 30,
+
+  breakpoints: {
+      960: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+      },
+  }
 });

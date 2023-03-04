@@ -71,7 +71,7 @@ class Portfolio extends Section implements Initializable
                     $query->orderBy('created_at', $direction);
                 }),
             
-            AdminColumn::lists('service_categories.title','Категории услуг'),
+            AdminColumn::lists('serviceCategories.title','Категории услуг'),
             AdminColumn::text('sort', 'Порядок сортировки'),
             AdminColumn::text('created_at', 'Дата создания/обновления', 'updated_at')
                 ->setWidth('160px')
@@ -138,13 +138,9 @@ class Portfolio extends Section implements Initializable
                 ->setHtmlAttribute('data-services', Service::all()->toJson())
                 ->setModelForOptions(Service::class, 'title'),
 
-            AdminFormElement::multiselect('service_categories', 'Категории услуг')
-                ->setHtmlAttribute('data-service_categories', ServiceCategory::all()->toJson())
+            AdminFormElement::multiselect('serviceCategories', 'Категории услуг')
+                ->setHtmlAttribute('data-serviceCategories', ServiceCategory::all()->toJson())
                 ->setModelForOptions(ServiceCategory::class, 'title'),
-            AdminFormElement::select('view', 'Шаблон',config('constant.portfolio_view'))
-                ->setDefaultValue('default')
-                ->required(),
-
             AdminFormElement::checkbox('status', 'Опубликовать?')
                 ->setDefaultValue(true),
             AdminFormElement::html('<hr>'),

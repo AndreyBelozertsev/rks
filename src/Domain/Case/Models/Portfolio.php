@@ -36,7 +36,7 @@ class Portfolio extends Model
         return $this->belongsToMany(Service::class);
     }
 
-    public function service_categories()
+    public function serviceCategories()
     {
         return $this->belongsToMany(ServiceCategory::class);
     }

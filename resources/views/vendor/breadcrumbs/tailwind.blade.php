@@ -5,11 +5,17 @@
             <ol class="py-4 flex flex-wrap text-brandGrey-40">
                 @foreach ($breadcrumbs as $breadcrumb)
                     @if ($loop->first)
-                        <li>
-                            <a href="{{ $breadcrumb->url }}">
-                                <span class="pr-[4px]"><</span> {{ $breadcrumb->title }}
-                            </a>
-                        </li>
+                        @if($breadcrumb->url)
+                            <li>
+                                <a href="{{ $breadcrumb->url }}">
+                                    <span class="pr-[4px]"><</span> {{ $breadcrumb->title }}
+                                </a>
+                            </li>
+                        @else
+                            <li>
+                                <span class="pr-[6px]"><</span> {{ $breadcrumb->title }}
+                            </li>
+                        @endif
                     @elseif( $breadcrumb->url && !$loop->last )
                         <li>
                             <a href="{{ $breadcrumb->url }}">
