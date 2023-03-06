@@ -8,7 +8,7 @@
 ])
 
 
-<div class="lg:grid grid-cols-2 gap-16 pb-12">
+<div class="lg:grid grid-cols-2 gap-16 pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
     <div class="hidden lg:block">
         <x-subtitle-home class="pb-7" title="{{ $title }}" number="{{ str_pad($number, 2, '0', STR_PAD_LEFT) }}" />
     </div>

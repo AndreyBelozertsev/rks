@@ -141,6 +141,9 @@ class Portfolio extends Section implements Initializable
             AdminFormElement::multiselect('serviceCategories', 'Категории услуг')
                 ->setHtmlAttribute('data-serviceCategories', ServiceCategory::all()->toJson())
                 ->setModelForOptions(ServiceCategory::class, 'title'),
+            AdminFormElement::select('view', 'Шаблон',config('constant.portfolio_view'))
+                ->setDefaultValue('default')
+                ->required(),              
             AdminFormElement::checkbox('status', 'Опубликовать?')
                 ->setDefaultValue(true),
             AdminFormElement::html('<hr>'),

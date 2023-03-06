@@ -6,7 +6,7 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",
-        "axios": "^1.1.2",
+        "axios": "^1.3.4",
         "laravel-vite-plugin": "^0.7.2",
         "postcss": "^8.4.21",
         "sass": "^1.58.3",
@@ -14,6 +14,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "aos": "^3.0.0-beta.6",
         "flowbite": "^1.6.3",
         "lightgallery": "^2.7.1",
         "lord-icon-element": "^4.0.3",

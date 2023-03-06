@@ -5,19 +5,19 @@
 	<section class="lg:h-screen">
 		<div class="container">
 			<div class="hidden lg:flex justify-center pt-20 pb-40">
-				<svg width="80" height="300">
+				<svg width="80" height="300" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500">
 					<text x="28" y="150" fill="#F0F0F0" transform="rotate(-90, 28, 150)" style="text-anchor:middle;font-size:16px;">Другой взгляд на маркетинг</text>
 				</svg>
 				<div class="ff-dela-gothic-one">
 					<div class="pb-12">
-						<h1 class="uppercase text-onAccent text-9xl">Ракурс</h1>
+						<h1 data-aos="fade-in" data-aos-easing="linear" data-aos-duration="2000" class="uppercase text-onAccent text-9xl">Ракурс</h1>
 					</div>
-					<div class="text-4xl">
+					<div data-aos="fade-in" data-aos-easing="linear" data-aos-duration="3000" class="text-4xl">
 						<p class="uppercase">#digital</p>
 						<p class="uppercase">#marketing</p>
 					</div>
 				</div>
-				<div class="flex items-end">
+				<div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="3000" class="flex items-end">
 					<a href="{{ route('form.show') }}"><button class="animation-pulse rounded-full w-128 h-128 ff-dela-gothic-one bg-onAccent text-brand text-lg">Оставить<br>заявку</button></a>
 				</div>
 			</div>
@@ -47,10 +47,10 @@
 			<div class="flex lg:hidden justify-end pt-18">
 				<a href="{{ route('form.show') }}"><button class="rounded-full w-128 h-128 ff-dela-gothic-one bg-accent text-brand text-lg">Оставить<br>заявку</button></a>
 			</div>
-			<x-pulse-button class="pb-8 pt-12" />
+			<x-pulse-button class="pb-8 pt-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000" />
 		</div>
 	</section>
-	<section class="about py-12" id="anchor">
+	<section class="about py-12" id="anchor" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
 		<div class="container lg:grid grid-cols-2 pb-20 gap-32">
 			<x-subtitle-home title="О нас" number="01" />
 			<div>
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="services pb-12 lg:mb-40">
+	<section class="services pb-12 lg:mb-40" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
 		<div class="container hidden lg:grid grid-cols-2 gap-32">
 			<div>
 				<p class="text-4xl">Ракурс в цифрах</p>
@@ -115,7 +115,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="work pb-12">
+	<section class="work pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<x-subtitle-home class="pb-7" title="Как мы<br>работаем?" number="03" />
@@ -126,7 +126,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="client pb-12">
+	<section class="client pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
 		<div class="container ">
 			<x-subtitle-home class="pb-7" title="Нам<br>доверяют" number="04" />
 		</div>

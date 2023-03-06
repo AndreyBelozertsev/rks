@@ -5,7 +5,19 @@
 <main class="py-40">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
-            <x-title-with-thumbnail :title="$portfolio->title" :thumbnail="$portfolio->thumbnail" />
+                <div>
+                    <h1>{{ $portfolio->title }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+		<div class="container">
+            <x-slider.slider class="swiper-photography gallery-slider">
+                @foreach (getImages($portfolio->images) as $image)
+                    <x-slider.slider-photography-item :item="$image" />
+                @endforeach
+            </x-slider.slider>
         </div>
     </section>
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
@@ -55,15 +67,6 @@
         </div>
     </section>
     @endif 
-    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-		<div class="container">
-            <x-slider.slider class="swiper-photography gallery-slider">
-                @foreach (getImages($portfolio->images) as $image)
-                    <x-slider.slider-photography-item :item="$image" />
-                @endforeach
-            </x-slider.slider>
-        </div>
-    </section>
     @if($portfolio->services->isNotEmpty())
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
@@ -96,7 +99,7 @@
     </section>
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
-        <x-pre-footer-action text="Готовы запустить проект? Мы поможем вам в этом. Давайте сделаем ваш бизнес успешным"/>
+            <x-pre-footer-action text="Готовы запустить проект? Мы поможем вам в этом. Давайте сделаем ваш бизнес успешным"/>
         </div> 
     </section>
     @endif

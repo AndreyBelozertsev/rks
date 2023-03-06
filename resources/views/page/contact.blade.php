@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <main class="pt-28">
-	<section class="pb-12">
+	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
 			<div class="pb-12">
 				<h1>Контакты</h1>

@@ -2,7 +2,7 @@
 @section('breadcrumbs', Breadcrumbs::render('service-category.show',$serviceCategory)) 
 @section('content')
 <main class="py-40">
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <div class="pb-12">
                 <h1>{{ $serviceCategory->title }}</h1>
@@ -21,7 +21,7 @@
         </div>
     </section>
     @if($serviceCategory->portfolios->isNotEmpty())
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
             <div class="pb-16">
                 <h3>Кейсы</h3>
@@ -35,7 +35,7 @@
         </div> 
     </section>
     @endif
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <x-pre-footer-action 
             url="{{ route('form.show',['category'=>$serviceCategory->slug, 'url'=>request()->url()]) }}" 

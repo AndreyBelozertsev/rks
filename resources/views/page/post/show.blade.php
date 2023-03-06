@@ -3,7 +3,7 @@
 @section('breadcrumbs', Breadcrumbs::render('article.show',$post))
 @section('content')
 <main class="py-40">
-	<section class="pb-12">
+	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
             <x-title-with-thumbnail :title="$post->title" :thumbnail="$post->thumbnail" />
             <div class="pb-8 lg:text-2xl lg:leading-10">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </section>
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
             <x-slider.slider class="swiper-photography gallery-slider">
                 @foreach (getImages($post->images) as $image)
@@ -21,7 +21,7 @@
         </div>
     </section> 
     @if($post->services->isNotEmpty())
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
             <div class="pb-16">
                 <h3>Сопутствующие услуги</h3>
@@ -34,7 +34,7 @@
             <div>
         </div> 
     </section>
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
         <x-pre-footer-action text="Готовы запустить проект? Мы поможем вам в этом. Давайте сделаем ваш бизнес успешным"/>
         </div> 

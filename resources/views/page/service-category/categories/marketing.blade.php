@@ -2,7 +2,7 @@
 @section('breadcrumbs', Breadcrumbs::render('service-category.show',$serviceCategory)) 
 @section('content')
 <main class="py-40">
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <div class="pb-12">
                 <h1>{{ $serviceCategory->title }}</h1>
@@ -11,7 +11,7 @@
                 {!! $serviceCategory->content !!}
             </div>
     </section>
-    <section class="py-12">
+    <section class="py-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container">
             @forelse ($serviceCategory->services as $service)
                 <x-product-item 
@@ -27,14 +27,7 @@
             </div>
         </div>
     </section>
-    @forelse ($serviceCategory->portfolios as $portfolio)
-        <a href="{{ route('case.show',['slug'=> $portfolio->slug ]) }}">{{ $portfolio->title  }}</a>
-        <br>
-    @empty
-
-    @endforelse
-    <br><br>
-    <section class="pb-12">
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <x-pre-footer-action 
                 url="{{ route('form.show',['category'=>$serviceCategory->slug, 'url'=>request()->url()]) }}" 
