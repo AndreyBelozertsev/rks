@@ -16,6 +16,10 @@
     z-index: -1;
 }
 
+.modal-hide{
+    opacity: 0;
+    pointer-events: none;
+}
 
 body.modal-active {
     overflow-x: hidden;

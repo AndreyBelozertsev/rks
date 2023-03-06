@@ -18,7 +18,9 @@ export function openModal(id) {
     if(modal){
         const body = document.querySelector('body');
         modal.classList.add('modal-open');
-        modal.classList.remove('opacity-0','pointer-events-none');
+        modal.style.pointerEvents = 'auto';
+        modal.style.opacity = '1';
+
         body.classList.add('modal-active');
         let overlay = modal.querySelector('.modal-overlay');
         modal.addEventListener('click', function(e) {
@@ -40,7 +42,8 @@ export function hideModal(id) {
     if(modal){
         const body = document.querySelector('body');
         modal.classList.remove('modal-open');
-        modal.classList.add('opacity-0','pointer-events-none');
+        modal.style.pointerEvents = 'none';
+        modal.style.opacity = '0';
         body.classList.remove('modal-active');
         modal.dispatchEvent(new CustomEvent("hideModal", {
             detail: { id: id }
