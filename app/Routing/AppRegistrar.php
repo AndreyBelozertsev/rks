@@ -13,6 +13,8 @@ class AppRegistrar implements RouteRegistrar
     {
         Route::middleware('web')->group(function () {
             Route::get('/', [HomeController::class, 'index'])->name('home'); 
+            
+            Route::get('/video/{slug}', [HomeController::class, 'video'])->name('video'); 
         });
 
         Route::get('/storage/images/{dir}/{method}/{year}/{month}/{day}/{size}/{file}',ThumbnailController::class)

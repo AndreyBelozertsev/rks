@@ -22,8 +22,8 @@ class SignInController extends Controller
                 'email' => 'The provided credentials do not match our records.',
             ])->onlyInput('email');
         }
-        
-        SessionRegenerator::run();
+
+        //SessionRegenerator::run();
 
         return redirect()->route('home');
     }

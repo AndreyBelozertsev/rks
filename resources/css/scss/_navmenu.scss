@@ -111,7 +111,8 @@
   width: 100%;
 }
 
-.popup .menu > li > a {
+.popup .menu > li > a, 
+.popup .menu > li > form > button{
   width: fit-content;
   font-size: 48px;
   display: flex;

@@ -11,6 +11,10 @@ class DevelopmentStageController extends Controller
     {
         $developmentStage = DevelopmentStage::activeItem($slug)->firstOrFail();
 
-        return view('page.development-stage.show', compact('developmentStage'));
+        $prev = DevelopmentStage::prevItem($developmentStage)->first();
+
+        $next = DevelopmentStage::nextItem($developmentStage)->first();
+
+        return view('page.development-stage.show', compact('developmentStage','prev', 'next'));
     }
 }

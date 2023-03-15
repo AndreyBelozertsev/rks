@@ -9,7 +9,6 @@ class SessionRegenerator
 {
     public static function run(Closure $callback = null): void
     {
-        $old = request()->session()->getId();
 
         request()->session()->invalidate();
      
@@ -19,6 +18,5 @@ class SessionRegenerator
             $callback();
         }
 
-        event(new AfterSessionRegenerated($old, request()->session()->getId()));
     }
 }

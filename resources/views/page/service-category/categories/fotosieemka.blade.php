@@ -20,6 +20,22 @@
             </div>
         </div>
     </section>
+    @if($serviceCategory->services->isNotEmpty())
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+        <div class="container">
+            <div class="pb-12">
+                <h5>Наши услуги</h5>
+            </div>
+            <div class="pb-8">
+               <x-horizontal-scroll.horizontal-scroll>
+                    @foreach ($serviceCategory->services as $item)
+                        <x-flipper-card :item="$item" :url="route('service.show', ['category'=> $item->category->slug,'slug'=> $item->slug])" />
+                    @endforeach
+                </x-horizontal-scroll.horizontal-scroll>
+            </div>
+        </div>
+    </section>
+    @endif
     @if($serviceCategory->portfolios->isNotEmpty())
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">

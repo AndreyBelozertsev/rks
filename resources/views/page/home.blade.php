@@ -50,17 +50,17 @@
 			<x-pulse-button class="pb-8 pt-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000" />
 		</div>
 	</section>
-	<section class="about py-12" id="anchor" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
+	<section class="about py-12" id="anchor" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container lg:grid grid-cols-2 pb-20 gap-32">
 			<x-subtitle-home title="О нас" number="01" />
 			<div>
-				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Руководствуясь концепцией, согласно которой нет единого шаблона для всех,Ракурс нашёл своё место в качестве динамично развивающейся и гибкой студии, которая охватывает несколько областей маркетинга, брендинг и разработки</p>
+				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Руководствуясь концепцией, согласно которой нет единого шаблона для всех, Ракурс нашёл своё место в качестве динамично развивающейся и гибкой студии, которая охватывает несколько областей маркетинга, брендинг и разработки</p>
 				<p class="lg:text-2xl lg:leading-10 lg:pb-10">За 5 лет мы выросли благодаря вовлеченности в проблемы клиентов и упорному труду</p>
-				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы называем точную цену услуг,поэтому никогда не выходим за рамки согласованного бюджета. А ещё наша команда ценит время партнёров, поэтому всегда соблюдает сроки</p>
+				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы называем точную цену услуг и не выходим за рамки согласованного бюджета. Наша команда ценит время партнёров, поэтому всегда соблюдает сроки</p>
 			</div>
 		</div>
 	</section>
-	<section class="services pb-12 lg:mb-40" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
+	<section class="services pb-12 lg:mb-40" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container hidden lg:grid grid-cols-2 gap-32">
 			<div>
 				<p class="text-4xl">Ракурс в цифрах</p>
@@ -94,8 +94,8 @@
 				<div>
 					<x-subtitle-home class="pb-7" title="Услуги" number="02" />
 					<div class="pb-8">
-						<p>Независимо от того, управляете ли вы предприятием или небольшим стартапом, вы получите лучший в своём классе сервис, соответствующий вашим ожиданиям</p>
-						<p>Решаем задачи по продвижению любой сложности: от контекстной рекламы до создания приложений</p>
+						<p>Независимо от того, управляете ли вы крупным предприятием или небольшим стартапом, вы получите лучший в своём классе сервис, соответствующий вашим ожиданиям</p>
+						<p>Решаем задачи любой сложности: от разработки дизайна и настройки контекстной рекламы до создания корпоративных CRM систем и приложений</p>
 					</div>
 				</div>
 				<div>
@@ -115,25 +115,25 @@
 			</div>
 		</div>
 	</section>
-	<section class="work pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
+	<section class="work pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<x-subtitle-home class="pb-7" title="Как мы<br>работаем?" number="03" />
 				<div class="pb-8">
-					<p class="lg:text-2xl lg:leading-10 lg:pb-10">Нам важно быть полезными клиенту, поэтому изначально мы согласовываем целевые показатели, проводим анализ компании, изучаем её представленность в интернете, сайт, целевую аудиторию</p>
-					<p class="lg:text-2xl lg:leading-10 lg:pb-10">После аудита мы озвучиваем зоны потенциального роста и интересуемся бюджетом на рекламу. Понимание объёма вашего бюджета даёт нам возможность предложить оптимальные варианты для начала взаимовыгодного сотрудничества</p>
+					<p class="lg:text-2xl lg:leading-10 lg:pb-10">Нам важно быть полезными клиенту, поэтому изначально мы проводим комплексный анализ компании, изучаем текущую представленность в интернете, определяем портрет клиента и основных конкурентов, согласовываем целевые показатели</p>
+					<p class="lg:text-2xl lg:leading-10 lg:pb-10">После аудита мы находим зоны потенциального роста и интересуемся бюджетом на рекламу. Понимание объёма бюджета даёт нам возможность разработать оптимальную маркетинговую стратегию</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="client pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-center">
+	<section class="client pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container ">
 			<x-subtitle-home class="pb-7" title="Нам<br>доверяют" number="04" />
 		</div>
 		<x-our-clients />
 		<div class="container">
 			<x-pre-footer-action 
-				text="Готовы запустить проект по продвижению? Мы поможем вам в этом. Давайте сделаем ваш бизнес успешным"
+				text="Хотите сделать ваш бизнес более успешным и узнаваемым? Напишите, и мы вам поможем!"
 			/>
 		</div>
 	</section>

@@ -22,6 +22,22 @@
         </div>
     </section>
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+		<div class="container">
+            <div class="flex justify-center gap-10">
+                @if($prev)
+                    <div>
+                        <a href="{{ route('development-stage.show',['slug'=> $prev->slug]) }}">< Предыдущий этап: {{ $prev->title  }}</a>
+                    </div>
+                @endif
+                @if($next)
+                    <div>
+                        <a href="{{ route('development-stage.show',['slug'=> $next->slug]) }}">Следующий этап: {{ $next->title }} ></a>
+                    </div>
+                @endif
+            </div>
+        </div>
+    </section>
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <x-pre-footer-action url="{{ route('form.show',['category' => 'razrabotka']) }}" />
         </div>

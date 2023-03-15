@@ -6,11 +6,18 @@
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
             <x-title-with-thumbnail :title="$service->title" :thumbnail="$service->thumbnail" />
-            <div class="pb-8 lg:text-2xl lg:leading-10">
+            <div class="pb-8 lg:text-2xl lg:leading-10 content">
                 {!! $service->content !!}
             </div>
         </div>
     </section>
+    @if($service->price)
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+		<div class="container">
+            <p class="pb-8 lg:text-2xl lg:leading-10 text-accent lg:text-onAccent font-bold">Цена {{ $service->price }}</p>
+        </div> 
+    </section>
+    @endif
     @if($service->portfolios->isNotEmpty())
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">

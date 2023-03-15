@@ -17,83 +17,80 @@ class DevelopmentStageSeeder extends Seeder
         $items = [
             [
                 'title' => 'Аналитика',
-                'description' => '<p>Чтобы определиться, какой вам нужен сайт, необходимо проанализировать вашу аудиторию</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'description' => '<p>На первом этапе делается анализ сферы деятельности, конкурентов, целевой аудитории</p>',
+                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/analitika.jpg',
                 'sort' => 100,
                 'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Стратегия',
-                'description' => '<p>Теперь важно определить цель сайта, критерии успеха</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'description' => '<p>Теперь важно определить цель сайта</p>',
+                'content' => '<p>После сбора аналитики формируется базовая структура сайта, строятся поведенческие гепотезы Клиента, выстраивается первоначальная воронка продаж.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/strategy.jpg',
                 'sort' => 200,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Техзадание',
-                'description' => '<p>Теперь важно определить цель сайта, критерии успеха</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'description' => '<p>Детальное описание того, каким будет сайт</p>',
+                'content' => '<p>Любой дом строится по проекту, который содержит описание каким должно быть будущее строение, из чего сделаны стены, где должна проходить проводка и прочие технические коммуникации. На основе проекта ведутся в дальнейшем все строительные работы. В сфере веб-разработки техническое задание - это и есть наш проект.</p><p> Это важнейший документ, который подробно описывает каким должен быть сайт, каждый раздаел, каждую страницу, какие пункты должны быть в меню, как должна работать админ панель, какие сервисы и как подключаются. Именно сейчас подбирается стек технологий, расчитываются необходимые параметры сервера на котором будет размещен проект. На его основе будут выполнятся все последующие этапы. Поэтому при его разработке крайне важен скурпулезный подход.</p><p>Это очень ответственный этап, от корректно составленного технического задания, будет зависеть успех проекта вцелом. Очень важно, чтобы у заказчика и исполнителя было единое понимание готового продукта.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/texzadanie.jpg',
                 'sort' => 300,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+
             ],
             [
                 'title' => 'Прототипирование',
                 'description' => '<p>Создание сценариев пути пользователя и проектирование структуры страниц на сайте</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'content' => '<p>На данном этапе формируется схематическая структура для каждой страницы. Расположение элементов каждой страницы должно строится на основе современных правил веб дизайна, поведенческих особенностей клиента, правил восприиятия информации. Структура страницы должна быть удобной для клиента, должно быть чередование текста и интерактива, удобное расположение навигационных блоков и кнопок действия, а также быть удобным для устройств с разными размерами экрана.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/prototipirovanie.jpg',
                 'sort' => 400,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/prototip-1.jpg","title":"","desc":"","orig":"prototip-1.jpg","filesize":290855,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Дизайн-макет',
                 'description' => '<p>Дизайн сайта и демонстрация его прототипа до этапа разработки</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'content' => '<p>На основе прототипов стороится дизайн-макеты для каждой странцы. На этом этапе подбираются шрифты, цветовая гамма, разрабатывется визуальная концепия всего сайта. Данный этап можно делать с нуля или опираться на уже существующий фирменный стиль организации. На этом этапе надо быть максимально внимательным, весь дальнейший визуал стрроится на основе данного макета. Именно сейчас необходимо вносить изменения во внешний, а не дожидаться окончания разработки. Итогом должен быть согласованный визуал каждой страницы готового сайта. В соответствии с которой верстаются страницы.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/dizain-maket.jpg',
                 'sort' => 500,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/dizain-1.jpg","title":"","desc":"","orig":"dizain-1.jpg","filesize":202321,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/dizain-2.jpg","title":"","desc":"","orig":"dizain-2.jpg","filesize":210556,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Верстка',
                 'description' => '<p>Дизайн-макет превращается в код HTML. Уровень навыков исполнителя, сложность реализации элементов влияют на стоимость</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'content' => '<p>По окончания этапа "Дизайн-макет" мы получаем визуальное представление нашего будущего сайта. Суть данного процесса заключается в том, что картинка превращается в уже готовую страницу, именно сейчас делается адаптация под устройства с разными размера экранов. Данный процесс делает фронт-энд разработчик, здесь применяется специальный язык разметки html, каскадные таблицы стилей css, при помощи JavaScript добавляются интерактивные элементы, слайдеры, карусели и многое другое. Итогом данного этапа будут сверстанные страницы, которые содержат статические данные ( о том, что это такое вы узнаете на следующем этапе ).</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/verstka.jpg',
                 'sort' => 600,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/verstka-1.jpg","title":"","desc":"","orig":"verstka-1.jpg","filesize":375918,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/verstka-2.jpg","title":"","desc":"","orig":"verstka-2.jpg","filesize":375918,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Программирование',
                 'description' => '<p>Интеграция вёрстки с CMS, настройка системы кеширования, оптимизация запросов</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'content' => '<p>У нас уже есть техническое задание и готовая верстка с статическими данными. Статические данные - это чаще всего текст рыба или просто какой-то произвольный набор информации, который дает визуальное понимание внешнего вида. Естественно нам такое не подходит, ведь каждый Заказчик хочет чтобы практически всю информацию на сайте можно было добавлять, изменять или удалять через административную панель. На этом этапе происходит разработка бэкэнда. Если очень простыми слова, то бекэнд - система, которая отвечает за все данные которые хранятся на сайте, за логику работы сайта, системы авризации и регистрации и много другое. Благодаря бекэнду сайт переключается от одной страницы к другой, бэе энд достает из базы данных нужную нам информацию в ответ на наш запрос. Если провести сравнение с автомобилем, то это вся магия, которая происходят под капотом после того, как водитель нажимает на педаль газа или поворачивает ключ зажигания. Сейчас разрабатывается админ панель, систему авторизации и регистрации, подключаются необходимые сервисы, происходит настройка всех служб, которые необходимы сайту для корректной работы. Ну и конечно объединения всего этого с готовой версткой из предыдущего этапа. Итогом этапа является размещение готового сайта на серввере для наполнения и тестирования</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/programmirovanie.jpg',
                 'sort' => 700,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/programmirovanie-1.jpg","title":"","desc":"","orig":"programmirovanie-1.jpg","filesize":287905,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/programmirovanie-2.jpg","title":"","desc":"","orig":"programmirovanie-2.jpg","filesize":137082,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Базовое наполнение',
                 'description' => '<p>Подготовка и обработка предоставленных материалов для размещения на сайте, настройка</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'content' => '<p>У нас уже есть практически готовый сайт, но он полностью пустой, там отсутствуют данные об организации, нет ни какого описания про услуги или товары, которыми мы можем быть полезны Клиенту. У нас есть уже готовая админ панель через которую мы можем сделать наполнение уже нужной нам информацией. Или же приналичии интеграции сделать импорт товараов или услуг из 1С или любого другого сервиса.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/bazovoe-napolnenie.jpg',
                 'sort' => 800,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Тестирование',
                 'description' => '<p>Состоит из двух этапов. Закрытое — взаимодействие сайта с бизнесом. Открытое — тестирование работы сайта и поведения пользователей</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'content' => '<p>Мы уже находимся на финишной прямой, и практически готовы к запуску нашего проекта. Хоть на этапе разработки и используются авто-тесты всегда присутствует вероятность механической ошибки и человеческий фактор. Поэтому перед полноценным запуском необходимо тестировать работу системы. Так сказать имитировать работу реального посетителя, попробовать погулять по сайту, поотправлять заявки, добавлять товары в корзину. Проверить чтобы все работало как часы без сбоев и нареканий. Итогом данного проекта является перенос проекта уже основной домен, перевод платежных систем и других сервисов из тестового в боевой режим.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/testirovanie.jpg',
                 'sort' => 900,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/testirovanie-1.jpg","title":"","desc":"","orig":"testirovanie-1.jpg","filesize":398431,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}, {"url":"template\/images\/stages\/2023\/03\/01\/testirovanie-2.jpg","title":"","desc":"","orig":"testirovanie-2.jpg","filesize":221456,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]',
             ],
             [
                 'title' => 'Техподдержка',
                 'description' => '<p>Поддержка сайта в работоспособном состоянии и помощь в устранении неполадок</p>',
-                'content' => '<p>Перед созданием сайта крайне важно провести аналитику. Этот процесс помогает определить потребности и желания вашей целевой аудитории, а также технические и дизайнерские требования к проекту</p>',
+                'content' => '<p>Задача данного этапа является поддержка проекта в рабочем состоянии. Устранение последствий технических сбоев или обновления програмного обеспечения сервера. Изучение логов на предмет скрытых ошибок, которые неудалось диагностировать на этапе тестирования. Ну и конечно работы связанные с безопасностью, защита от DDOS атак, резервное копирование, проверка на вирусы.</p>',
                 'thumbnail' => '/template/images/stages/2023/03/01/texpodderjka.jpg',
                 'sort' => 1000,
-                'images' => '[{"url":"template\/images\/stages\/2023\/03\/01\/service-3.jpg","title":"","desc":"","orig":"service-3.jpg","filesize":151521,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-2.jpg","filesize":253909,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"},{"url":"template\/images\/stages\/2023\/03\/01\/service-1.jpg","title":"","desc":"","orig":"service-1.jpg","filesize":254118,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
            
         ];

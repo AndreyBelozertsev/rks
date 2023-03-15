@@ -18,8 +18,9 @@
                 @endforelse
                 @if (auth()->check())
                     <li>
-                        <span>{{ auth()->user()->name }}</span>
                         <a href="{{ route('admin.dashboard') }}">В админ панель</a>
+                    </li>
+                    <li>
                         <form action="{{ route('logOut') }}" method="POST">
                             @csrf
                             @method('DELETE')

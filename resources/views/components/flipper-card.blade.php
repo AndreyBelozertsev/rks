@@ -4,7 +4,7 @@
     'url' => null
 ])
 
-<div class="min-w-full md:min-w-[70%] lg:min-w-0" >
+<div {{ $attributes->class(['min-w-full md:min-w-[70%] lg:min-w-0 '])}} >
     <div class="rounded-lg overflow-hidden">
         <div class="flip-container" id="{{ $entity }}-{{ $item->slug }}">
             <div class="flipper">

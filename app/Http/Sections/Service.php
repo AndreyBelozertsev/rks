@@ -131,6 +131,8 @@ class Service extends Section implements Initializable
                     ->setUploadPath(function($file) {
                         return PathSaveClass::getUploadPath('service','images'); 
                     }),
+                AdminFormElement::text('price', 'Цена')
+                    ->setValidationRules('string','max:255'),
                 AdminFormElement::number('sort', 'Порядок сортировки')
                     ->setDefaultValue(500)
                     ->required(), 

@@ -18,5 +18,20 @@ class DevelopmentStageQueryBuilder extends Builder
             ->where('slug', $slug)
             ->select(['title','slug','content','sort','thumbnail','images']);
     }
+
+    public function prevItem($item): DevelopmentStageQueryBuilder
+    {
+        return $this->active()
+            ->orderBy('sort', 'desc')
+            ->where('sort', '<', $item->sort)
+            ->select(['title','slug','sort']);
+    }
+
+    public function nextItem($item): DevelopmentStageQueryBuilder
+    {
+        return $this->active()
+            ->where('sort', '>', $item->sort)
+            ->select(['title','slug','sort']);
+    }
     
 }

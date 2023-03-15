@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->text('images')->nullable();
+            $table->string('price')->nullable();
             $table->integer('sort')->default(500)->nullable();
             $table->boolean('status')->default(true);
             $table->string('view')->default('default');
