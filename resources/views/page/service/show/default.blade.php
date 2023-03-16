@@ -2,15 +2,29 @@
 
 @section('breadcrumbs', Breadcrumbs::render('service.show',$service))
 @section('content')
-<main class="py-40">
+<main class="py-36">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
-		<div class="container">
+		<div class="container px-0 md:px-4">
             <x-title-with-thumbnail :title="$service->title" :thumbnail="$service->thumbnail" />
+        </div>
+        <div class="container">
             <div class="pb-8 lg:text-2xl lg:leading-10 content">
                 {!! $service->content !!}
             </div>
         </div>
     </section>
+
+    @if($service->images)
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+		<div class="container">
+            <x-gallery.gallery class="justify-center">
+                @foreach (getImages($service->images) as $image)
+                    <x-gallery.gallery-item :url_full="$image['url']" :title="$image['title']" :desc="$image['desc']" />
+                @endforeach
+            </x-gallery.gallery>
+        </div>
+    </section>
+    @endif
     @if($service->price)
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">

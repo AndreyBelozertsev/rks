@@ -21,7 +21,7 @@ class AdditionalServiceSeeder extends Seeder
                 'sort' => 100,
             ],
             [
-                'title' => 'Баннер при построении маршрута',
+                'title' => 'Баннер при построении',
                 'description' =>  '<p>Баннер показывается в момент построения маршрута</p>',
                 'thumbnail' => '/template/images/additional-service/2023/03/01/banery-pri-postroenii-marshruta.png',
                 'sort' => 200,

@@ -8,27 +8,19 @@
     method="POST"
 >
 
-    <x-forms.text-input 
-        type="email" 
-        name="email" 
-        placeholder="Email" 
-        required="true"
-        value="{{ old('email') }}"
-        :isError="$errors->has('email')"
-    />
+
+    <div class="py-2">
+        <x-forms.text-input class="py-3" type="email" placeholder="E-mail" name="email"/>
+    </div>
     @error('email')
         <x-forms.error>
             {{ $message }}
         </x-forms.error>
     @enderror
+    <div class="py-2">
+        <x-forms.text-input class="py-3" type="password" placeholder="Пароль" name="password"/>
+    </div>
 
-    <x-forms.text-input 
-        type="password" 
-        name="password" 
-        placeholder="Пароль" 
-        required="true" 
-        :isError="$errors->has('password')"
-    />
 
     <x-forms.primary-button>Вход</x-forms.primary-button>
 

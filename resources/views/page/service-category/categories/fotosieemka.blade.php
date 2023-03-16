@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('breadcrumbs', Breadcrumbs::render('service-category.show',$serviceCategory)) 
 @section('content')
-<main class="py-40">
+<main class="py-36">
     <section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <div class="pb-12">

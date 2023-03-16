@@ -2,7 +2,7 @@
 
 @section('breadcrumbs', Breadcrumbs::render('case.show',$portfolio))
 @section('content')
-<main class="py-40">
+<main class="py-36">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
                 <div>
@@ -71,7 +71,7 @@
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
             <div class="pb-16">
-                <h3>Сопутствующие услуги</h3>
+                <h3>Оказанные услуги</h3>
             </div>
             <x-horizontal-scroll.horizontal-scroll>
                 @foreach ($portfolio->services as $item)

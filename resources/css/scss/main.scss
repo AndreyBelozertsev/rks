@@ -73,13 +73,14 @@
 }
 
 $brand: #282C35;
+$brandLight: #323641;
 $accent: #CBE857;
 $onAccent: #AEED42;
 $sunnyLime: #d8ee7f;
 $wildSand: #F0F0F0;
 $brandWhite: #FBFBFB;
 $success: #18762e;
-$error: #c30f00;
+$error: #FF453A;
 $warning: #ec8e00;
 $brandHeading: #2B2D33;
 
@@ -93,6 +94,7 @@ $brandGrey-100: #404247;
 
 // Imports
 @import '_animation-pulse';
+@import '_arrow';
 @import '_content';
 @import '_custom-checkbox';
 @import '_flipper';

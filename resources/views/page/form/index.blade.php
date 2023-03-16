@@ -11,7 +11,7 @@
 @endif
 
 @section('content')    
-<main class="pt-40">
+<main class="pt-36">
 	<section class="pb-12">
 		<div class="container">
                 <h2 class="pb-12">Готовы создать эффективный маркетинг вместе с нами?</h2>
@@ -38,12 +38,12 @@
                     </div>
                     <div class="lg:grid grid-cols-2 gap-32">
                         <div class="py-6">
-                            <p class="text-lg pb-6">Услуга:</p>
+                            <p class="text-lg pb-6 pt-0">Услуга:</p>
                             <x-forms.service-categories-inputs />
                         </div>
                         <div class="py-6">
                             <textarea 
-                                class="w-full bg-brandGrey-80 outline-none rounded-xl border border-brandGrey-40 py-2 px-4"
+                                class="w-full bg-brandLight outline-none rounded-xl py-2 px-4"
                                 placeholder="Вы можете поделиться с нами деталями или контекстом проекта" 
                                 name="comment"
                                 rows="5"

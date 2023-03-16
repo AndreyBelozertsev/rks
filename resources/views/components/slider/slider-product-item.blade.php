@@ -5,7 +5,7 @@
     'thumbnail' => isset($thumbnail) ? $thumbnail : $item->thumbnail,
  ])
 <div class="swiper-slide">
-    <div class="bg-brandGrey-80 rounded-lg overflow-hidden">
+    <div class="bg-brandLight rounded-lg overflow-hidden">
         <div class="pb-8">
             <img src="{{ $thumbnail }}">
         </div>

@@ -2,7 +2,7 @@
 
 @section('breadcrumbs', Breadcrumbs::render('article.show',$post))
 @section('content')
-<main class="py-40">
+<main class="py-36">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
             <x-title-with-thumbnail :title="$post->title" :thumbnail="$post->thumbnail" />

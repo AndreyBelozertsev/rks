@@ -39,29 +39,31 @@
 					<h1 class="text-center">ДРУГОЙ ВЗГЛЯД <br>НА МАРКЕТИНГ</h1>
 				</div>
 				<div class="hero__description-block w-full pb-12">
-					<p class="text-lg">Ракурс — студия digital маркетинга.</p>
-					<p class="text-lg">Наши клиенты зависят от успеха</p>
-					<p class="text-lg">в интернете, и мы помогаем им его достичь</p>
+					<p class="text-lg p-0">Ракурс — студия digital маркетинга.</p>
+					<p class="text-lg p-0">Наши клиенты зависят от успеха</p>
+					<p class="text-lg p-0">в интернете, и мы помогаем им его достичь</p>
 				</div>
 			</div>
 			<div class="flex lg:hidden justify-end pt-18">
-				<a href="{{ route('form.show') }}"><button class="rounded-full w-128 h-128 ff-dela-gothic-one bg-accent text-brand text-lg">Оставить<br>заявку</button></a>
+				<a href="{{ route('form.show') }}"><button class="rounded-full w-128 h-128 ff-dela-gothic-one bg-accent text-brand text-lg leading-tight">Оставить<br>заявку</button></a>
 			</div>
 			<x-pulse-button class="pb-8 pt-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000" />
 		</div>
 	</section>
 	<section class="about py-12" id="anchor" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-		<div class="container lg:grid grid-cols-2 pb-20 gap-32">
-			<x-subtitle-home title="О нас" number="01" />
+		<div class="container lg:grid grid-cols-2 pb-2 gap-32">
 			<div>
-				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Руководствуясь концепцией, согласно которой нет единого шаблона для всех, Ракурс нашёл своё место в качестве динамично развивающейся и гибкой студии, которая охватывает несколько областей маркетинга, брендинг и разработки</p>
-				<p class="lg:text-2xl lg:leading-10 lg:pb-10">За 5 лет мы выросли благодаря вовлеченности в проблемы клиентов и упорному труду</p>
+				<x-subtitle-home title="О нас" number="01" class="pb-7" />
+				<div class="pb-8">
+					<p>За 5 лет мы выросли благодаря вовлеченности в проблемы клиентов и упорному труду</p>
+				</div>
+
+			</div>			
+			<div>
 				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы называем точную цену услуг и не выходим за рамки согласованного бюджета. Наша команда ценит время партнёров, поэтому всегда соблюдает сроки</p>
 			</div>
 		</div>
-	</section>
-	<section class="services pb-12 lg:mb-40" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-		<div class="container hidden lg:grid grid-cols-2 gap-32">
+		<div class="container hidden lg:grid grid-cols-2 gap-32 pb-12">
 			<div>
 				<p class="text-4xl">Ракурс в цифрах</p>
 			</div>	
@@ -89,6 +91,8 @@
 			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span></marquee>
 			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span></marquee>
 		</div>
+	</section>
+	<section class="services pb-12 lg:mb-40" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<div>
@@ -127,8 +131,16 @@
 		</div>
 	</section>
 	<section class="client pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-		<div class="container ">
-			<x-subtitle-home class="pb-7" title="Нам<br>доверяют" number="04" />
+		<div class="container">
+			<div class="lg:grid grid-cols-2 pb-2 gap-32">
+				<div>
+					<x-subtitle-home class="pb-7" title="Нам<br>доверяют" number="04" />
+				</div>
+				<div>
+					<p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы называем точную цену услуг и не выходим за рамки согласованного бюджета. Наша команда ценит время партнёров, поэтому всегда соблюдает сроки</p>
+				</div>
+			</div>
+			
 		</div>
 		<x-our-clients />
 		<div class="container">

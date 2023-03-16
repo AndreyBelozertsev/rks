@@ -33,6 +33,7 @@ module.exports = {
         },
         colors: {
             brand: "#282C35",
+            brandLight:"#323641",
             accent: "#CBE857",
             onAccent: "#AEED42",
             sunnyLime: "#d8ee7f",

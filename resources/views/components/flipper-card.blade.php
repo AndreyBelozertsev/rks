@@ -8,7 +8,7 @@
     <div class="rounded-lg overflow-hidden">
         <div class="flip-container" id="{{ $entity }}-{{ $item->slug }}">
             <div class="flipper">
-                <div class="front flex justify-between flex-col bg-brandGrey-80 w-full">
+                <div class="front flex justify-between flex-col bg-brandLight w-full">
                     <div>
                         <div class="pb-8">
                             <a 
@@ -21,7 +21,7 @@
                         <div class="px-4">
                             <div class="pb-4">
                                 <a href="{{ $url }}">
-                                    <h2 class="leading-loose text-base">{{ $item->title }}</h2>
+                                    <h2 class="leading-loose text-lg ff-jura font-bold">{{ $item->title }}</h2>
                                 </a>
                             </div>
                         </div>

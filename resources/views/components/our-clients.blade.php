@@ -1,5 +1,5 @@
 <div class="pb-8">
-	<marquee class="py-4 ff-dela-gothic-one text-3xl text-brand" scrollamount="3">
+	<marquee class="py-4 ff-dela-gothic-one text-3xl text-brand" scrollamount="10">
         @forelse ($clients as $client)
             <span class="px-4"><img src="{{ $client->thumbnail }}"></span>•
         @empty

@@ -2,7 +2,7 @@
 
 @section('breadcrumbs', Breadcrumbs::render('service-category.show',$serviceCategory)) 
 @section('content')
-<main class="py-40">
+<main class="py-36">
     <section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <div class="pb-12">
@@ -37,7 +37,7 @@
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <div class="pb-12">
-                <h5>Попроубуйте бесплатно</h5>
+                <h5>Попробуйте бесплатно</h5>
             </div>                
             <div class="lg:grid grid-cols-2 gap-32">
                 <div class="block pb-12 lg:pb-0">

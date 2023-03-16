@@ -11,7 +11,7 @@ if( document.getElementsByClassName('contact-form') ){
             //const preloader = document.getElementById('preloader');
             const responseBlock = document.querySelector('#modal-response .modal-content');
    
-            //button.setAttribute('disabled', 'disabled');
+            button.setAttribute('disabled', 'disabled');
             //preloader.classList.remove("hidden");
             responseBlock.innerHTML = '';
             let inputs = e.target.getElementsByClassName('input-error');

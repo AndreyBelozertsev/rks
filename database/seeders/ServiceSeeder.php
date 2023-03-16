@@ -41,7 +41,7 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 20 000 руб.',
                 'service_category_id' => 2,
                 'sort' => 100,
-                'images' => '[{"url":"template\/images\/services\/2023\/03\/01\/geo.jpg","title":"","desc":"","orig":"geo.jpg","filesize":47935,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+                'images' => '[{"url":"template\/images\/service\/2023\/03\/01\/geo.png","title":"","desc":"","orig":"geo.png","filesize":47935,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Каталог',
@@ -96,6 +96,7 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'Яндекс.Карты',
                 'description' =>  '<p>' .fake()->paragraph(4) . '</p>',
+                'thumbnail' => '/template/images/service/2023/03/01/ya-map.jpeg',
                 'icon' => '<lord-icon src="/template/lord-icon/map-pin.json" trigger="loop" delay="1500" colors="primary:#F0F0F0,secondary:#cbe857" stroke="35" state="hover-jump" style="width:100px;height:100px"></lord-icon>',
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
@@ -108,6 +109,7 @@ class ServiceSeeder extends Seeder
                 'content' =>  '<p>' .fake()->paragraph(8) . '</p>',
                 'service_category_id' => 1,
                 'sort' => 200,
+                'images' => '[{"url":"template\/images\/service\/2023\/03\/01\/geo.png","title":"","desc":"","orig":"geo.png","filesize":47935,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Базовое SEO',
@@ -141,7 +143,7 @@ class ServiceSeeder extends Seeder
                 'service_category_id' => 1,
                 'view' => 'geo',
                 'sort' => 500,
-                'images' => '[{"url":"template\/images\/service\/2023\/03\/01\/geo.jpg","title":"","desc":"","orig":"geo.jpg","filesize":47935,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
+                'images' => '[{"url":"template\/images\/service\/2023\/03\/01\/geo.png","title":"","desc":"","orig":"geo.png","filesize":47935,"ext":"jpg","mime":"image\/jpeg","mime_base":"image","mime_detail":"jpeg"}]'
             ],
             [
                 'title' => 'Интерьерная фотосьемка',

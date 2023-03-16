@@ -2,7 +2,7 @@
 
 @section('breadcrumbs', Breadcrumbs::render('service.show',$service))
 @section('content')
-<main class="py-40">
+<main class="py-36">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
             <div class="pb-12">
@@ -30,11 +30,13 @@
             <div class="pb-12">
                 <h3>Форматы</h3>
             </div>
-            <x-slider.slider class="swiper-default">
-                @foreach ($service->additionalServices as $item)
-                    <x-slider.slider-product-item :item="$item" :thumbnail="$item->makeThumbnail('345x220','resize')" :iteration="$loop->iteration" />
-                @endforeach
-            </x-slider.slider>
+            <div class="pb-8">
+                <x-slider.slider class="swiper-default">
+                    @foreach ($service->additionalServices as $item)
+                        <x-slider.slider-product-item :item="$item" :thumbnail="$item->makeThumbnail('345x220','resize')" :iteration="$loop->iteration" />
+                    @endforeach
+                </x-slider.slider>
+            </div>
             <div class="pb-8 lg:text-2xl lg:leading-10">
                 {!! $service->content !!}
             </div>
