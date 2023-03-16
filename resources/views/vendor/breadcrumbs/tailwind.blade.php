@@ -6,25 +6,25 @@
                 @foreach ($breadcrumbs as $breadcrumb)
                     @if ($loop->first)
                         @if($breadcrumb->url)
-                            <li>
+                            <li class="pr-4">
                                 <a href="{{ $breadcrumb->url }}">
                                     <span class="pr-[4px]"><</span> {{ $breadcrumb->title }}
                                 </a>
                             </li>
                         @else
-                            <li>
+                            <li class="pr-4">
                                 <span class="pr-[6px]"><</span> {{ $breadcrumb->title }}
                             </li>
                         @endif
                     @elseif( $breadcrumb->url && !$loop->last )
-                        <li>
+                        <li class="pr-4">
                             <a href="{{ $breadcrumb->url }}">
-                                <span class="pr-[4px] pl-4"><</span> {{ $breadcrumb->title }}
+                                <span class="pr-[4px]"><</span> {{ $breadcrumb->title }}
                             </a>
                         </li>
                     @else
-                        <li>
-                            <span class="pr-[6px] pl-4"><</span> {{ $breadcrumb->title }}
+                        <li class="pr-4">
+                            <span class="pr-[6px]"><</span> {{ $breadcrumb->title }}
                         </li>
                     @endif
 

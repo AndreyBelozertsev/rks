@@ -88,11 +88,11 @@
 
 		</div>
 		<div class="block lg:hidden pb-8">
-			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span></marquee>
-			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span></marquee>
+			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•<span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•<span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•<span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•</marquee>
+			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•<span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•<span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•<span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•</marquee>
 		</div>
 	</section>
-	<section class="services pb-12 lg:mb-40" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+	<section class="services pb-12 lg:mb-24" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<div>
