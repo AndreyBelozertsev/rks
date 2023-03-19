@@ -12,7 +12,7 @@
             </div>
     </section>
     <section class="py-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-        <div class="container">
+        <div class="container grid gap-16">
             @forelse ($serviceCategory->services as $service)
                 <x-product-item 
                     :url="route('service.show',['category'=> $serviceCategory->slug, 'slug'=> $service->slug ])"

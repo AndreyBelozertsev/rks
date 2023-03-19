@@ -23,9 +23,9 @@
 				<a class="lg:hidden" href="{{ route('home') }}" rel="home">
 					<img src="{{ asset('template/images/logo.svg') }}" alt="{{ env('APP_NAME') }}">
 				</a>
-				<p class="uppercase">{{ date('Y') }} © {{ isset($contacts['organization']) ? $contacts['organization'] :  env('APP_NAME') }}</p>
-				<a>Конфиденциальность</a>
-				<a class="lg:hidden">Контакты</a>
+				<p class="uppercase pb-0">{{ date('Y') }} © {{ isset($contacts['organization']) ? $contacts['organization'] :  env('APP_NAME') }}</p>
+				<a class="gap-2">Конфиденциальность</a>
+				<a class="lg:hidden -mt-2">Контакты</a>
 			</div>
 		</div>
 	</footer>

@@ -81,7 +81,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'favicon' => '/packages/sleepingowl/default/images/favicon.ico',
+    'favicon' => '/template/favicon/favicon.ico',
 
     /*
     |--------------------------------------------------------------------------
@@ -291,6 +291,7 @@ return [
             'height'          => 200,
             'allowedContent'  => true,
             'extraPlugins'    => 'uploadimage,image2,justify,youtube,uploadfile',
+            'format_tags' => 'p;h2;h3;h4;h5;h6;pre;address;div',
             /*
              * WARNING!!!! CKEDITOR on D & D and UploadImageDialog
              * BY DEFAULT IMAGES WILL STORE TO imagesUploadDirectory = /images/uploads
@@ -357,7 +358,7 @@ return [
             // Text alignment options
             'alignment'     => [
                 'options' => [
-                    'left', 'center', 'right', /*'justify',*/
+                    'left', 'center', 'right', 'justify',
                 ],
             ],
 

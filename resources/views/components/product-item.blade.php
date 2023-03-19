@@ -8,7 +8,7 @@
 ])
 
 
-<div class="pb-24" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+<div class="pb-10 lg:pb-16" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
     <div class="lg:grid gap-8" style="grid-template-columns: 2fr 4fr">
         <div>
             <div>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div>
-            <div class="pb-8 lg:text-xl lg:leading-10">
+            <div class="pb-6 lg:text-xl lg:leading-10">
                 {!! $description !!}  
             </div>
             <a class="text-base underline underline-offset-4 decoration-2 decoration-accent" href="{{ $url }}">Узнать больше</a>

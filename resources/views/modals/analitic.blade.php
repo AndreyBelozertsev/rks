@@ -23,7 +23,7 @@
                     </div>
                     <div class="py-3">
                         <textarea 
-                            class="w-full bg-brandGrey-80 outline-none rounded-xl border border-brandGrey-40 py-2 px-4"
+                            class="w-full bg-brandLight outline-none rounded-xl py-2 px-4"
                             placeholder="Вы можете поделиться с нами деталями или контекстом проекта" 
                             name="comment"
                             rows="3"

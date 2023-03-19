@@ -27,30 +27,34 @@
             <div>
                 <form class="contact-form" action="{{ route('form.show') }}" method="POST">
                     <input type="hidden" name="url" value="{{ request()->get('url') ? request()->get('url') : url()->previous() }}">
-                    <div class="py-6">
-                            <x-forms.text-input class="py-3" placeholder="Ваше имя" required="required" name="name"/>
-                    </div>
-                    <div class="py-6">
-                            <x-forms.text-input class="phone-number py-3" placeholder="Номер телефона" required="required" name="phone"/>
-                    </div>
-                    <div class="py-6">
-                            <x-forms.text-input class="py-3" type="email" placeholder="E-mail" name="email"/>
-                    </div>
-                    <div class="lg:grid grid-cols-2 gap-32">
-                        <div class="py-6">
-                            <p class="text-lg pb-6 pt-0">Услуга:</p>
-                            <x-forms.service-categories-inputs />
+                    <div class="lg:grid grid-cols-2 gap-20">
+                        <div>
+                            <div class="py-6 lg:py-4">
+                                    <x-forms.text-input class="py-3" placeholder="Ваше имя" required="required" name="name"/>
+                            </div>
+                            <div class="py-6 lg:py-4">
+                                    <x-forms.text-input class="phone-number py-3" placeholder="Номер телефона" required="required" name="phone"/>
+                            </div>
+                            <div class="py-6 lg:py-4">
+                                    <x-forms.text-input class="py-3" type="email" placeholder="E-mail" name="email"/>
+                            </div>
                         </div>
-                        <div class="py-6">
-                            <textarea 
-                                class="w-full bg-brandLight outline-none rounded-xl py-2 px-4"
-                                placeholder="Вы можете поделиться с нами деталями или контекстом проекта" 
-                                name="comment"
-                                rows="5"
-                            ></textarea>
+                        <div>
+                            <div class="py-6 w-full">
+                                <p class="text-lg pb-6 pt-0">Услуга:</p>
+                                <x-forms.service-categories-inputs />
+                            </div>
+                            <div class="py-6 w-full">
+                                <textarea 
+                                    class="w-full bg-brandLight outline-none rounded-xl py-2 px-4"
+                                    placeholder="Вы можете поделиться с нами деталями или контекстом проекта" 
+                                    name="comment"
+                                    rows="4"
+                                ></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="py-6">
+                    <div class="py-6 lg:py-4">
                         <div class="custom-checkbox-mark">
                             <input type="checkbox" id="custom-checkbox-agree" name="agree">
                             <label for="custom-checkbox-agree"><span>Согласен с политикой обработки персональных данных</span></label>

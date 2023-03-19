@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="py-20">
+<main class="pt-20">
 	<section class="lg:h-screen">
 		<div class="container">
 			<div class="hidden lg:flex justify-center pt-20 pb-40">
@@ -51,10 +51,10 @@
 		</div>
 	</section>
 	<section class="about py-12" id="anchor" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-		<div class="container lg:grid grid-cols-2 pb-2 gap-32">
+		<div class="container lg:grid grid-cols-2 pb-12 lg:pb-2 gap-32">
 			<div>
-				<x-subtitle-home title="О нас" number="01" class="pb-7" />
-				<div class="pb-8">
+				<x-subtitle-home title="О нас" number="01" class="pb-0 lg:pb-7" />
+				<div class="pb-2 lg:pb-8">
 					<p>За 5 лет мы выросли благодаря вовлеченности в проблемы клиентов и упорному труду</p>
 				</div>
 
@@ -63,7 +63,7 @@
 				<p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы называем точную цену услуг и не выходим за рамки согласованного бюджета. Наша команда ценит время партнёров, поэтому всегда соблюдает сроки</p>
 			</div>
 		</div>
-		<div class="container hidden lg:grid grid-cols-2 gap-32 pb-12">
+		<div class="container hidden lg:grid grid-cols-2 gap-32 pb-16">
 			<div>
 				<p class="text-4xl">Ракурс в цифрах</p>
 			</div>	
@@ -87,7 +87,7 @@
 			</div>
 
 		</div>
-		<div class="block lg:hidden pb-8">
+		<div class="block lg:hidden pb-4">
 			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•<span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•<span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•<span class="px-4">5+ лет опыта</span>•<span class="px-4">200+ компаний</span>•</marquee>
 			<marquee class="py-4 ff-dela-gothic-one text-2xl" scrollamount="10"><span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•<span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•<span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•<span class="px-4">2000+ панорам</span>•<span class="px-4">Выручка клиентов в среднем +22%</span>•</marquee>
 		</div>
@@ -96,7 +96,7 @@
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
 				<div>
-					<x-subtitle-home class="pb-7" title="Услуги" number="02" />
+					<x-subtitle-home class="pb-0 lg:pb-8" title="Услуги" number="02" />
 					<div class="pb-8">
 						<p>Независимо от того, управляете ли вы крупным предприятием или небольшим стартапом, вы получите лучший в своём классе сервис, соответствующий вашим ожиданиям</p>
 						<p>Решаем задачи любой сложности: от разработки дизайна и настройки контекстной рекламы до создания корпоративных CRM систем и приложений</p>
@@ -112,7 +112,7 @@
 						@empty
 						@endforelse
 					</div>
-					<div>
+					<div class="pb-4 lg:pb-0">
 						<a class="text-base underline underline-offset-4 decoration-2 decoration-accent py-2" href="{{ route('service-category.index') }}">Узнать больше</a>
 					</div>
 				</div>
@@ -122,8 +122,8 @@
 	<section class="work pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
 			<div class="lg:grid grid-cols-2 gap-32">
-				<x-subtitle-home class="pb-7" title="Как мы<br>работаем?" number="03" />
-				<div class="pb-8">
+				<x-subtitle-home class="pb-0 lg:pb-8" title="Как мы<br>работаем?" number="03" />
+				<div class="pb-6">
 					<p class="lg:text-2xl lg:leading-10 lg:pb-10">Нам важно быть полезными клиенту, поэтому изначально мы проводим комплексный анализ компании, изучаем текущую представленность в интернете, определяем портрет клиента и основных конкурентов, согласовываем целевые показатели</p>
 					<p class="lg:text-2xl lg:leading-10 lg:pb-10">После аудита мы находим зоны потенциального роста и интересуемся бюджетом на рекламу. Понимание объёма бюджета даёт нам возможность разработать оптимальную маркетинговую стратегию</p>
 				</div>
@@ -132,15 +132,14 @@
 	</section>
 	<section class="client pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
-			<div class="lg:grid grid-cols-2 pb-2 gap-32">
+			<div class="lg:grid grid-cols-2 pb-4 gap-32">
 				<div>
-					<x-subtitle-home class="pb-7" title="Нам<br>доверяют" number="04" />
+					<x-subtitle-home class="pb-0 lg:pb-8" title="Нам<br>доверяют" number="04" />
 				</div>
 				<div>
 					<p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы называем точную цену услуг и не выходим за рамки согласованного бюджета. Наша команда ценит время партнёров, поэтому всегда соблюдает сроки</p>
 				</div>
 			</div>
-			
 		</div>
 		<x-our-clients />
 		<div class="container">
