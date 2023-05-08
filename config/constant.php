@@ -10,7 +10,7 @@ return [
     'service_view' =>
     [
         'default' => 'Стандартный',
-        'geo' => 'ГеоРеклама'
+        'with_additional' => 'Расширенный'
     ],
     'portfolio_view' =>
     [

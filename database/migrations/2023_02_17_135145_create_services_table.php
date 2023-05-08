@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('icon')->nullable();
             $table->text('description')->nullable();
             $table->text('content')->nullable();
+            $table->text('additional_content')->nullable();
             $table->text('images')->nullable();
             $table->string('price')->nullable();
             $table->integer('sort')->default(500)->nullable();

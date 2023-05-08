@@ -22,7 +22,7 @@
     </section>
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
-            <div class="pb-8 lg:text-2xl lg:leading-10">
+            <div class="pb-8 lg:text-2xl lg:leading-10 content">
                 {!! $portfolio->content !!}
             </div>
         </div>

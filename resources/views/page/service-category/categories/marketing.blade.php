@@ -7,7 +7,7 @@
             <div class="pb-12">
                 <h1>{{ $serviceCategory->title }}</h1>
             </div>
-            <div class="pb-8 lg:pb-20 lg:text-2xl lg:leading-10 text-base">
+            <div class="pb-8 lg:pb-20 lg:text-2xl lg:leading-10 text-base content">
                 {!! $serviceCategory->content !!}
             </div>
     </section>

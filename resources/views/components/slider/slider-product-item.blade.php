@@ -6,7 +6,7 @@
  ])
 <div class="swiper-slide">
     <div class="bg-brandLight rounded-lg overflow-hidden">
-        <div class="pb-8">
+        <div class="pb-8 flex justify-center">
             <img src="{{ $thumbnail }}">
         </div>
         <div class="px-4">

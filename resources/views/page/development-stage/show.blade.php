@@ -7,7 +7,7 @@
 		<div class="container">
             <x-title-with-thumbnail :title="$developmentStage->title" :thumbnail="$developmentStage->thumbnail" />
 
-            <div class="pb-8 lg:text-2xl lg:leading-10">
+            <div class="pb-8 lg:text-2xl lg:leading-10 content">
                 {!! $developmentStage->content !!}
             </div>
         </div>

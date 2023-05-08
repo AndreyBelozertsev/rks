@@ -46,3 +46,12 @@ Breadcrumbs::for('article.show', function ($trail, $post) {
     $trail->parent('article.index',$post);
     $trail->push($post->title, route('article.show',['slug'=> $post->slug]));
 });
+
+Breadcrumbs::for('vacancy.index', function ($trail) {
+    $trail->push('Вакансии', route('vacancy.index'));
+});
+
+Breadcrumbs::for('vacancy.show', function ($trail, $vacancy) {
+    $trail->parent('vacancy.index',$vacancy);
+    $trail->push($vacancy->title, route('vacancy.show',['slug'=> $vacancy->slug]));
+});

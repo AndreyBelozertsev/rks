@@ -6,7 +6,7 @@
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
             <x-title-with-thumbnail :title="$post->title" :thumbnail="$post->thumbnail" />
-            <div class="pb-8 lg:text-2xl lg:leading-10">
+            <div class="pb-8 lg:text-2xl lg:leading-10 content">
                 {!! $post->content !!}
             </div>
         </div>

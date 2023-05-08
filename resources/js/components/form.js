@@ -59,6 +59,7 @@ if( document.getElementsByClassName('contact-form') ){
             }else if(json.success){
                 hideAllModals();
                 openModal('modal-response');
+                ym(48507413,'reachGoal','send');
                 responseBlock.innerHTML = json.success;
             } else {
                 hideAllModals();

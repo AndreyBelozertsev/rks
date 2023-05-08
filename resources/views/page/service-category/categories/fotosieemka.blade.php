@@ -15,7 +15,7 @@
                     <x-horizontal-scroll.item-photography :item="$item" />
                 @endforeach
             </x-horizontal-scroll.horizontal-scroll>
-            <div class="pb-8 lg:text-2xl lg:leading-10 lg:pb-10">
+            <div class="pb-8 lg:text-2xl lg:leading-10 lg:pb-10 content">
                 {!! $serviceCategory->content !!}
             </div>
         </div>

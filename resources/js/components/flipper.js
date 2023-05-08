@@ -5,4 +5,3 @@ for (let i = 0; i < flipper.length; i++) {
     document.querySelector(`#${e.target.dataset.flipId}`).classList.toggle('hover');
   })
 }
-console.log(window.screen.width);

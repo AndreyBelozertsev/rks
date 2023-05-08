@@ -8,7 +8,7 @@
             <div class="pb-12">
                 <h1>{{ $serviceCategory->title }}</h1>
             </div>
-            <div class="pb-8 lg:text-2xl lg:leading-10 lg:pb-10">
+            <div class="pb-8 lg:text-2xl lg:leading-10 lg:pb-10 content">
                 {!! $serviceCategory->content !!}
             </div>
         </div>
@@ -41,7 +41,7 @@
             </div>                
             <div class="lg:grid grid-cols-2 gap-32">
                 <div class="block pb-12 lg:pb-0">
-                    <p class="lg:text-2xl lg:leading-10 lg:pb-10">Мы готовы помочь вам определиться с видом сайта, а для этого необходимо выполнить первый пункт из нашего списка. Сделайте свой первый шаг к созданию сайта вместе с нами</p>
+                    <p class="lg:text-2xl lg:leading-10 lg:pb-10">Компания «Ракурс» поможет вам определиться с видом сайта и будет сопровождать на каждом этапе создания. Сделайте первый шаг, и мы вместе создадим идеальный сайт под ваши потребности</p>
                 </div>
                 <div>
                     <button data-modal="modal-analitic" class="modal-open-button w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Получить аналитику</button>

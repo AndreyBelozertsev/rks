@@ -42,9 +42,9 @@ class SettingController extends Controller
     {
         $policy = Cache::rememberForever('setting.policy', function (){
             return Setting::where('key','policy')
-                ->select('value')
-                ->first();
+                ->value('value');
         });
+
         return view('page.policy', compact('policy') );
     }
 }

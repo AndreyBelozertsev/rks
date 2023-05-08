@@ -121,6 +121,7 @@ class Service extends Section implements Initializable
                     ->required(),
                 AdminFormElement::wysiwyg('description', 'Краткое описание'),
                 AdminFormElement::wysiwyg('content', 'Основное содержание'),
+                AdminFormElement::wysiwyg('additional_content', 'Дополнительное содержание'),
                 AdminFormElement::image('thumbnail', 'Обложка')
                     ->setUploadPath(function($file) {
                         return PathSaveClass::getUploadPath('service','images'); 

@@ -9,6 +9,7 @@ use Domain\Case\Providers\CaseServiceProvider;
 use Domain\Post\Providers\PostServiceProvider;
 use Domain\Product\Providers\ProductServiceProvider;
 use Domain\Setting\Providers\SettingServiceProvider;
+use Domain\Vacancy\Providers\VacancyServiceProvider;
 use Domain\Customer\Providers\CustomerServiceProvider;
 
 class DomainServiceProvider extends ServiceProvider
@@ -46,6 +47,10 @@ class DomainServiceProvider extends ServiceProvider
 
         $this->app->register(
             SettingServiceProvider::class
+        );
+
+        $this->app->register(
+            VacancyServiceProvider::class
         );
     }
 

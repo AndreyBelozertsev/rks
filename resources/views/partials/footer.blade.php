@@ -24,7 +24,11 @@
 					<img src="{{ asset('template/images/logo.svg') }}" alt="{{ env('APP_NAME') }}">
 				</a>
 				<p class="uppercase pb-0">{{ date('Y') }} © {{ isset($contacts['organization']) ? $contacts['organization'] :  env('APP_NAME') }}</p>
-				<a class="gap-2">Конфиденциальность</a>
+				<div class="flex flex-col">
+					<a href="{{ route('vacancy.index') }}" class="gap-2">Вакансии</a>
+					<a href="{{ route('policy.index') }}" class="gap-2">Конфиденциальность</a>
+				</div>
+
 				<a class="lg:hidden -mt-2">Контакты</a>
 			</div>
 		</div>

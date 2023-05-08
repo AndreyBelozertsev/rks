@@ -11,6 +11,7 @@ use App\Routing\PostRegistrar;
 use App\Contracts\RouteRegistrar;
 use App\Routing\ProductRegistrar;
 use App\Routing\SettingRegistrar;
+use App\Routing\VacancyRegistrar;
 use App\Routing\CustomerRegistrar;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Cache\RateLimiting\Limit;
@@ -37,6 +38,7 @@ class RouteServiceProvider extends ServiceProvider
         PostRegistrar::class,
         ProductRegistrar::class,
         SettingRegistrar::class,
+        VacancyRegistrar::class,
     ];
 
     /**

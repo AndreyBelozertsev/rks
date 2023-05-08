@@ -4,10 +4,10 @@
 @section('content')
 <main class="py-36">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
-		<div class="container">
-            <div class="pb-12">
-                <h1>{{ $service->title }}</h1>
-            </div>
+        <div class="container px-0 md:px-4">
+            <x-title-with-thumbnail :title="$service->title" :thumbnail="$service->thumbnail" />
+        </div>
+        <div class="container">
             <div class="pb-8 lg:text-2xl lg:leading-10">
                 {!! $service->content !!}
             </div>
@@ -37,8 +37,14 @@
                     @endforeach
                 </x-slider.slider>
             </div>
-            <div class="pb-8 lg:text-2xl lg:leading-10">
-                {!! $service->content !!}
+        </div>
+    </section>
+    @endif
+    @if($service->additional_content)
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+		<div class="container">
+            <div class="pb-8 lg:text-2xl lg:leading-10 content">
+                {!! $service->additional_content !!}
             </div>
         </div>
     </section>
