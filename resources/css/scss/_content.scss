@@ -47,7 +47,6 @@
     & ol li:before,  ul li:before{
         display: inline-block;	
         position: absolute;
-        top: 0px;
         left: -26px;
         width: 20px;    
         color: $accent;
@@ -55,10 +54,22 @@
     }
     & ol li:before {
         content: counter(num) '.'; 
+        //top: 8px;
         counter-increment: num;
     }
     & ul li:before {
         content: '-'; 
     }
 
+    & a{
+        color: $onAccent;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+}
+@media (max-width: 960px) {
+    content a{
+        color: $accent;
+    }
 }

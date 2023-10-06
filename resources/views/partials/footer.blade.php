@@ -11,7 +11,7 @@
 							<x-contacts.address />
 						</div>
 					</div>
-					<div class="flex justify-between">
+					<div class="flex gap-4">
 						<x-contacts.social />
 					</div>
 				</div>
@@ -24,18 +24,20 @@
 					<img src="{{ asset('template/images/logo.svg') }}" alt="{{ env('APP_NAME') }}">
 				</a>
 				<p class="uppercase pb-0">{{ date('Y') }} © {{ isset($contacts['organization']) ? $contacts['organization'] :  env('APP_NAME') }}</p>
-				<div class="flex flex-col">
-					<a href="{{ route('vacancy.index') }}" class="gap-2">Вакансии</a>
-					<a href="{{ route('policy.index') }}" class="gap-2">Конфиденциальность</a>
+				<div class="flex flex-col gap-4 lg:gap-2 items-center lg:items-start">
+					<a href="{{ route('vacancy.index') }}">Вакансии</a>
+					<a href="{{ route('policy.index') }}">Конфиденциальность</a>
 				</div>
 
-				<a class="lg:hidden -mt-2">Контакты</a>
+				<a href="/contact" class="lg:hidden mt-2">Контакты</a>
 			</div>
 		</div>
 	</footer>
 	@include('modals.response')
 	@include('modals.analitic')
 	@include('modals.cookie')
+	@include('modals.feedback')
+	@include('preloader.main')
 	<script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
 	@vite(['resources/js/app.js'])
 </body>

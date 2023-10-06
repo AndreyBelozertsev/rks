@@ -25,7 +25,7 @@ class SignInController extends Controller
 
         //SessionRegenerator::run();
 
-        return redirect()->route('home');
+        return redirect()->route('admin.dashboard');
     }
 
     public function logOut(){

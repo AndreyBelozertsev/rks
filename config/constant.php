@@ -10,7 +10,12 @@ return [
     'service_view' =>
     [
         'default' => 'Стандартный',
-        'with_additional' => 'Расширенный'
+        'development' => 'Разработка',
+        'with_additional' => 'Расширенный',
+        'yandex_map' => 'Яндекс Карты',
+        'seo' => 'SEO',
+        'reklamnaya_podpiska' => 'Рекламная подписка',
+        'kontekstnaya_reklama' => 'Контекстная реклама',
     ],
     'portfolio_view' =>
     [
@@ -18,5 +23,6 @@ return [
         'development' => 'Разработка',
         'marketing' => 'Маркетинг',
         'photography' => 'Фотосъемка',
+        'panorams' => 'Панорамы',
     ],
 ];

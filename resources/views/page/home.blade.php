@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="pt-20">
+<main class="pt-20 white-theme">
 	<section class="lg:h-screen">
 		<div class="container">
 			<div class="hidden lg:flex justify-center pt-20 pb-40">
 				<svg width="80" height="300" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500">
-					<text x="28" y="150" fill="#F0F0F0" transform="rotate(-90, 28, 150)" style="text-anchor:middle;font-size:16px;">Другой взгляд на маркетинг</text>
+					<text x="28" y="150" fill="" transform="rotate(-90, 28, 150)" style="text-anchor:middle;font-size:16px;">Другой взгляд на маркетинг</text>
 				</svg>
 				<div class="ff-dela-gothic-one">
 					<div class="pb-12">
-						<h1 data-aos="fade-in" data-aos-easing="linear" data-aos-duration="2000" class="uppercase text-onAccent text-9xl">Ракурс</h1>
+						<p data-aos="fade-in" data-aos-easing="linear" data-aos-duration="2000" class="uppercase text-onAccent text-9xl">Ракурс</p>
 					</div>
 					<div data-aos="fade-in" data-aos-easing="linear" data-aos-duration="3000" class="text-4xl">
 						<p class="uppercase">#digital</p>
@@ -40,8 +40,7 @@
 				</div>
 				<div class="hero__description-block w-full pb-12">
 					<p class="text-lg p-0">Ракурс — студия digital маркетинга.</p>
-					<p class="text-lg p-0">Наши клиенты зависят от&nbspуспеха</p>
-					<p class="text-lg p-0">в интернете, и&nbspмы&nbspпомогаем им&nbspего&nbspдостичь</p>
+					<p class="text-lg p-0">Помогаем стать успешными в интернете</p>
 				</div>
 			</div>
 			<div class="flex lg:hidden justify-end pt-18">
@@ -98,7 +97,6 @@
 				<div>
 					<x-subtitle-home class="pb-0 lg:pb-8" title="Услуги" number="02" />
 					<div class="pb-8">
-						<p>Независимо от&nbspтого, управляете ли&nbspвы&nbspкрупным предприятием&nbspили небольшим стартапом,&nbspвы получите лучший&nbspв своём классе сервис, соответствующий вашим ожиданиям</p>
 						<p>Поможем решить задачи любой сложности: от&nbspразработки дизайна и&nbspнастройки контекстной рекламы до&nbspсоздания корпоративных CRM-систем и&nbspприложений.</p>
 					</div>
 				</div>
@@ -107,7 +105,7 @@
 						@forelse ($serviceCategories as $category)
 							<div class="flex">
 								<a href="{{ route('service-category.show', $category->slug) }}" 
-								class="uppercase text-5xl ff-dela-gothic-one border-solid divide-wildSand border-t-2 leading-loose @if($loop->last) border-b-2 @endif">{{ $category->title }}</a>
+								class="uppercase hover:text-onAccent text-5xl ff-dela-gothic-one border-solid divide-wildSand border-t-2 leading-loose @if($loop->last) border-b-2 @endif">{{ $category->title }}</a>
 							</div>
 						@empty
 						@endforelse

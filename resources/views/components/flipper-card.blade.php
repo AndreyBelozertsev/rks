@@ -13,7 +13,7 @@
                         <div class="pb-8">
                             <a 
                                 class="block bg-center bg-no-repeat bg-cover h-[250px] md:h-[300px] lg:h-[250px]"
-                                style="background-image: url('{{ $item->thumbnail ? $item->thumbnail : asset('template/images/logo.svg') }}')" 
+                                style="background-image: url('{{ $item->thumbnail ? asset($item->thumbnail) : asset('template/images/logo.svg') }}')" 
                                 href="{{ $url }}"
                             >
                             </a>

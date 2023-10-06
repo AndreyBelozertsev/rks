@@ -1,0 +1,19 @@
+//DarkMode
+.dark-theme{
+    background-color: $brand;
+    color: $wildSand;
+}
+
+.dark-theme text{
+    fill: $wildSand;
+}
+
+//LightMode
+.light-theme{
+    background-color: $wildSand;
+    color: $brand;
+}
+
+.light-theme text{
+    fill: $brand;
+}

@@ -10,6 +10,7 @@ class VacancyQueryBuilder extends Builder
     public function activeItem($slug): VacancyQueryBuilder
     {
         return $this->active()
+            ->orderBy('sort', 'asc')
             ->where('slug', $slug)
             ->select(['id','title','slug','content']);
     }

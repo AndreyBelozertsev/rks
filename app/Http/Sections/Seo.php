@@ -46,7 +46,7 @@ class Seo extends Section implements Initializable
      */
     public function initialize()
     {
-        $this->addToNavigation()->setPriority(100)->setIcon('fa fa-rocket');
+        $this->setIcon('fa fa-rocket');
     }
 
     /**
@@ -83,21 +83,15 @@ class Seo extends Section implements Initializable
         ];
 
         $display = AdminDisplay::datatables()
-            ->setName('firstdatatables')
-            ->setOrder([[0, 'desc']])
-            ->setDisplaySearch(true)
-            ->paginate(25)
-            ->setColumns($columns)
-            ->setHtmlAttribute('class', 'table-primary table-hover')
-        ;
-        $display->setApply(function ($query) {
-            $query->orderBy('id', 'desc');
-        });
+        ->setName('firstdatatables')
+        ->setOrder([[0, 'asc']])
+        ->paginate(25)
+        ->setColumns($columns)
+        ->setHtmlAttribute('class', 'table-primary table-hover');
 
 
-        $display->getColumnFilters()->setPlacement('card.heading');
+    return $display;
 
-        return $display;
     }
 
     /**

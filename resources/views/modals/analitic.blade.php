@@ -8,18 +8,18 @@
                 </div>
             </div>
             <div class="pb-3">
-                <h4 class="leading-loose pb-4">Заполните поля ниже для получения анализа пути пользователя</h4>
+                <h2 class="leading-loose pb-4 text-xl">Для получения стоимсоти разработки заполните следующий данные</h2>
 
                 <form class="contact-form" action="{{ route('form.send-modal') }}" method="POST">
                     <input type="hidden" name="url" value="{{ request()->get ? request()->get : url()->previous() }}">
                     <div class="py-2">
-                            <x-forms.text-input class="py-2" placeholder="Ваше имя" required="required" name="name"/>
+                            <x-forms.text-input class="py-2" placeholder="Ваше имя" required="required" id="name-input" name="name"/>
                     </div>
                     <div class="py-2">
-                            <x-forms.text-input placeholder="Номер телефона" class="phone-number py-2" required="required" name="phone"/>
+                            <x-forms.text-input placeholder="Номер телефона" class="phone-number py-2" id="phone-input" required="required" name="phone"/>
                     </div>
                     <div class="py-2">
-                            <x-forms.text-input class="py-2" type="email" placeholder="E-mail" name="email"/>
+                            <x-forms.text-input class="py-2" type="email" placeholder="E-mail" id="email-input" name="email"/>
                     </div>
                     <div class="py-3">
                         <textarea 
@@ -37,7 +37,7 @@
                                 <span>Согласен с политикой обработки персональных данных</span>
                             </label>
                             <p class="text-error text-sm feedback-error hidden" id="agree-error">
-                                <img class="inline align-bottom" src="{{ asset('template/icon/warning-filled.svg') }}">
+                                <img class="inline align-bottom" src="{{ asset('template/icon/warning-filled.svg') }}" alt="error">
                                 <span></span>
                             </p>
                         </div>

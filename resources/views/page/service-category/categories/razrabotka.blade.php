@@ -6,10 +6,17 @@
     <section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <div class="pb-12">
-                <h1>{{ $serviceCategory->title }}</h1>
+                <h1 class="break-all">{{ $serviceCategory->title }}</h1>
             </div>
-            <div class="pb-8 lg:text-2xl lg:leading-10 lg:pb-10 content">
-                {!! $serviceCategory->content !!}
+            <div class="gap-32">
+                <div class="block pb-12 lg:pb-0">
+                    <p class="lg:text-2xl lg:leading-10 lg:pb-10">Разработаем сайт с индивидуальным дизайном под Ваши цели. Поможем решить задачи любой сложности: от создания одностраничного сайта до корпоративных CRM-систем и приложений.</p>
+                </div>
+                <div class="flex pb-8">
+                    <div class="w-full md:w-1/3">
+                        <button data-modal="modal-analitic" class="modal-open-button w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Оставить заявку</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -22,32 +29,31 @@
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <div class="pb-12">
-                <h5>Виды сайтов</h5>
+                <h5>Стоимость разработки</h5>
             </div>
             <div class="pb-8">
-                <x-horizontal-scroll.horizontal-scroll>
+                <x-horizontal-scroll.horizontal-scroll class="lg:gap-16">
                     @foreach ($serviceCategory->services as $item)
-                        <x-flipper-card :item="$item" :url="route('service.show', ['category'=> $item->category->slug,'slug'=> $item->slug])" />
+                        <x-horizontal-scroll.item-product :item="$item" :url="route('service.show', ['category'=> $item->category->slug,'slug'=> $item->slug])" />
                     @endforeach
                 </x-horizontal-scroll.horizontal-scroll>
             </div>
         </div>
     </section>
     @endif
+    @if($serviceCategory->portfolios->isNotEmpty())
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-        <div class="container">
-            <div class="pb-12">
-                <h5>Попробуйте бесплатно</h5>
-            </div>                
-            <div class="lg:grid grid-cols-2 gap-32">
-                <div class="block pb-12 lg:pb-0">
-                    <p class="lg:text-2xl lg:leading-10 lg:pb-10">Компания «Ракурс» поможет вам определиться с видом сайта и будет сопровождать на каждом этапе создания. Сделайте первый шаг, и мы вместе создадим идеальный сайт под ваши потребности</p>
-                </div>
-                <div>
-                    <button data-modal="modal-analitic" class="modal-open-button w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Получить аналитику</button>
-                </div>
+		<div class="container">
+            <div class="pb-16">
+                <h3>Кейсы</h3>
             </div>
-        </div>
+            <x-horizontal-scroll.horizontal-scroll>
+                @foreach ($serviceCategory->portfolios as $item)
+                    <x-horizontal-scroll.item-case :item="$item" bgSize='contain' :url="route('case.show',['slug'=>$item->slug])" />
+                @endforeach
+            </x-horizontal-scroll.horizontal-scroll>
+        </div> 
     </section>
+    @endif
 </main>
 @endsection

@@ -7,7 +7,7 @@
 <div class="swiper-slide">
     <div class="bg-brandLight rounded-lg overflow-hidden">
         <div class="pb-8 flex justify-center">
-            <img src="{{ $thumbnail }}">
+            <img src="{{ $thumbnail }}" alt="{{ $item->title }}">
         </div>
         <div class="px-4">
             <div class="flex justify-between pb-6">

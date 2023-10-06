@@ -3,6 +3,6 @@
     <form class="space-y-3" method="{{ $method }}" action="{{ $action }}">
         @csrf
         {{ $slot }}
-</form>
+    </form>
     {{ $buttons }}
 </div>

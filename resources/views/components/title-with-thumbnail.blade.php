@@ -9,7 +9,7 @@
             style="background-image: linear-gradient(to top, rgba(26, 32, 44, .44) 0%, rgba(26, 32, 44, 1) 100%) , url('{{ asset($thumbnail) }}')" 
         @endif>
         <div class="pb-12">
-            <h1>{{ $title }}</h1>
+            <h1 class="text-2xl md:text-3xl">{{ $title }}</h1>
         </div>
     </div>
 </div>

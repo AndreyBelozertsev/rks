@@ -14,6 +14,9 @@ final class CaseRegistrar implements RouteRegistrar
     public function map(Registrar $registrar): void
     {
         Route::middleware('web')->group(function () {
+
+            Route::get('/case', [PortfolioController::class, 'index'])->name('case.index');
+
             Route::get('/case/{slug}', [PortfolioController::class, 'show'])->name('case.show');
         });
     }

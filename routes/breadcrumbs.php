@@ -25,12 +25,18 @@ Breadcrumbs::for('development-stage.show', function ($trail, $stage) {
 });
 
 Breadcrumbs::for('service.show', function ($trail, $service) {
-    $trail->parent('service-category.show',$service->category);
+    if($service->parentService){
+        $trail->parent('service.show',$service->parentService);
+    }else{
+        $trail->parent('service-category.show',$service->category);
+    }
+    
     $trail->push($service->title, route('service.show',['category'=>$service->category->slug ,'slug'=> $service->slug]));
 });
 
 Breadcrumbs::for('case.index', function ($trail) {
-    $trail->push('Кейсы');
+    $trail->parent('home');
+    $trail->push('Кейсы', route('case.index'));
 });
 
 Breadcrumbs::for('case.show', function ($trail, $portfolio) {
@@ -38,13 +44,14 @@ Breadcrumbs::for('case.show', function ($trail, $portfolio) {
     $trail->push($portfolio->title, route('case.show',['slug'=> $portfolio->slug]));
 });
 
-Breadcrumbs::for('article.index', function ($trail) {
-    $trail->push('Блог');
+Breadcrumbs::for('post.index', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Блог', route('post.index'));
 });
 
-Breadcrumbs::for('article.show', function ($trail, $post) {
-    $trail->parent('article.index',$post);
-    $trail->push($post->title, route('article.show',['slug'=> $post->slug]));
+Breadcrumbs::for('post.show', function ($trail, $post) {
+    $trail->parent('post.index',$post);
+    $trail->push($post->title, route('post.show',['slug'=> $post->slug]));
 });
 
 Breadcrumbs::for('vacancy.index', function ($trail) {

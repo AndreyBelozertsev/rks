@@ -15,7 +15,6 @@ class HomeController extends Controller
         $serviceCategories = Cache::rememberForever('service_categories', function () {
             return ServiceCategory::activeItems()->get();
         }); 
-        
         return view('page.home', compact('serviceCategories'));
     }
 
@@ -26,4 +25,11 @@ class HomeController extends Controller
         }
         return abort(404);
     }
+
+    public function getFeedback(){
+ 
+        return view('page.get_feedback');
+    }
+
+
 }

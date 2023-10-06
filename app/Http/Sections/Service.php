@@ -119,6 +119,13 @@ class Service extends Section implements Initializable
                 AdminFormElement::select('service_category_id', 'Категория')
                     ->setModelForOptions(ServiceCategory::class, 'title')
                     ->required(),
+                AdminFormElement::select('parent_id', 'Родительская услуга')
+                    ->setModelForOptions(\Domain\Product\Models\Service::class, 'title')
+                    ->setLoadOptionsQueryPreparer(function($element, $query){
+                        return $query
+                            ->where('id', '!=', $element->getModel()->id);
+                    })
+                    ->nullable(),
                 AdminFormElement::wysiwyg('description', 'Краткое описание'),
                 AdminFormElement::wysiwyg('content', 'Основное содержание'),
                 AdminFormElement::wysiwyg('additional_content', 'Дополнительное содержание'),
@@ -133,7 +140,7 @@ class Service extends Section implements Initializable
                         return PathSaveClass::getUploadPath('service','images'); 
                     }),
                 AdminFormElement::text('price', 'Цена')
-                    ->setValidationRules('string','max:255'),
+                    ->setValidationRules('nullable','string','max:255'),
                 AdminFormElement::number('sort', 'Порядок сортировки')
                     ->setDefaultValue(500)
                     ->required(), 

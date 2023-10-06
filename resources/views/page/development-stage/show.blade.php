@@ -6,7 +6,6 @@
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
             <x-title-with-thumbnail :title="$developmentStage->title" :thumbnail="$developmentStage->thumbnail" />
-
             <div class="pb-8 lg:text-2xl lg:leading-10 content">
                 {!! $developmentStage->content !!}
             </div>
@@ -16,7 +15,7 @@
 		<div class="container">
             <x-slider.slider class="swiper-default gallery-slider">
                 @foreach (getImages($developmentStage->images) as $image)
-                    <x-slider.slider-photography-item :item="$image" />
+                    <x-slider.slider-photography-item :item="$image" :entity="$developmentStage" />
                 @endforeach
             </x-slider.slider>
         </div>

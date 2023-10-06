@@ -22,7 +22,8 @@ class ServiceCategoryQueryBuilder extends Builder
             ->with([
                 'services' => fn ($query) => $query
                     ->active()
-                    ->select(['title','slug','description','sort','thumbnail','icon','service_category_id'])
+                    ->where('parent_id', null)
+                    ->select(['title','slug','description','sort','thumbnail','icon','price','service_category_id'])
                     ->orderBy('sort', 'asc')
             ])
             ->with([

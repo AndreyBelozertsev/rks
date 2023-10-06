@@ -102,7 +102,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  padding: 150px 0;
+  padding: 120px 0;
   overflow: auto;
   transition: 1s;
 }
@@ -114,11 +114,11 @@
 .popup .menu > li > a, 
 .popup .menu > li > form > button{
   width: fit-content;
-  font-size: 48px;
+  font-size: 36px;
   display: flex;
   justify-content: start;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 12px 0;
   font-family:'Dela Gothic One';
   transition: 2s;
   background: linear-gradient(45deg, $wildSand 0%, rgba(251, 251, 251, 0));

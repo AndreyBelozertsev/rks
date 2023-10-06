@@ -4,6 +4,7 @@ namespace Domain\Product\Models;
 
 use Support\Traits\HasSlug;
 use Support\Traits\ScopeActive;
+use Support\Traits\HasThumbnail;
 use Domain\Case\Models\Portfolio;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,7 +13,7 @@ use Domain\Product\QueryBuilders\ServiceCategoryQueryBuilder;
 
 class ServiceCategory extends Model
 {
-    use HasFactory, HasSlug, ScopeActive;
+    use HasFactory, HasSlug, ScopeActive, HasThumbnail;
 
     public function services()
     {
@@ -27,6 +28,11 @@ class ServiceCategory extends Model
     public function newEloquentBuilder($query): ServiceCategoryQueryBuilder 
     {
          return new ServiceCategoryQueryBuilder($query);
+    }
+
+    protected function thumbnailDir():string
+    {
+        return 'service-category';
     }
 
 }

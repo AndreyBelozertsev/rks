@@ -12,6 +12,7 @@
                 <p class="lg:text-2xl lg:leading-10">Интернет-маркетинг помогает бизнесу преодолеть вызовы и&nbspрешить проблемы, связанные с&nbspмаксимальным охватом в&nbspинтернете, несмотря на&nbspконкуренцию на&nbspрынке. Поэтому к&nbspнам&nbspобращаются, когда нужно разработать, доработать и&nbspвнедрить цифровой продукт.</p>
             </div>
             <x-pulse-button class="pb-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" />
+        </div>
     </section>
     <section class="py-12" id="anchor" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
         <div class="container grid gap-16">
@@ -26,7 +27,6 @@
                 />
             @empty
             @endforelse
-            </div>
         </div>
     </section>
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">

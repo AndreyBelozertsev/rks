@@ -25,5 +25,12 @@ class UserSeeder extends Seeder
             'email' => 'gartpaint@yandex.ru',
             'password' => Hash::make('Kdkti2345f!')
         ]);
+
+
+        User::create([
+            'name'=>'Алина',
+            'email' => 'dodika.alina@yandex.ru',
+            'password' => Hash::make('Lckcdkd93lxx2rv')
+        ]);
     }
 }

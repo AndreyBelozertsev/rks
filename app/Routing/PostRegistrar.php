@@ -13,9 +13,11 @@ class PostRegistrar implements RouteRegistrar
     public function map(Registrar $registrar):void
     {        
         
-        Route::get('/article', [PostController::class, 'index'])->name('article.index');
+        Route::get('/post', [PostController::class, 'index'])->name('post.index');
 
-        Route::get('/article/{slug}', [PostController::class, 'show'])->name('article.show');
+        Route::get('/post/{slug}', [PostController::class, 'show'])->name('post.show');
+
+        Route::feeds();
         
     }
 }

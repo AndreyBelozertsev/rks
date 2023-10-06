@@ -7,6 +7,15 @@ use Domain\Case\Models\Portfolio;
 
 class PortfolioController extends Controller
 {
+    public function index()
+    {
+        $portfolios = Portfolio::activeItems()->paginate(12)->withQueryString();
+
+        return view("page.portfolio.index", compact('portfolios') ); 
+
+    }
+
+
     public function show($slug)
     {
         $portfolio = Portfolio::activeItem($slug)->firstOrFail();

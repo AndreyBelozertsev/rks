@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar__wrap">
             <a class="logo" href="{{ route('home') }}" rel="home">
-                <img src="{{ asset('template/images/logo.svg' ) }}">
+                <img src="{{ asset('template/images/logo.svg' ) }}" alt="{{ env('APP_NAME') }}">
             </a>
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="bg-brand">
-        @yield('breadcrumbs')
+       @yield('breadcrumbs')
     </div>
     <div class="popup" id="popup"></div>
 </nav>

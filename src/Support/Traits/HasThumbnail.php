@@ -27,13 +27,33 @@ trait HasThumbnail
         ]);
     }
 
+    public function makeThumbnailFromImg(string $size, string $file, string $method = 'resize')
+    {
+        if(! file_exists(public_path($file)) ){
+            return;
+        }
+        return route('thumbnail',[
+            'size'=>$size,
+            'dir'=> $this->thumbnailDir(),
+            'year'=> $this->thumbnailDate($file)[3],
+            'month'=> $this->thumbnailDate($file)[2],
+            'day'=> $this->thumbnailDate($file)[1],
+            'method'=>$method,
+            'file' =>File::basename($file)
+        ]);
+    }
+
     protected function thumbnailColumn():string
     {
         return 'thumbnail';
     }
     
-    protected function thumbnailDate():array
+    protected function thumbnailDate($file = null):array
     {
+        
+        if($file){
+            return array_reverse(explode('/', $file));
+        }
         return array_reverse(explode('/', $this->{$this->thumbnailColumn()}));
     }
 

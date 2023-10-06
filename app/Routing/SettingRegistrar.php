@@ -14,6 +14,7 @@ final class SettingRegistrar implements RouteRegistrar
     public function map(Registrar $registrar): void
     {
         Route::middleware('web')->group(function () {
+            
             Route::get('/contact', [SettingController::class, 'contactIndex'])->name('contact.index');
 
             Route::get('/policy', [SettingController::class, 'policyIndex'])->name('policy.index');

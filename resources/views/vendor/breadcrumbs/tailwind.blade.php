@@ -23,7 +23,7 @@
                             </a>
                         </li>
                     @else
-                        <li class="pr-4">
+                        <li class="pr-4 hidden lg:list-item">
                             <span class="pr-[6px]"><</span> {{ $breadcrumb->title }}
                         </li>
                     @endif

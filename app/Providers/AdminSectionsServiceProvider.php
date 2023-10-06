@@ -18,6 +18,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
         \Domain\Post\Models\PostCategory::class => 'App\Http\Sections\PostCategory',
         \Domain\Auth\Models\User::class => 'App\Http\Sections\Users',
         \Domain\Seo\Models\Seo::class => 'App\Http\Sections\Seo',
+        \Domain\Seo\Models\SeoDownload::class => 'App\Http\Sections\SeoDownload',
         \Domain\Customer\Models\Customer::class => 'App\Http\Sections\Customer',
         \Domain\Product\Models\Service::class => 'App\Http\Sections\Service',
         \Domain\Product\Models\AdditionalService::class => 'App\Http\Sections\AdditionalService',

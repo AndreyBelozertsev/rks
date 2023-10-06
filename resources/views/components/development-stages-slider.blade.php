@@ -1,6 +1,6 @@
 <div {{ $attributes->class([]) }}>    
     <div class="pb-12">
-        <h5>{{ $stages->count() }} шагов на пути к вашему идеальному сайту</h5>
+        <h5>{{ $stages->count() }} этапов разработки эффективного сайта</h5>
     </div>
     <x-slider.slider class="swiper-default">
         @foreach ($stages as $item)

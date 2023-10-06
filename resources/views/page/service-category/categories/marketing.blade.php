@@ -5,11 +5,12 @@
     <section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <div class="pb-12">
-                <h1>{{ $serviceCategory->title }}</h1>
+                <h1 class="break-all">{{ $serviceCategory->title }}</h1>
             </div>
             <div class="pb-8 lg:pb-20 lg:text-2xl lg:leading-10 text-base content">
                 {!! $serviceCategory->content !!}
             </div>
+        </div>
     </section>
     <section class="py-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container grid gap-16">
@@ -24,7 +25,6 @@
                 />
             @empty
             @endforelse
-            </div>
         </div>
     </section>
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">

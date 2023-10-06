@@ -1,5 +1,5 @@
 <div class="pb-8 md:px-16 relative">
-    <div {{ $attributes->class(['swiper mb-8 md:mb-0']) }}">
+    <div {{ $attributes->class(['swiper mb-8 md:mb-0']) }}>
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             {{ $slot }}

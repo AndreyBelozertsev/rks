@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('thumbnail')->nullable();
             $table->text('images')->nullable();
             $table->text('description')->nullable();
+            $table->string('url')->nullable();
             $table->text('service_description')->nullable();
             $table->text('result')->nullable();
             $table->text('techology')->nullable();

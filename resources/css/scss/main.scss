@@ -73,6 +73,7 @@
 }
 
 $brand: #282C35;
+$brandDeep: #1F222A;
 $brandLight: #323641;
 $accent: #CBE857;
 $onAccent: #AEED42;
@@ -104,11 +105,13 @@ $brandGrey-100: #404247;
 @import '_map';
 @import '_modal';
 @import '_navmenu';
+@import '_preloader';
 @import '_pulse-button';
 @import '_root';
 @import '_runner-string';
 @import '_slider';
 @import '_stroke-panel';
+@import '_theme-mode';
 @import '_validate';
 
 @import 'aos/src/sass/aos';

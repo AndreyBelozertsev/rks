@@ -40,6 +40,16 @@ class Service extends Model
         return $this->belongsToMany(AdditionalService::class);
     }
 
+    public function childServices()
+    {
+        return $this->hasMany(Service::class, 'parent_id');
+    }
+
+    public function parentService()
+    {
+        return $this->hasOne(Service::class, 'id', 'parent_id');
+    }
+
 
     protected function thumbnailDir():string
     {

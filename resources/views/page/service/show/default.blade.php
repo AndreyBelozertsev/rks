@@ -2,19 +2,18 @@
 
 @section('breadcrumbs', Breadcrumbs::render('service.show',$service))
 @section('content')
-<main class="py-36">
+<main class="pt-36">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container px-0 md:px-4">
             <x-title-with-thumbnail :title="$service->title" :thumbnail="$service->thumbnail" />
         </div>
         <div class="container">
-            <div class="pb-8 lg:text-2xl lg:leading-10 content">
+            <div class="lg:text-2xl lg:leading-10 content">
                 {!! $service->content !!}
             </div>
         </div>
     </section>
-
-    @if($service->images)
+    @if($service->images && $service->images != '[]')
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
             <x-gallery.gallery class="justify-center">
@@ -24,11 +23,16 @@
             </x-gallery.gallery>
         </div>
     </section>
-    @endif
+    @endempty
     @if($service->price)
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
             <p class="pb-8 lg:text-2xl lg:leading-10 text-accent lg:text-onAccent font-bold">Цена {{ $service->price }}</p>
+            <div class="flex pb-8">
+                <div class="w-full md:w-1/3">
+                    <a href="{{ route('form.show') }}" class="w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Оставить заявку</a>
+                </div>
+            </div>
         </div> 
     </section>
     @endif
@@ -40,10 +44,9 @@
             </div>
             <x-horizontal-scroll.horizontal-scroll>
                 @foreach ($service->portfolios as $item)
-                    <x-flipper-card :item="$item" :url="route('case.show',['slug'=>$item->slug])" />
+                    <x-horizontal-scroll.item-case :item="$item" :url="route('case.show',['slug'=>$item->slug])" />
                 @endforeach
             </x-horizontal-scroll.horizontal-scroll>
-            <div>
         </div> 
     </section>
     @endif
@@ -56,17 +59,12 @@
             <div class="pb-8 lg:text-2xl lg:leading-10">
                 @foreach ($service->posts as $post)
                     <div class="py-2">
-                        <a class="hover:text-accent lg:hover:text-onAccent" href="{{ route('article.show',['slug'=> $post->slug ]) }}">{{ $post->title  }}</a>
+                        <a class="hover:text-accent lg:hover:text-onAccent" href="{{ route('post.show',['slug'=> $post->slug ]) }}">{{ $post->title  }}</a>
                     </div>
                 @endforeach
             </div>
         </div> 
     </section>
     @endif
-    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-		<div class="container">
-            <x-pre-footer-action :url="route('form.show',['category'=>$service->category->slug, 'url'=>request()->url()])" />
-        </div>
-    </section>
 </main>
 @endsection

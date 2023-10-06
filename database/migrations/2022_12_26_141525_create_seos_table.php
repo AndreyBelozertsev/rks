@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('url')
                 ->unique();
             $table->string('title');
+            $table->string('download_id')->nullable();
             $table->string('description')->nullable();
             $table->string('open_graph')->nullable();
             $table->timestamps();

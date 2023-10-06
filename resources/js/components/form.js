@@ -57,9 +57,9 @@ if( document.getElementsByClassName('contact-form') ){
                     button.disabled = false;
                 }
             }else if(json.success){
+                ym(48507413,'reachGoal','send');
                 hideAllModals();
                 openModal('modal-response');
-                ym(48507413,'reachGoal','send');
                 responseBlock.innerHTML = json.success;
             } else {
                 hideAllModals();

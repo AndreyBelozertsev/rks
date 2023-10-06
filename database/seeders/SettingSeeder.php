@@ -63,6 +63,10 @@ class SettingSeeder extends Seeder
                 'value' => 'https://vk.com/rakurs3d',
             ],
             [
+                'key' => 'telegram',
+                'value' => 'https://t.me/rakurs_digital',
+            ],
+            [
                 'key' => 'cookie',
                 'value' => 'Мы используем cookies на нашем сайте для лучшего пользовательского опыта. Продолжая использовать сайт, вы даёте согласие на работу с этими файлами',
             ],

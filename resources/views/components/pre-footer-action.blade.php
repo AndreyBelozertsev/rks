@@ -1,7 +1,7 @@
 @props([
     'url' => route('form.show'),
     'text' => null,
-    'button_title' => 'Обсудить проект'
+    'button_title' => 'Оставить заявку'
 ])
 
 <div {{ $attributes->class(['lg:grid grid-cols-2 gap-32'])}} >

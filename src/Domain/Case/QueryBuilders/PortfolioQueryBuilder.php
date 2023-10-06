@@ -1,6 +1,7 @@
 <?php
 namespace Domain\Case\QueryBuilders;
 
+
 use Illuminate\Database\Eloquent\Builder;
 
 class PortfolioQueryBuilder extends Builder
@@ -26,6 +27,27 @@ class PortfolioQueryBuilder extends Builder
                     ->active()
                     ->select(['title','slug','description','thumbnail'])
             ])
-            ->select(['id','title','thumbnail','images','content','slug','service_description','result','techology','branch','view']);
+            ->select(['id','title','thumbnail','images','content','slug','url','service_description','result','techology','branch','view']);
     }
+
+    public function activeItems(): PortfolioQueryBuilder
+    {
+        return $this->active()
+            ->with([
+                'category' => fn ($query) => $query
+                    ->active()
+                    ->select(['id', 'title'])
+            ])
+            ->when(request()->has('category'), function($query){
+                $query->whereRelation('serviceCategories','slug','=',request()->get('category'));
+            })
+            ->with([
+                'serviceCategories' => fn ($query) => $query
+                    ->active()
+                    ->select(['title', 'slug'])
+            ])
+            ->orderBy('created_at', 'desc')
+            ->select(['id','title','slug','thumbnail','portfolio_category_id']);
+    }
+
 }

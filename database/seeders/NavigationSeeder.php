@@ -22,19 +22,43 @@ class NavigationSeeder extends Seeder
                 'title' => 'Главная',
                 'url' => '/',
                 'type' => 'top',
-                'status' => 1
+                'status' => 1,
+                'sort' => 100
             ],
             [
                 'title' => 'Услуги',
                 'url' => '/service-category',
                 'type' => 'top',
-                'status' => 1
+                'status' => 1,
+                'sort' => 200
+            ],
+            [
+                'title' => 'Кейсы',
+                'url' => '/case',
+                'type' => 'top',
+                'status' => 1,
+                'sort' => 300
+            ],
+            [
+                'title' => 'Отзывы',
+                'url' => '/feedback',
+                'type' => 'top',
+                'status' => 1,
+                'sort' => 400
+            ],
+            [
+                'title' => 'Блог',
+                'url' => '/post',
+                'type' => 'top',
+                'status' => 1,
+                'sort' => 500
             ],
             [
                 'title' => 'Контакты',
                 'url' => '/contact',
                 'type' => 'top',
-                'status' => 1
+                'status' => 1,
+                'sort' => 600
             ]
         ];
         

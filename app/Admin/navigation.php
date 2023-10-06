@@ -56,4 +56,16 @@ return [
                 ->setPriority(100)   
         ]
     ],
+    [
+        'title' => 'SEO',
+        'icon' => 'fa fa-rocket',
+        'priority'    => 300,
+        'pages' => [
+            (new Page(\Domain\Seo\Models\Seo::class))
+                ->setPriority(0),
+            (new Page(\Domain\Seo\Models\SeoDownload::class))
+                ->setPriority(100),
+
+        ]
+    ],
 ];

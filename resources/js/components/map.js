@@ -1,4 +1,4 @@
-if(document.querySelector('#map').dataset.coordinates){
+if(document.querySelector('#map')){
     let coord = document.querySelector('#map').dataset.coordinates;
 
     ymaps.ready(function () {

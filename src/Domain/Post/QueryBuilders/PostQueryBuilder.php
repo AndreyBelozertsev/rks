@@ -30,14 +30,26 @@ class PostQueryBuilder extends Builder
                     ])
                     ->select(['title','slug','description','thumbnail','service_category_id'])
             ])
+            ->with([
+                'portfolios' => fn ($query) => $query
+                    ->active()
+                    ->whereHas('category',fn ($query) => $query->active())
+                    ->select(['title','slug','sort','thumbnail','portfolio_category_id'])
+                    ->orderBy('sort', 'asc')
+            ])
             ->select(['id','title','slug','content','thumbnail','images']);
     }
 
     public function activeItems(): PostQueryBuilder
     {
         return $this->active()
+            ->with([
+                'category' => fn ($query) => $query
+                    ->active()
+                    ->select(['id', 'title'])
+            ])
             ->whereHas('category',fn ($query) => $query->active())
-            ->select(['title','slug','description','thumbnail']);
+            ->select(['title','slug','description','thumbnail','post_category_id']);
     }
 
 }

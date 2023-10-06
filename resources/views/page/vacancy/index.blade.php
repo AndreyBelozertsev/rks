@@ -9,13 +9,14 @@
                 <h1>Вакансии</h1>
             </div>
 			<div class="pb-8 lg:text-2xl lg:leading-10 lg:pb-10 content">
+			<p><a href="https://hh.ru/employer/5695970">Наши вакансии на hh.ru</a></p>
 			@forelse ($vacancies as $vacancy)
 				<div class="pb-4">
 					<a href="{{ route('vacancy.show',['slug' => $vacancy->slug]) }}">{{$loop->iteration . '. ' . $vacancy->title }}</a>
 					<div class="text-sm">{!! $vacancy->description !!}</div>
 				</div>
 			@empty
-				К сожалению в данный момент нет открытых вакансий, можете выслать Ваше резюме для формирования кадрового резерва - <a href="mailto:info.rakurs@bk.ru">info.rakurs@bk.ru</a>. 
+				
 			@endforelse 
             </div>
         </div>

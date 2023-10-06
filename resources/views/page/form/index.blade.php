@@ -14,8 +14,7 @@
 <main class="pt-36">
 	<section class="pb-12">
 		<div class="container">
-                <h2 class="pb-12">Готовы создать эффективный маркетинг вместе с нами?</h2>
-        </div>
+            <h1 class="pb-12">Готовы создать эффективный маркетинг вместе с нами?</h1>
         </div>
         <div class="container">
             <div class="pb-8 lg:text-xl lg:leading-10">
@@ -30,13 +29,13 @@
                     <div class="lg:grid grid-cols-2 gap-20">
                         <div>
                             <div class="py-6 lg:py-4">
-                                    <x-forms.text-input class="py-3" placeholder="Ваше имя" required="required" name="name"/>
+                                    <x-forms.text-input class="py-3" placeholder="Ваше имя" id="name-form-input" required="required" name="name"/>
                             </div>
                             <div class="py-6 lg:py-4">
-                                    <x-forms.text-input class="phone-number py-3" placeholder="Номер телефона" required="required" name="phone"/>
+                                    <x-forms.text-input class="phone-number py-3" placeholder="Номер телефона" id="phone-form-input" required="required" name="phone"/>
                             </div>
                             <div class="py-6 lg:py-4">
-                                    <x-forms.text-input class="py-3" type="email" placeholder="E-mail" name="email"/>
+                                    <x-forms.text-input class="py-3" type="email" id="email-form-input" placeholder="E-mail" name="email"/>
                             </div>
                         </div>
                         <div>

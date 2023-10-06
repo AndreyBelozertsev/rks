@@ -9,6 +9,7 @@ use AdminFormElement;
 use AdminColumnFilter;
 use Domain\Post\Models\Post;
 use SleepingOwl\Admin\Section;
+use Services\Files\PathSaveClass;
 use Domain\Product\Models\Service;
 use Illuminate\Database\Eloquent\Model;
 use SleepingOwl\Admin\Form\Buttons\Save;
@@ -83,7 +84,6 @@ class Portfolio extends Section implements Initializable
 
         $display = AdminDisplay::datatables()
             ->setName('firstdatatables')
-            ->setOrder([[0, 'asc']])
             ->setDisplaySearch(true)
             ->paginate(25)
             ->setColumns($columns)
@@ -91,7 +91,7 @@ class Portfolio extends Section implements Initializable
         ;
 
         $display->setApply(function ($query) {
-            $query->orderBy('sort', 'asc');
+            $query->orderBy('id', 'desc');
         });
 
         $display->getColumnFilters()->setPlacement('card.heading');
@@ -118,7 +118,9 @@ class Portfolio extends Section implements Initializable
             AdminFormElement::wysiwyg('result', 'Результат'),
             AdminFormElement::wysiwyg('techology', 'Примененные технологии'),
             AdminFormElement::text('branch', 'Конкретизированное описание отрасли')
-                ->setValidationRules('string','max:255'),
+                ->setValidationRules('max:255'),
+            AdminFormElement::text('url', 'Ссылка')
+                ->setValidationRules('max:255'),
             AdminFormElement::image('thumbnail', 'Обложка')
                 ->setUploadPath(function($file) {
                     return PathSaveClass::getUploadPath('case','images'); 

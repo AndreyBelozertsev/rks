@@ -55,7 +55,7 @@
 						<div class="block md:hidden pb-8">
 							<h5>Социальные сети</h5>
 						</div>
-						<div class="flex justify-between pb-8 lg:text-xl lg:leading-10">
+						<div class="flex pb-8 lg:text-xl lg:leading-10 gap-4">
 							<x-contacts.social />
 						</div>
 					</div>
