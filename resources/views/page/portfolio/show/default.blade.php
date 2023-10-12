@@ -80,11 +80,5 @@
             </div> 
         </section>
     @endif
-    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-		<div class="container">
-            <x-pre-footer-action text="Хотите также?"/>
-        </div> 
-    </section>
-
 </main>
 @endsection
