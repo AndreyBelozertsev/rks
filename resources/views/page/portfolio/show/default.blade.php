@@ -45,6 +45,11 @@
             </x-slider.slider>
         </div>
     </section>
+    <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+		<div class="container">
+            <x-pre-footer-action text="Хотите также?"/>
+        </div> 
+    </section>
     @if($portfolio->services->isNotEmpty())
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
