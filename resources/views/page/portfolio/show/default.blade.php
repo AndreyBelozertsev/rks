@@ -36,7 +36,7 @@
         </div>
     </section>
     @endif
-    @if(! empty($portfolio->images))
+    @if(! empty($portfolio->images) && $portfolio->images != '[]' )
         <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
             <div class="container">
                 <x-slider.slider class="swiper-photography gallery-slider">
