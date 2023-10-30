@@ -2,7 +2,7 @@
 
 @section('breadcrumbs', Breadcrumbs::render('case.show',$portfolio))
 @section('content')
-<main class="py-36">
+<main class="pt-36 pb-12">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
             <x-title-with-thumbnail :title="$portfolio->title" />
