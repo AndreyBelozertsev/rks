@@ -66,7 +66,7 @@
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <div class="pb-12">
-                <h5>Чем мы можем быть полезны?</h5>
+                <h5>Тарифы</h5>
             </div>
             <div class="pb-8">
                 <x-horizontal-scroll.horizontal-scroll class="lg:gap-16">
