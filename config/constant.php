@@ -25,4 +25,13 @@ return [
         'photography' => 'Фотосъемка',
         'panorams' => 'Панорамы',
     ],
+
+    'page_view' =>
+    [   
+        'default' => 'Стандартный',
+        'home' => 'Главная страница',
+        'feedback' => 'Отзывы',
+        'get_feedback' => 'Пройти опрос',
+        'panorams' => 'Панорамы',
+    ],
 ];

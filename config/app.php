@@ -193,7 +193,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        
         App\Providers\DomainServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\ViewServiceProvider::class,
@@ -206,6 +206,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 

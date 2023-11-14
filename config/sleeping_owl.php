@@ -55,7 +55,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'url_prefix' => 'admin-portal',
+    'url_prefix' => 'cms/admin-portal',
 
     /*
      * Subdomain & Domain support routes

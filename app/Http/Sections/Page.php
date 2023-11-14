@@ -107,7 +107,7 @@ class Page extends Section implements Initializable
 
             AdminFormElement::wysiwyg('description', 'Краткое описание'),
             AdminFormElement::wysiwyg('content', 'Основное содержание'),
-            AdminFormElement::select('view', 'Шаблон',config('constant.page_view'))
+            AdminFormElement::select('template', 'Шаблон',config('constant.page_view'))
                     ->setDefaultValue('default')
                     ->required(),
             AdminFormElement::checkbox('status', 'Опубликовать?')
