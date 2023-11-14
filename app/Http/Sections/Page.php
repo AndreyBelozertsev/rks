@@ -2,20 +2,21 @@
 
 namespace App\Http\Sections;
 
-use AdminColumn;
-use AdminColumnFilter;
-use AdminDisplay;
 use AdminForm;
+use AdminColumn;
+use AdminDisplay;
 use AdminFormElement;
+use AdminColumnFilter;
+use SleepingOwl\Admin\Section;
+use Illuminate\Validation\Rule;
 use Illuminate\Database\Eloquent\Model;
-use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
-use SleepingOwl\Admin\Contracts\Form\FormInterface;
-use SleepingOwl\Admin\Contracts\Initializable;
-use SleepingOwl\Admin\Form\Buttons\Cancel;
 use SleepingOwl\Admin\Form\Buttons\Save;
+use SleepingOwl\Admin\Form\Buttons\Cancel;
+use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Form\Buttons\SaveAndClose;
 use SleepingOwl\Admin\Form\Buttons\SaveAndCreate;
-use SleepingOwl\Admin\Section;
+use SleepingOwl\Admin\Contracts\Form\FormInterface;
+use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 
 /**
  * Class Page
@@ -104,7 +105,8 @@ class Page extends Section implements Initializable
             AdminFormElement::text('title', 'Заголовок')
                 ->required()
                 ->setValidationRules('string','max:255'),
-
+            AdminFormElement::text('slug', 'slug')
+                ->setValidationRules([Rule::unique('pages')->ignore($id)]),
             AdminFormElement::wysiwyg('description', 'Краткое описание'),
             AdminFormElement::wysiwyg('content', 'Основное содержание'),
             AdminFormElement::select('template', 'Шаблон',config('constant.page_view'))
