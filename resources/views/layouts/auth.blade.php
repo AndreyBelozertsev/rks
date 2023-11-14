@@ -8,7 +8,7 @@
         <div class="container">
             <!-- Page heading -->
             <div class="text-center">
-                <a href="{{ route('home') }}" class="inline-block" rel="home">
+                <a href="/" class="inline-block" rel="home">
                     <x-application-logo class="w-[148px] md:w-[201px] h-[36px] md:h-[50px]" />
                 </a>
             </div>

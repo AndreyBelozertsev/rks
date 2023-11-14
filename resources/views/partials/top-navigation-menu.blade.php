@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="container">
         <div class="navbar__wrap">
-            <a class="logo" href="{{ route('home') }}" rel="home">
+            <a class="logo" href="/" rel="home">
                 <img src="{{ asset('template/images/logo.svg' ) }}" alt="{{ env('APP_NAME') }}">
             </a>
             <div class="hamb">

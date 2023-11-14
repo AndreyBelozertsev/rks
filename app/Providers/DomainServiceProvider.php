@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Domain\Seo\Providers\SeoServiceProvider;
 use Domain\Auth\Providers\AuthServiceProvider;
 use Domain\Case\Providers\CaseServiceProvider;
+use Domain\Page\Providers\PageServiceProvider;
 use Domain\Post\Providers\PostServiceProvider;
 use Domain\Product\Providers\ProductServiceProvider;
 use Domain\Setting\Providers\SettingServiceProvider;
@@ -31,6 +32,10 @@ class DomainServiceProvider extends ServiceProvider
 
         $this->app->register(
             CustomerServiceProvider::class
+        );
+
+        $this->app->register(
+            PageServiceProvider::class
         );
 
         $this->app->register(

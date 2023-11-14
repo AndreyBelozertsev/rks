@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             SettingSeeder::class,
             UserSeeder::class,
+            PageSeeder::class,
         ]);
     }
 }

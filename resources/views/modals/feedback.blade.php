@@ -11,10 +11,9 @@
                 <div class="text-brand modal-content text-center pb-6">
                     Жаль, что Вы собираетесь покинуть наш сайт!
                     Будем Вам очень признательны за обратную связь по работе сайта.
-                    
                 </div>
                 <div class="py-3">
-                    <a href="{{ route('getFeedback') }}" class="animation-pulse bg-accent lg:bg-onAccent disabled:bg-brandGrey-10 disabled:cursor-not-allowed text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl font-bold">Пройти опрос</a>
+                    <a href="/get-feedback" class="animation-pulse bg-accent lg:bg-onAccent disabled:bg-brandGrey-10 disabled:cursor-not-allowed text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl font-bold">Пройти опрос</a>
                 </div>
             </div>
         </div>

@@ -20,13 +20,13 @@
 				</div>
 			</div>
 			<div class="flex flex-col lg:flex-row items-center lg:justify-between gap-4">
-				<a class="lg:hidden" href="{{ route('home') }}" rel="home">
+				<a class="lg:hidden" href="/" rel="home">
 					<img src="{{ asset('template/images/logo.svg') }}" alt="{{ env('APP_NAME') }}">
 				</a>
 				<p class="uppercase pb-0">{{ date('Y') }} © {{ isset($contacts['organization']) ? $contacts['organization'] :  env('APP_NAME') }}</p>
 				<div class="flex flex-col gap-4 lg:gap-2 items-center lg:items-start">
 					<a href="{{ route('vacancy.index') }}">Вакансии</a>
-					<a href="{{ route('policy.index') }}">Конфиденциальность</a>
+					<a href="/policy">Конфиденциальность</a>
 				</div>
 
 				<a href="/contact" class="lg:hidden mt-2">Контакты</a>

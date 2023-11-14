@@ -10,10 +10,10 @@
 	<section class="pb-12">
         <div class="container">
             <div>
-                <h1 class="pb-12">Политика обработки персональных данных</h1>
+                <h1 class="pb-12">{{ $page->title }}</h1>
             </div>
             <div class="content">
-                {!! $policy !!}
+                {!! $page->content !!}
             </div>
         </div>
     </section>

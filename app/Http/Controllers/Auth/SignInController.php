@@ -32,7 +32,7 @@ class SignInController extends Controller
          
         SessionRegenerator::run(fn()=>auth()->logout());
      
-        return redirect()->route('home');
+        return redirect('/');
     }
 
 }

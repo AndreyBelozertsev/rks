@@ -2,7 +2,7 @@
 
 // Home
 Breadcrumbs::for('home', function ($trail) {
-    $trail->push('Главная', route('home'));
+    $trail->push('Главная', '/');
 });
 
 Breadcrumbs::for('service-category.index', function ($trail) {

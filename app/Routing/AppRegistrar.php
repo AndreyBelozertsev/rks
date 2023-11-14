@@ -12,11 +12,11 @@ class AppRegistrar implements RouteRegistrar
     public function map(Registrar $registrar):void
     {
         Route::middleware('web')->group(function () {
-            Route::get('/', [HomeController::class, 'index'])->name('home'); 
+            //Route::get('/', [HomeController::class, 'index'])->name('home'); 
             
             // Route::get('/video/{slug}', [HomeController::class, 'video'])->name('video'); 
 
-            Route::get('get-feedback', [HomeController::class, 'getFeedback'])->name('getFeedback'); 
+            // Route::get('get-feedback', [HomeController::class, 'getFeedback'])->name('getFeedback'); 
         });
 
         Route::get('/storage/images/{dir}/{method}/{year}/{month}/{day}/{size}/{file}',ThumbnailController::class)

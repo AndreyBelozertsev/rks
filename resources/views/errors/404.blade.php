@@ -24,7 +24,7 @@
             <div>
                 <p>Указанная ссылка неактуальна. Но нам есть, что вам рассказать</p>
                 <div class="flex py-6">
-                    <a href="{{ route('home') }}" class="bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center w-full md:w-auto">Вернуться на главную</a>
+                    <a href="/" class="bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center w-full md:w-auto">Вернуться на главную</a>
                 </div>
             </div>
         </div>

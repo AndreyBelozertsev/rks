@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Routing\AppRegistrar;
 use App\Routing\AuthRegistrar;
 use App\Routing\CaseRegistrar;
+use App\Routing\PageRegistrar;
 use App\Routing\PostRegistrar;
 use App\Contracts\RouteRegistrar;
 use App\Routing\ProductRegistrar;
@@ -41,6 +42,7 @@ class RouteServiceProvider extends ServiceProvider
         ProductRegistrar::class,
         SettingRegistrar::class,
         VacancyRegistrar::class,
+        PageRegistrar::class,
     ];
 
     /**
