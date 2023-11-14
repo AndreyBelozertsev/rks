@@ -3,7 +3,7 @@
     <x-back-arrow :url="url()->previous()" />
 @endsection
 @section('content')
-<main class="pt-28">
+<main class="pt-48 pb-36">
 	<section class="pb-12" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
 		<div class="container">
 			<div class="pb-12">

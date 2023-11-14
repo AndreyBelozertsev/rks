@@ -100,13 +100,8 @@ class Setting extends Section implements Initializable
             AdminFormElement::text('telegram', 'Telegram')
                 ->setDefaultValue(SetModel::where('key','telegram')->value('value')),
         ];
-        $fields2 = [
-            AdminFormElement::wysiwyg('policy', 'Политика обработки перснальных данных', 'ckeditor')
-                ->setHeight('450')
-                ->setDefaultValue(SetModel::where('key','policy')->value('value')),
-        ];
 
-        $fields3 = [
+        $fields2 = [
             AdminFormElement::textarea('cookie', 'Текст cookie', 'ckeditor')
                 ->setDefaultValue(SetModel::where('key','cookie')->value('value')),
         ];
@@ -117,8 +112,7 @@ class Setting extends Section implements Initializable
             $tabs = [];
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements($fields1))->setLabel('Контактные данные');
-            $tabs[] = AdminDisplay::tab(AdminForm::elements($fields2))->setLabel('Политика обработки персональных данных');
-            $tabs[] = AdminDisplay::tab(AdminForm::elements($fields3))->setLabel('Текст cookie');
+            $tabs[] = AdminDisplay::tab(AdminForm::elements($fields2))->setLabel('Текст cookie');
 
             return $tabs;
         });

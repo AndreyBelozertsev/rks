@@ -6,7 +6,7 @@
 
 @section('content')    
 
-<main class="pt-36">
+<main class="pt-48 pb-36">
 	<section class="pb-12">
         <div class="container">
             <div>
