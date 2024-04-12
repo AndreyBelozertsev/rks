@@ -8,8 +8,7 @@
                 </div>
             </div>
             <div class="pb-3">
-                <h2 class="leading-loose pb-4 text-xl">Для получения стоимсоти разработки заполните следующий данные</h2>
-
+                <h2 class="leading-loose pb-4 text-xl">Оставьте данные и мы с Вами свяжемся</h2>
                 <form class="contact-form" action="{{ route('form.send-modal') }}" method="POST">
                     <input type="hidden" name="url" value="{{ request()->get ? request()->get : url()->previous() }}">
                     <div class="py-2">

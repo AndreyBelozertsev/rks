@@ -24,18 +24,18 @@
         </div>
     </section>
     @endempty
-    @if($service->price)
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
-            <p class="pb-8 lg:text-2xl lg:leading-10 text-accent lg:text-onAccent font-bold">Цена {{ $service->price }}</p>
+            @if($service->price)
+                <p class="pb-8 lg:text-2xl lg:leading-10 text-accent lg:text-onAccent font-bold">Цена {{ $service->price }}</p>
+            @endif
             <div class="flex pb-8">
                 <div class="w-full md:w-1/3">
-                    <a href="{{ route('form.show') }}" class="w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Оставить заявку</a>
+                    <a href="{{ route('form.show', ['category' => $service->category->slug]) }}" class="w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Оставить заявку</a>
                 </div>
             </div>
         </div> 
     </section>
-    @endif
     @if($service->portfolios->isNotEmpty())
     <section class="pb-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
 		<div class="container">
