@@ -1,4 +1,5 @@
 import './bootstrap';
+import './components/bitrix-page';
 import './components/cookie-modal';
 import './components/flipper';
 import './components/form';

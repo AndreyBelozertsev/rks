@@ -16,6 +16,7 @@ return [
         'seo' => 'SEO',
         'reklamnaya_podpiska' => 'Рекламная подписка',
         'kontekstnaya_reklama' => 'Контекстная реклама',
+        'bitrix' => 'Битрикс',
     ],
     'portfolio_view' =>
     [

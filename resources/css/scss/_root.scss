@@ -46,3 +46,33 @@ p{
 .ff-jura{
     font-family:'Jura';
 }
+
+*::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 20px;
+    border: 3px solid var(--brand);
+    cursor: pointer;
+  }
+  
+  @media (min-width: 540px) {
+    .switch::after {
+      position: absolute;
+      content: '';
+      background-image: url('../../../public/template/icon/arrow.svg');
+      background-repeat: no-repeat;
+      width: 132px;
+      height: 42px;
+      background-size: cover;
+      top: -47px;
+      right: -85px;
+    }
+  }
