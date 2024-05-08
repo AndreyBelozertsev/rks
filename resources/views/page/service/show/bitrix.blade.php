@@ -7,11 +7,6 @@
 		<div class="container px-0 md:px-4">
             <x-title-with-thumbnail :title="$service->title" :thumbnail="$service->thumbnail" />
         </div>
-        <div class="container">
-            <div class="lg:text-2xl lg:leading-10 content">
-                {!! $service->content !!}
-            </div>
-        </div>
     </section>
     <section class="pt-10 mb-10">
         <div class="container">
@@ -870,6 +865,13 @@
                     </div>
                 </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-10">
+        <div class="container">
+            <div class="lg:text-2xl lg:leading-10 content">
+                {!! $service->content !!}
             </div>
         </div>
     </section>
