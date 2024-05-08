@@ -10,7 +10,7 @@
     </section>
     <section class="pt-10 mb-10">
         <div class="container">
-            <h2 class="text-xl md:text-3xl text-center mb-5 md:mb-7">Битрикс24 помогает бизнесу работать</h2>
+            <h2 class="text-xl md:text-3xl text-center mb-5 md:mb-7">Битрикс24 помогает бизнесу достигать максимальную эффективность</h2>
             <div class="tabs-block">
                 <div
                 class="gap-2.5 grid grid-cols-[repeat(5,_minmax(260px,_1fr))] overflow-auto pb-2.5 mb-5 xl:flex xl:justify-center xl:mb-7">
