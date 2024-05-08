@@ -108,7 +108,7 @@ class Setting extends Section implements Initializable
 
         $tabs = AdminDisplay::tabbed();
 
-        $tabs->setTabs(function ($id) use ($fields1, $fields2, $fields3) {
+        $tabs->setTabs(function ($id) use ($fields1, $fields2) {
             $tabs = [];
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements($fields1))->setLabel('Контактные данные');
