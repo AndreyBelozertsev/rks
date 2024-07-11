@@ -76,3 +76,7 @@ p{
       right: -85px;
     }
   }
+
+._img{
+    @apply absolute top-4 right-4 w-1/2 h-1/2 object-cover ;
+}

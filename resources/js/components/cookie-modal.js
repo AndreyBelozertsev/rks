@@ -36,9 +36,9 @@ function checkCookies() {
 checkCookies();
 
 
-document.addEventListener("mouseleave", (e) => {
-    if (e.clientY < 0 && !getCookie('feedback_modal')) {
-        openModal('modal-feedback');
-        setCookie('feedback_modal', 'true');
-    } 
-});
+// document.addEventListener("mouseleave", (e) => {
+//     if (e.clientY < 0 && !getCookie('feedback_modal')) {
+//         openModal('modal-feedback');
+//         setCookie('feedback_modal', 'true');
+//     } 
+// });

@@ -3,6 +3,7 @@ import './components/bitrix-page';
 import './components/cookie-modal';
 import './components/flipper';
 import './components/form';
+import './components/hotel-page';
 import './components/lightgallery';
 import './components/map';
 import './components/modal';

@@ -31,7 +31,7 @@
             @endif
             <div class="flex pb-8">
                 <div class="w-full md:w-1/3">
-                    <a href="{{ route('form.show', ['category' => $service->category->slug]) }}" class="w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Оставить заявку</a>
+                    <a href="{{ route('form.show', ['category' => $service->category?->slug]) }}" class="w-full bg-accent lg:bg-onAccent text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl">Оставить заявку</a>
                 </div>
             </div>
         </div> 

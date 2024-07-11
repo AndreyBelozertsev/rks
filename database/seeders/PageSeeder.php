@@ -220,7 +220,7 @@ class PageSeeder extends Seeder
                 'template' => 'default',
                 'status' => 1,
                 'sort' =>600,
-            ],
+            ]
         ];
 
         foreach($items as $item){
