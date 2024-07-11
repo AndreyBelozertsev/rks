@@ -17,6 +17,7 @@ return [
         'reklamnaya_podpiska' => 'Рекламная подписка',
         'kontekstnaya_reklama' => 'Контекстная реклама',
         'bitrix' => 'Битрикс',
+        'hotel_complex' => 'Комплексное решение - отель',
     ],
     'portfolio_view' =>
     [
