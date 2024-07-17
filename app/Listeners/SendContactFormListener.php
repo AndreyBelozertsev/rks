@@ -10,9 +10,10 @@ use Illuminate\Queue\InteractsWithQueue;
 use Domain\Product\Models\ServiceCategory;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Notification;
+use Services\Bitrix24\Actions\SendContactForm;
 use App\Notifications\ContactFormSendNotification;
 
-class SendContactFormListener
+class SendContactFormListener implements ShouldQueue
 {
     /**
      * Create the event listener.
@@ -28,6 +29,8 @@ class SendContactFormListener
 
         TelegramBotApi::sendMessage( $this->textForTelegram($event->customer) , env('LOGGER_TELEGRAM_CHAT_ID'), env('LOGGER_TELEGRAM_TOKEN') );
         Notification::send(User::all(), new ContactFormSendNotification ($event->customer));
+        SendContactForm::send($event->customer, $event->customer->services);
+
     }
 
     protected function textForTelegram($customer): string
