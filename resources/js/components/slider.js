@@ -39,13 +39,17 @@ const swiperPhotography = new Swiper('.swiper-photography', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 30,
 
   breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 35,
+      },
       960: {
-          slidesPerView: 3,
-          spaceBetween: 40,
+        slidesPerView: 3,
+        spaceBetween: 40,
       },
   }
 });

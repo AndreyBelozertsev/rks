@@ -50,32 +50,41 @@ p{
 *::-webkit-scrollbar {
     width: 9px;
     height: 9px;
-  }
+}
   
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: transparent;
-  }
+}
   
-  *::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
+*::-webkit-scrollbar-thumb {
+    background-color: $onAccent;
     border-radius: 20px;
-    border: 3px solid var(--brand);
+    border: 3px solid $onAccent;
     cursor: pointer;
-  }
+}
   
-  @media (min-width: 540px) {
+@media (min-width: 540px) {
     .switch::after {
-      position: absolute;
-      content: '';
-      background-image: url('../../../public/template/icon/arrow.svg');
-      background-repeat: no-repeat;
-      width: 132px;
-      height: 42px;
-      background-size: cover;
-      top: -47px;
-      right: -85px;
+        position: absolute;
+        content: '';
+        background-image: url('../../../public/template/icon/arrow.svg');
+        background-repeat: no-repeat;
+        width: 132px;
+        height: 42px;
+        background-size: cover;
+        top: -47px;
+        right: -85px;
     }
-  }
+}
+
+@media (max-width: 960px) {
+    *::-webkit-scrollbar-thumb {
+        background-color: $accent;
+        border-radius: 20px;
+        border: 3px solid $accent;
+        cursor: pointer;
+    }
+}
 
 ._img{
     @apply absolute top-4 right-4 w-1/2 h-1/2 object-cover ;
