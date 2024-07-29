@@ -247,7 +247,7 @@
             </div>
         </div>
     </section>
-    <div id="#photo"></div>
+    <div id="photo"></div>
     <section class="pb-10 aos-init aos-animate" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <h3 class="mb-10">
