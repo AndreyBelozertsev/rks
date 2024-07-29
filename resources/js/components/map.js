@@ -1,8 +1,8 @@
 if(document.querySelector('#map_block')){
     let coord = document.querySelector('#map_block').dataset.coordinates;
-
+    console.log(coord);
     ymaps.ready(function () {
-        let myMap = new ymaps.Map('map', {
+        let myMap = new ymaps.Map('map_block', {
                 center: coord.split(','),
                 zoom: 14
             },{

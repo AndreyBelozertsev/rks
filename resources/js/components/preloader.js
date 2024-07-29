@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startTime = performance.now()
 
     const mediaFiles = document.querySelectorAll('img');
-    console.log(mediaFiles.length)
+
     let i = 0
 
     Array.from(mediaFiles).forEach((file, index) => {
