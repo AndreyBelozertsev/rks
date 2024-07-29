@@ -1,5 +1,5 @@
-if(document.querySelector('#map')){
-    let coord = document.querySelector('#map').dataset.coordinates;
+if(document.querySelector('#map_block')){
+    let coord = document.querySelector('#map_block').dataset.coordinates;
 
     ymaps.ready(function () {
         let myMap = new ymaps.Map('map', {
