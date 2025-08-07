@@ -8,8 +8,13 @@
                 </div>
             </div>
             <div class="pb-3">
-                <h2 class="leading-loose pb-4 text-xl">Оставьте данные и мы с Вами свяжемся</h2>
-                <form class="contact-form" action="{{ route('form.send-modal') }}" method="POST">
+                <h2 class="leading-loose pb-4 text-xl">Используйте удобный для Вас способ связи</h2>
+                <div class="pb-8 lg:text-xl lg:leading-10">
+                    <p><a href="tel:+79781107289">+7 (978)110 72 89</a></p>
+                    <p><a href="tel:+79781107283">+7 (978)110 72 89</a></p>
+                    <p><a href="mailto:info.rakurs@bk.ru">info.rakurs@bk.ru</a></p>
+                </div>
+                <!-- <form class="contact-form" action="{{ route('form.send-modal') }}" method="POST">
                     <input type="hidden" name="url" value="{{ request()->get ? request()->get : url()->previous() }}">
                     <div class="py-2">
                             <x-forms.text-input class="py-2" placeholder="Ваше имя" required="required" id="name-input" name="name"/>
@@ -44,7 +49,7 @@
                     <div class="py-3">
                         <input class="animation-pulse bg-accent lg:bg-onAccent disabled:bg-brandGrey-10 disabled:cursor-not-allowed text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl font-bold" type="submit" value="Отправить">
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>

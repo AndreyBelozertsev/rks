@@ -18,13 +18,20 @@
         </div>
         <div class="container">
             <div class="pb-8 lg:text-xl lg:leading-10">
+                <p class="text-xl lg:text-2xl pb-6">Используйте удобный для Вас способ связи</p>
+                <p><a href="tel:+79781107289">+7 (978)110 72 89</a></p>
+                <p><a href="tel:+79781107283">+7 (978)110 72 89</a></p>
+                <p><a href="mailto:info.rakurs@bk.ru">info.rakurs@bk.ru</a></p>
+            </div>
+             
+            <!-- <div class="pb-8 lg:text-xl lg:leading-10">
                 <p class="text-xl lg:text-2xl pb-6">Мы свяжемся с вами, чтобы:</p>
                 <p>Определить задачу</p>
                 <p>Ответить на ваши вопросы</p>
                 <p>Предоставить информацию о ценах</p>
             </div>
-            <div>
-                <form class="contact-form" action="{{ route('form.show') }}" method="POST">
+            <div> -->
+                <!-- <form class="contact-form" action="{{ route('form.show') }}" method="POST">
                     <input type="hidden" name="url" value="{{ request()->get('url') ? request()->get('url') : url()->previous() }}">
                     <div class="lg:grid grid-cols-2 gap-20">
                         <div>
@@ -66,7 +73,7 @@
                     <div class="py-6">
                         <input class="animation-pulse bg-accent lg:bg-onAccent disabled:bg-brandGrey-10 disabled:cursor-not-allowed text-brand py-4 px-8 rounded-2xl block text-center text-base lg:text-xl font-bold" type="submit" value="Отправить">
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </section>
